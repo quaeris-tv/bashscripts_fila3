@@ -11,3 +11,6 @@ sshfs remote:/path/to/folder local -oauto_cache,reconnect,defer_permissions
 
 https://www.digitalocean.com/community/tutorials/how-to-use-visual-studio-code-for-remote-development-via-the-remote-ssh-plugin
 
+
+
+eval "$(ssh-agent -s)" && ssh-add
