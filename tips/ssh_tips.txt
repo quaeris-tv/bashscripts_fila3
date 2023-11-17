@@ -17,3 +17,5 @@ eval "$(ssh-agent -s)" && ssh-add
 
 con puttygen traduci da id_rsa a file .ppk
 
+sudo chown www-data:www-data -R /var/www
+

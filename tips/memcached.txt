@@ -1,0 +1,5 @@
+sudo apt install memcached libmemcached-tools
+sudo systemctl start memcached
+
+
+
