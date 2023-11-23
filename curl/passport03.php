@@ -6,7 +6,7 @@ ini_set('display_errors', true);
 
 $base_url = 'https://multi.local';
 $login = '/api/user/login';
-$addContact = '/api/quaeris/add-contact';
+$addContact = '/api/add-contact';
 $email = '';
 $pass = '';
 
@@ -19,8 +19,6 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 
 $response = curl_exec($ch);
 $json = json_decode($response);
-
-
 
 $headers = [
     // 'Content-Type: application/json',  //error
