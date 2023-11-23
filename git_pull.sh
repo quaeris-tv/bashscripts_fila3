@@ -1,3 +1,4 @@
+git submodule foreach $( readlink -f -- "$0";)
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout master --
 #git pull origin master --autostash  --allow-unrelated-histories --prune --rebase

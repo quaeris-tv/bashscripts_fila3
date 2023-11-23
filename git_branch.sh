@@ -1,3 +1,4 @@
+git submodule foreach $( readlink -f -- "$0";)
 git branch --set-upstream-to=origin/master master
 git branch -m master
 git merge master
