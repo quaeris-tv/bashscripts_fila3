@@ -8,6 +8,12 @@ sudo chown -R $(whoami):www-data ./
 sudo chmod -R 775 ./
 sudo chmod o+s ./
 
+
+sudo find httpdocs -type d -exec chgrp www-data {} +
+sudo find httpdocs -type d -exec chgrp www-data {} +
+sudo find httpdocs -type d -exec chmod g+s {} +
+sudo find storage/logs -type d -exec chmod o+s {} +
+
 ---------------------------------------
 do-release-upgrade
 
