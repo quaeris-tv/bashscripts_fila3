@@ -9,10 +9,11 @@ sudo chmod -R 775 ./
 sudo chmod o+s ./
 
 
-sudo find httpdocs -type d -exec chgrp www-data {} +
-sudo find httpdocs -type d -exec chgrp www-data {} +
-sudo find httpdocs -type d -exec chmod g+s {} +
+sudo find laravel -type d -exec chgrp www-data {} +
+sudo find laravel -type d -exec chmod g+s {} +
 sudo find storage/logs -type d -exec chmod o+s {} +
+
+setfacl -d -m g:www-data:rw /full/path/to/laravel/storage/logs
 
 ---------------------------------------
 do-release-upgrade
