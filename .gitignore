@@ -5,3 +5,4 @@
 package-lock.json
 .php-cs-fixer.cache
 *.phar
+*.cache
