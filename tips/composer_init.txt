@@ -7,6 +7,7 @@ rm composer.lock
 rm package-lock.json
 // doctrine mi serve per le funzioni in piu' e per le migrazioni
 <<<<<<< HEAD
+<<<<<<< HEAD
 php -d memory_limit=-1 composer.phar require -W  doctrine/dbal
 // scout per la ricerca, forse da sostituire con query builder di spatie
 php -d memory_limit=-1 composer.phar require -W  laravel/scout
@@ -31,6 +32,8 @@ php -d memory_limit=-1 composer.phar require -W  livewire/livewire
 // per le monete
 php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money
 =======
+=======
+>>>>>>> dd31420 (first)
 php -d memory_limit=-1 composer.phar require -W  doctrine/dbal 
 // scout per la ricerca, forse da sostituire con query builder di spatie
 php -d memory_limit=-1 composer.phar require -W  laravel/scout 
@@ -54,12 +57,16 @@ php -d memory_limit=-1 composer.phar require -W  laravel/ui
 php -d memory_limit=-1 composer.phar require -W  livewire/livewire 
 // per le monete
 php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money 
+<<<<<<< HEAD
 >>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
 // per le immagini
 php -d memory_limit=-1 composer.phar require -W  intervention/image
 // per immagini e fa anche un percorso che gestisce le immagini in dimensione
 php -d memory_limit=-1 composer.phar require -W  intervention/imagecache
 // cookie law
+<<<<<<< HEAD
 <<<<<<< HEAD
 php -d memory_limit=-1 composer.phar require -W  spatie/laravel-cookie-consent
 // per accellerare le risposte
@@ -69,6 +76,8 @@ php -d memory_limit=-1 composer.phar require -W  genealabs/laravel-model-caching
 // per selezionare dei tag html
 php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler
 =======
+=======
+>>>>>>> dd31420 (first)
 php -d memory_limit=-1 composer.phar require -W  spatie/laravel-cookie-consent 
 // per accellerare le risposte
 php -d memory_limit=-1 composer.phar require -W  genealabs/laravel-model-caching 
@@ -76,7 +85,10 @@ php -d memory_limit=-1 composer.phar require -W  genealabs/laravel-model-caching
 #php -d memory_limit=-1 composer.phar require -W  asantibanez/laravel-eloquent-state-machines
 // per selezionare dei tag html
 php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler 
+<<<<<<< HEAD
 >>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
 // per le chiamate curl
 php -d memory_limit=-1 composer.phar require -W  guzzlehttp/guzzle
 #per gestire modello home, themes confs
@@ -88,6 +100,7 @@ php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-debugbar
 php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-ide-helper
 //test sul codice
 <<<<<<< HEAD
+<<<<<<< HEAD
 php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
 //test su codice su moduli
 php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
@@ -95,13 +108,18 @@ php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 #GLOBAL
 #cs fixer
 =======
+=======
+>>>>>>> dd31420 (first)
 php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
 //test su codice su moduli
 php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 
 #GLOBAL 
 #cs fixer 
+<<<<<<< HEAD
 >>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
 php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
 #laravel installer
 php -d memory_limit=-1 composer.phar global require laravel/installer

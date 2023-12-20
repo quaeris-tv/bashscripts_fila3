@@ -15,6 +15,7 @@ git config --global user.email marco.sottana@gmail.com
 git config --global credential.helper "store --file ~/.gitcredential"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
@@ -58,6 +59,10 @@ git config --global credential.https://github.com.username marco76tv
 //-----
 
 >>>>>>> 1283aaa (first)
+=======
+//-----
+
+>>>>>>> dd31420 (first)
 
 git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
 
@@ -66,6 +71,7 @@ git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anch
 git submodule sync 
 
 git fsck --lost-found
+<<<<<<< HEAD
 <<<<<<< HEAD
 git fsck --lost-found
 /bin/bash^M: bad interpreter: No such file or directory
@@ -147,3 +153,5 @@ git branch --set-upstream-to=origin/master  master
 git rebase
 =======
 >>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
