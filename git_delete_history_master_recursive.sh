@@ -7,4 +7,5 @@ git branch -D master  # Deletes the master branch
 git branch -m master  # Rename the current branch to master
 git gc --aggressive --prune=all     # remove the old files
 git push -u origin master  # Force push master branch to github
+git pull origin master
 git gc --aggressive --prune=all     # remove the old files
