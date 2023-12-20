@@ -8,6 +8,7 @@ git branch -m master  # Rename the current branch to master
 git gc --aggressive --prune=all     # remove the old files
 git push -uf origin master  # Force push master branch to github
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 git push -u origin master  # Force push master branch to github
 <<<<<<< HEAD
@@ -17,4 +18,6 @@ git pull origin master
 >>>>>>> c944ae5 (.)
 =======
 >>>>>>> fcc9fa2 (rebase 1/2)
+=======
+>>>>>>> dd31420 (first)
 git gc --aggressive --prune=all     # remove the old files

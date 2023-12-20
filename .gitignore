@@ -4,10 +4,15 @@
 *.lock
 package-lock.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 .php-cs-fixer.cache
 =======
+=======
+>>>>>>> 893420d (first)
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> dd31420 (first)
 .fuse_hidden*
 .fuse_hidden*
 .fuse_hidden**.lock
@@ -23,13 +28,17 @@ package-lock.json
 .fuse_hidden**.lock
 *.lock
 package-lock.json
+<<<<<<< HEAD
 >>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
 /vendor
 node_modules
 /docs/vendor
 >>>>>>> 203f2f7 (first)
 *.phar
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.cache
 <<<<<<< HEAD
 =======
@@ -44,6 +53,8 @@ node_modules
 
 
 =======
+=======
+>>>>>>> dd31420 (first)
 /vendor
 *.phar
 *.cache
@@ -55,5 +66,11 @@ package-lock.json
 package-lock.json
 .git-rewrite/
 .php-cs-fixer.cache
+<<<<<<< HEAD
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 203f2f7 (first)
+=======
+=======
+>>>>>>> dd31420 (first)
+>>>>>>> 893420d (first)

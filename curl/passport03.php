@@ -7,10 +7,14 @@ ini_set('display_errors', true);
 $base_url = 'https://multi.local';
 $login = '/api/user/login';
 <<<<<<< HEAD
+<<<<<<< HEAD
 $addContact = '/api/add-contact';
 =======
 $addContact = '/api/quaeris/add-contact';
 >>>>>>> 1283aaa (first)
+=======
+$addContact = '/api/quaeris/add-contact';
+>>>>>>> dd31420 (first)
 $email = '';
 $pass = '';
 
@@ -25,21 +29,31 @@ $response = curl_exec($ch);
 $json = json_decode($response);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 1283aaa (first)
+=======
+
+
+>>>>>>> dd31420 (first)
 $headers = [
     // 'Content-Type: application/json',  //error
     'Authorization: Bearer '.$json->token,
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 curl_setopt_array($ch, [
 =======
 curl_setopt_array(
     $ch, [
 >>>>>>> 1283aaa (first)
+=======
+curl_setopt_array(
+    $ch, [
+>>>>>>> dd31420 (first)
     CURLOPT_HTTPHEADER => $headers,
     CURLOPT_URL => $base_url.$addContact,
     CURLOPT_CUSTOMREQUEST => 'POST',
@@ -48,11 +62,16 @@ curl_setopt_array(
     CURLOPT_VERBOSE => true,
     CURLOPT_POSTFIELDS => $data,
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]);
 =======
     ]
 );
 >>>>>>> 1283aaa (first)
+=======
+    ]
+);
+>>>>>>> dd31420 (first)
 
 $response = curl_exec($ch);
 

@@ -10,6 +10,10 @@ git gc --aggressive --prune=now --force
 #read -p "Press [Enter] key to exit..."
 echo "-------- END PRUNE[$(pwd)] ----------";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1283aaa (first)
+=======
+
+>>>>>>> dd31420 (first)
