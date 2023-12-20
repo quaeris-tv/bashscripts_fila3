@@ -1,0 +1,24 @@
+apt install -y git python3 gcc build-essential
+
+npm install -g @soketi/soketi
+
+soketi start
+
+ sudo apt-get install gcc g++ make
+
+--- yarn
+  curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+     echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
+
+--- nvm
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+
+nvm list-remote
+
+nvm install v16
+
+https://computingforgeeks.com/how-to-install-node-js-on-ubuntu-debian/
+
+
