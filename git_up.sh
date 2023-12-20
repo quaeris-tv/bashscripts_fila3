@@ -3,10 +3,17 @@ git add --renormalize -A
 git add -A && aicommits  || echo '---------------------------empty'
 git push origin master -u --progress 'origin' || git push --set-upstream origin master
 echo "-------- END PUSH[$(pwd)] ----------";
+<<<<<<< HEAD
 git branch --set-upstream-to=origin/master master
 git branch -u origin/master
 git merge master
 git checkout master --
+=======
+git checkout master --
+git branch --set-upstream-to=origin/master master
+git branch -u origin/master
+git merge master
+>>>>>>> 1283aaa (first)
 echo "-------- END BRANCH[$(pwd)] ----------";
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout master --

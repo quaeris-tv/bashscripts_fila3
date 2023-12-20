@@ -3,10 +3,29 @@
 .fuse_hidden**.lock
 *.lock
 package-lock.json
+<<<<<<< HEAD
+=======
+.fuse_hidden*
+.fuse_hidden*
+.fuse_hidden**.lock
+*.lock
+package-lock.json
+.fuse_hidden*
+.fuse_hidden**.lock
+*.lock
+*.lock
+package-lock.json
+package-lock.json
+.fuse_hidden*
+.fuse_hidden**.lock
+*.lock
+package-lock.json
+>>>>>>> 1283aaa (first)
 /vendor
 node_modules
 /docs/vendor
 *.phar
+<<<<<<< HEAD
 *.cache
 *.log
 .git-blame-ignore-revs
@@ -18,3 +37,16 @@ node_modules
 
 
 
+=======
+/vendor
+*.phar
+*.cache
+*.log
+*.lock
+.git-blame-ignore-revs
+package-lock.json
+.php-cs-fixer.cache
+package-lock.json
+.git-rewrite/
+.php-cs-fixer.cache
+>>>>>>> 1283aaa (first)

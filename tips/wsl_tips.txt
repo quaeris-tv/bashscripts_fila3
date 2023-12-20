@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
+=======
+>>>>>>> 1283aaa (first)
 Nota Bene: prima dell'installazione, 
 controllare in "Gestione Attività" -> "prestazioni" -> Virtualizzazione 
 sia abilitato.
@@ -19,7 +22,10 @@ curl.exe -L -o ubuntu-2004.appx https://aka.ms/wslubuntu2004
 
 Add-AppxPackage .\app_name.appx
 
+<<<<<<< HEAD
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+=======
+>>>>>>> 1283aaa (first)
 
 
 
@@ -30,11 +36,14 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
+<<<<<<< HEAD
 ----------------------------------------------------------
 entrare con root
 wsl -u root
 
 PS C:\Windows\System32> ubuntu config --default-user marco
+=======
+>>>>>>> 1283aaa (first)
 
 --------------------------------------------------
 # Import the public repository GPG keys
@@ -56,6 +65,7 @@ pwsh
 
 //-- per sapere ip
 wsl hostname -I
+<<<<<<< HEAD
 wsl hostname -I
 
  PS C:\Users\adrien> wsl -l -v
@@ -106,5 +116,7 @@ cd ./Ubuntu
 $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Ubuntu", "User")
 
+=======
+>>>>>>> 1283aaa (first)
 
 

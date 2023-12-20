@@ -1,5 +1,15 @@
  //rinominare tutti i file di tipo PlutoInterface in PlutoContravy
  
+<<<<<<< HEAD
 
  for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
 
+=======
+ for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
+
+ //--
+ rename "s/oldExtension$/newExtension/" *.txt
+
+ //--- rinomina tutti i file da *.php a *.old
+ for file in *.php; do mv -- "$file" "${file%.php}.old"; done
+>>>>>>> 1283aaa (first)

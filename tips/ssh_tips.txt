@@ -2,8 +2,11 @@ https://www.digitalocean.com/community/tutorials/how-to-use-visual-studio-code-f
 
 sudo apt-get install sshfs
  sudo yum install fuse-sshfs
+<<<<<<< HEAD
 sudo yum install fuse-sshfs
 sudo yum install fuse-sshfs
+=======
+>>>>>>> 1283aaa (first)
 
 
 sshfs -C -o cache_timeout=80000 myself@work:~/files_at_work ~/my_home
@@ -19,6 +22,7 @@ puttygen per convertire da id_rsa a id_rsa.ppk
 
 
 eval "$(ssh-agent -s)" && ssh-add
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 5f13fe2 (first)
@@ -32,4 +36,6 @@ sudo chown www-data:www-data -R /var/www
 sudo chown -R $(whoami):www-data ./
 sudo chmod -R 775 ./
 sudo chmod o+s ./
+=======
+>>>>>>> 1283aaa (first)
 
