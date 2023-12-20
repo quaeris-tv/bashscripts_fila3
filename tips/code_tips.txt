@@ -1,0 +1,5 @@
+https://laravel-code.tips/
+
+
+https://martinjoo.dev/35-eloquent-recipes
+

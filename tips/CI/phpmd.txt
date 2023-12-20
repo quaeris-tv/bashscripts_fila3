@@ -1,0 +1,5 @@
+cd laravel
+rm phpmd.phar
+curl https://phpmd.org/static/latest/phpmd.phar -L -o phpmd.phar
+
+ php -d memory_limit=-1 phpmd.phar Modules/Xot text codesize
