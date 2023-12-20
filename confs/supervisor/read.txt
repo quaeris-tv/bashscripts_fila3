@@ -1,0 +1,23 @@
+sudo apt-get install supervisor
+
+cd /etc/supervisor/conf.d
+
+ create a worker file laravel-worker.conf that will listen queue
+
+
+ sudo supervisorctl reread
+
+ sudo supervisorctl update
+
+ sudo supervisorctl reload
+
+ sudo service supervisor restart
+
+ sudo supervisorctl status
+
+ sudo supervisorctl start worker:*
+
+
+
+---------------------------------------------
+ nohup php artisan queue:work --daemon &
