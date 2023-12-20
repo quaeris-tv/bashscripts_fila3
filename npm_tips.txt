@@ -1,0 +1,40 @@
+npm cache clear --force
+npm i -g laravel-mix@latest
+npm i -g postcss@latest
+npm install --save-dev file-loader url-loader
+npm install resolve-url-loader sass sass-loader alpinejs --save-dev
+npm i -g webpack webpack-cli webpack-dev-server 
+
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+
+
+
+
+
+
+---------------
+file: resources/js/app.js
+
+import Alpine from 'alpinejs'
+
+window.Alpine = Alpine
+Alpine.start()
+
+file: webpack.mix.js
+const mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss');
+
+mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .options({
+        postCss: [ tailwindcss('./tailwind.config.js') ],
+    });
+
+-------------------
+
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+To upgrade to latest version (and not current stable) version, you can use
+
+sudo n latest

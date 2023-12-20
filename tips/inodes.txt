@@ -1,0 +1,22 @@
+find . -printf "%h\n" | cut -d/ -f-2 | sort | uniq -c | sort -rn
+
+ 132994 ./laravel
+   3303 ./.git
+   1325 ./public_html
+    298 ./media
+     59 ./bashscripts
+     31 .
+     11 ./_docs
+      4 ./.vscode
+      3 ./extras
+      2 ./.devcontainer
+
+df -h
+
+sudo du  -t 500M -a / | sort
+
+
+ncdu  !!
+
+
+sudo ncdu --exclude=/xx
