@@ -51,7 +51,7 @@ php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-debugbar
 //creazione automatica delle intestazione delle funzioni
 php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-ide-helper
 //test sul codice
-php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
+php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
 //test su codice su moduli
 php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 

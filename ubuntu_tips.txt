@@ -4,10 +4,6 @@ sudo chown -R $USER:$USER /home/$USER/.composer
 
 sudo chown www-data:www-data -R /var/www
 
-sudo chown -R $(whoami):www-data ./
-sudo chmod -R 775 ./
-sudo chmod o+s ./
-
 ---------------------------------------
 nano ~/.bash_profile
 

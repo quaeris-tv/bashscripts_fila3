@@ -1,2 +1,3 @@
-winget install -e --id VSCodium.VSCodium
-winget install -e --id SublimeHQ.SublimeText.4
+
+
+winget install -e --id TheDocumentFoundation.LibreOffice
