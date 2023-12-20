@@ -124,6 +124,7 @@ php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-ide-helpe
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
 =======
 php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
@@ -140,6 +141,9 @@ php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
 =======
 php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
+=======
+php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
+>>>>>>> b3a67b2 (first)
 #test su codice su moduli
 php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 #scrive la docs dei modelli e facades

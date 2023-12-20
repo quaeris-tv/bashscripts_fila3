@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git submodule foreach $( readlink -f -- "$0";)
 git add --renormalize -A
 <<<<<<< HEAD
@@ -45,6 +46,15 @@ git branch -u origin/master
 >>>>>>> 464e6f0 (Change branch tracking to origin/masterCo-authored-by: Assistant)
 =======
 >>>>>>> 1030917 (Change branch tracking to origin/masterCo-authored-by: Assistant)
+=======
+git submodule foreach $( readlink -f -- "$0";)
+git add --renormalize -A
+git add -A && aicommits  || echo '---------------------------empty'
+git push origin master -u --progress 'origin' || git push --set-upstream origin master
+echo "-------- END PUSH[$(pwd)] ----------";
+git branch --set-upstream-to=origin/master master
+git branch -u origin/master
+>>>>>>> b3a67b2 (first)
 git merge master
 git checkout master --
 echo "-------- END BRANCH[$(pwd)] ----------";
@@ -53,8 +63,12 @@ git checkout master --
 git pull origin master --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 #read -p "Press [Enter] key to exit..."
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo '-------- END PULL ----------';
 >>>>>>> a176205 (first)
 =======
 echo "-------- END PULL[$(pwd)] ----------";
 >>>>>>> e65ec99 (up)
+=======
+echo "-------- END PULL[$(pwd)] ----------";
+>>>>>>> b3a67b2 (first)

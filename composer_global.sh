@@ -11,6 +11,7 @@ rm package-lock.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #cs fixer
 =======
 #cs fixer 
@@ -27,6 +28,9 @@ rm package-lock.json
 =======
 #cs fixer
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
+=======
+#cs fixer
+>>>>>>> b3a67b2 (first)
 php -d memory_limit=-1 composer.phar global require -W friendsofphp/php-cs-fixer
 #grumphp
 php -d memory_limit=-1 composer.phar global require -W phpro/grumphp
@@ -36,6 +40,7 @@ php -d memory_limit=-1 composer.phar global require -W phpro/grumphp
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 php -d memory_limit=-1 composer.phar global require -W --dev larastan/larastan
 =======
 php -d memory_limit=-1 composer.phar global require -W --dev nunomaduro/larastan
@@ -52,4 +57,7 @@ php -d memory_limit=-1 composer.phar global require -W --dev nunomaduro/larastan
 =======
 php -d memory_limit=-1 composer.phar global require -W --dev larastan/larastan
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
+=======
+php -d memory_limit=-1 composer.phar global require -W --dev larastan/larastan
+>>>>>>> b3a67b2 (first)
 php -d memory_limit=-1 composer.phar global require -W --dev phpstan/phpstan

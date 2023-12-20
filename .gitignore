@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,10 +42,13 @@ package-lock.json
 >>>>>>> a176205 (first)
 =======
 >>>>>>> 5ff86c0 (up)
+=======
+>>>>>>> b3a67b2 (first)
 .fuse_hidden*
 .fuse_hidden**.lock
 *.lock
 package-lock.json
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,3 +139,8 @@ package-lock.json
 =======
 *.cache
 >>>>>>> 49513c4 (up gitignore)
+=======
+.php-cs-fixer.cache
+*.phar
+*.cache
+>>>>>>> b3a67b2 (first)
