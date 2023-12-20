@@ -1,0 +1,19 @@
+sudo apt install curl php-cli php-mbstring git unzip
+
+cd /tmp
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+
+
+
+
+
+composer config --list --global
+
+// da il percorso del vendor del composer global
+composer -n config --global home 
+
+echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> ~/.bashrc
+
+source ~/.bashrc

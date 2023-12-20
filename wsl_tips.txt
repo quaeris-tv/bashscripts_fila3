@@ -1,0 +1,51 @@
+Nota Bene: prima dell'installazione, 
+controllare in "Gestione Attività" -> "prestazioni" -> Virtualizzazione 
+sia abilitato.
+in caso contrario abilitarlo tramite BIOS
+
+
+wsl --install
+
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --set-default-version 2
+
+Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
+oppure
+curl.exe -L -o ubuntu-2004.appx https://aka.ms/wslubuntu2004
+
+Add-AppxPackage .\app_name.appx
+
+
+
+
+
+1 -Open Start.
+2 - Search for PowerShell, right-click the top result, and select the Run as administrator option.
+3 - Type the following command to enable the Linux subsystem and press Enter:
+
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+
+--------------------------------------------------
+# Import the public repository GPG keys
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+ 
+# Register the Microsoft Ubuntu repository
+sudo curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/16.04/prod.list
+ 
+# Update the list of products
+sudo apt-get update
+ 
+# Install PowerShell
+sudo apt-get install -y powershell
+ 
+# Start PowerShell
+pwsh
+
+
+
+//-- per sapere ip
+wsl hostname -I
+
+

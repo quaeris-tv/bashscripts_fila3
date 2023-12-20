@@ -1,0 +1,6 @@
+sudo pecl install xdebug
+You should add "zend_extension=/usr/lib/php/20210902/xdebug.so" to php.ini
+
+In ubuntu puoi fare:
+sudo sed -i '$a\zend_extension=/usr/lib/php/20220829/xdebug.so' /etc/php/8.2/cli/php.ini
+sudo service apache2 restart
