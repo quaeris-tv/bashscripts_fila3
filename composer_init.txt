@@ -12,10 +12,13 @@ rm package-lock.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dev
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
 php -d memory_limit=-1 composer.phar require -W  doctrine/dbal
 // scout per la ricerca, forse da sostituire con query builder di spatie
 php -d memory_limit=-1 composer.phar require -W  laravel/scout
@@ -39,6 +42,7 @@ php -d memory_limit=-1 composer.phar require -W  laravel/ui
 php -d memory_limit=-1 composer.phar require -W  livewire/livewire
 // per le monete
 php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -109,6 +113,8 @@ php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
 // per le immagini
 php -d memory_limit=-1 composer.phar require -W  intervention/image
 // per immagini e fa anche un percorso che gestisce le immagini in dimensione
@@ -120,10 +126,13 @@ php -d memory_limit=-1 composer.phar require -W  intervention/imagecache
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dev
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
 php -d memory_limit=-1 composer.phar require -W  spatie/laravel-cookie-consent
 // per accellerare le risposte
 php -d memory_limit=-1 composer.phar require -W  genealabs/laravel-model-caching
@@ -131,6 +140,7 @@ php -d memory_limit=-1 composer.phar require -W  genealabs/laravel-model-caching
 #php -d memory_limit=-1 composer.phar require -W  asantibanez/laravel-eloquent-state-machines
 // per selezionare dei tag html
 php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -169,6 +179,8 @@ php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
 // per le chiamate curl
 php -d memory_limit=-1 composer.phar require -W  guzzlehttp/guzzle
 #per gestire modello home, themes confs
@@ -185,16 +197,20 @@ php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-ide-helpe
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dev
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
 php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
 //test su codice su moduli
 php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 
 #GLOBAL
 #cs fixer
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -230,6 +246,8 @@ php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
 php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
 #laravel installer
 php -d memory_limit=-1 composer.phar global require laravel/installer

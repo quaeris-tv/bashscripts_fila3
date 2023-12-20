@@ -16,6 +16,7 @@ sed -i -e 's/\r$//' ./bashscripts/git_branch.sh
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 git submodule foreach "mv docs/.git docs/a.git && git rm --cached -rf docs && git pull --rebase || git pull --rebase || git add -A && git commit -am . || echo '--no--'"
 
@@ -43,3 +44,8 @@ git submodule foreach "mv docs/.git docs/a.git && git rm --cached -rf docs && gi
 git submodule foreach "mv docs/.git docs/a.git && git rm --cached -rf docs && git pull --rebase || git pull --rebase || git add -A && git commit -am . || echo '--no--'"
 
 >>>>>>> b3a67b2 (first)
+=======
+
+git submodule foreach "mv docs/.git docs/a.git && git rm --cached -rf docs && git pull --rebase || git pull --rebase || git add -A && git commit -am . || echo '--no--'"
+
+>>>>>>> dev

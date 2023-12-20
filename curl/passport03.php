@@ -12,6 +12,7 @@ $login = '/api/user/login';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $addContact = '/api/add-contact';
 =======
 $addContact = '/api/quaeris/add-contact';
@@ -31,6 +32,9 @@ $addContact = '/api/add-contact';
 =======
 $addContact = '/api/add-contact';
 >>>>>>> b3a67b2 (first)
+=======
+$addContact = '/api/add-contact';
+>>>>>>> dev
 $email = '';
 $pass = '';
 
@@ -50,6 +54,7 @@ $json = json_decode($response);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -66,6 +71,8 @@ $json = json_decode($response);
 >>>>>>> f924de7 (Refactor API endpoint for adding contact)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
 $headers = [
     // 'Content-Type: application/json',  //error
     'Authorization: Bearer '.$json->token,

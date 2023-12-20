@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> caec2df (Update git scripts and add directory information)
 =======
@@ -12,12 +13,15 @@
 >>>>>>> caec2df (Update git scripts and add directory information)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
 git submodule foreach $( readlink -f -- "$0";)
 git add --renormalize -A
 #git add -A && git commit -am 'up'  || git rebase --continue || echo '---------------------------empty'
 git add -A && aicommits  || echo '---------------------------empty'
 git push origin master -u --progress 'origin' || git push --set-upstream origin master
 echo "-------- END PUSH[$(pwd)] ----------";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,3 +60,5 @@ echo '-------- END PUSH ----------';
 >>>>>>> caec2df (Update git scripts and add directory information)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev

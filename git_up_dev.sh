@@ -11,6 +11,7 @@ git merge dev
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #git merge master 
 =======
 git merge master 
@@ -24,6 +25,9 @@ git merge master
 =======
 #git merge master 
 >>>>>>> b3a67b2 (first)
+=======
+#git merge master 
+>>>>>>> dev
 echo "-------- END BRANCH[$(pwd)] ----------";
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout dev --

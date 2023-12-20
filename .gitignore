@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,10 +45,13 @@ package-lock.json
 >>>>>>> 5ff86c0 (up)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
 .fuse_hidden*
 .fuse_hidden**.lock
 *.lock
 package-lock.json
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,3 +148,8 @@ package-lock.json
 *.phar
 *.cache
 >>>>>>> b3a67b2 (first)
+=======
+.php-cs-fixer.cache
+*.phar
+*.cache
+>>>>>>> dev
