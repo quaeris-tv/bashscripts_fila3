@@ -41,7 +41,12 @@ $data=[
 $data=http_build_query($data);
 
 
+<<<<<<< HEAD
 curl_setopt_array($curl, [
+=======
+curl_setopt_array(
+    $curl, [
+>>>>>>> 1283aaa (first)
     CURLOPT_URL => $url,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
@@ -53,7 +58,12 @@ curl_setopt_array($curl, [
     CURLOPT_POST => true,
     CURLOPT_POSTFIELDS => $data,
     CURLOPT_HTTPHEADER => $headers,
+<<<<<<< HEAD
 ]);
+=======
+    ]
+);
+>>>>>>> 1283aaa (first)
 
 
 $response = curl_exec($curl);
