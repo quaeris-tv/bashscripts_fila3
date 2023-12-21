@@ -76,6 +76,7 @@ sudo chown -R www-data:www-data /var/www/html/laravelapp
 sudo chmod -R 775 /var/www/html/laravelapp/storage
 
 -----------------------------------------------
+<<<<<<< HEAD
 sudo a2enmod rewrite
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,3 +101,6 @@ nohup python bgservice.py &
 >>>>>>> 1283aaa (first)
 =======
 >>>>>>> dd31420 (first)
+=======
+sudo a2enmod rewrite
+>>>>>>> 98810cd (rebase 1/3)
