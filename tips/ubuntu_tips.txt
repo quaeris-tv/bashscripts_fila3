@@ -1,0 +1,121 @@
+sudo mount -t cifs  //osmc4/nas04 /media/nas04 -o username=osmc,password=osmc,nounix,sec=ntlmssp,rw,uid=zorin
+
+sudo chown -R $USER:$USER /home/$USER/.composer
+
+sudo chown www-data:www-data -R /var/www
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8f67d74f (up)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
+sudo chown -R $(whoami):www-data ./
+sudo chmod -R 775 ./
+sudo chmod o+s ./
+
+---------------------------------------
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+---------------------------------------
+<<<<<<< HEAD
+do-release-upgrade
+
+---------------------------------------
+
+chmod 644/usr/lib/sudo/sudoers.so
+su
+chown -R root/usr/lib/sudo
+
+
+>>>>>>> 4f180474 (first)
+=======
+>>>>>>> 7640735e (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
+nano ~/.bash_profile
+
+And paste
+
+export PATH=~/.composer/vendor/bin:$PATH
+export PATH="~/.config/composer/vendor/bin:$PATH"
+
+source ~/.bash_profile
+
+-----------------------------------------
+
+sudo apt -y install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get install -y php libapache2-mod-php php7.4-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap} php-{json,xml,zip,common,tokenizer,mysql}
+apt-get install apache2 php7.4 libapache2-mod-php7.4 php7.4-curl php-pear php7.4-gd php7.4-dev php7.4-zip php7.4-mbstring php7.4-mysql php7.4-xml curl -y
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap} php-{json,xml,zip,common,tokenizer,mysql} libapache2-mod-php8* 
+
+
+
+>>>>>>> 4f180474 (first)
+=======
+>>>>>>> 7640735e (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+------------------------------------------
+sudo  mysql -u root -p
+
+CREATE DATABASE laravel_db;
+CREATE USER 'laravel_user'@'localhost' IDENTIFIED BY 'secretpassword';
+GRANT ALL ON laravel_db.* TO 'laravel_user'@'localhost';
+FLUSH PRIVILEGES;
+QUIT;
+
+------------------------------------------------
+sudo chown -R www-data:www-data /var/www/html/laravelapp
+sudo chmod -R 775 /var/www/html/laravelapp/storage
+
+-----------------------------------------------
+sudo a2enmod rewrite
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+composer global require friendsofphp/php-cs-fixer
+
+PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> ~/.bashrc
+echo 'export PATH="$HOME/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
+
+source ~/.bashrc
+
+
+//--------------------------------
+
+nohup python bgservice.py &
+>>>>>>> 4f180474 (first)
+=======
+>>>>>>> 7640735e (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)

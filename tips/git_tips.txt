@@ -1,0 +1,251 @@
+//--- fix
+/bin/bash^M: bad interpreter: No such file or directory
+
+sed -i -e 's/\r$//' nomefile.sh
+
+//---
+
+git merge master --strategy-option theirs
+git fetch && git reset --hard origin/master
+
+//----
+
+git config --global user.name "marco xot"
+git config --global user.email marco.sottana@gmail.com
+git config --global credential.helper "store --file ~/.gitcredential"
+
+//-----
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
+
+//----------
+
+git submodule sync 
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+git fsck --lost-found
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9db6edef (.)
+=======
+>>>>>>> 19317203 (.)
+=======
+>>>>>>> 3f995b47 (.)
+=======
+>>>>>>> f6d60d03 (.)
+
+//--- fix
+/bin/bash^M: bad interpreter: No such file or directory
+
+sed -i -e 's/\r$//' nomefile.sh
+
+//---
+
+git merge master --strategy-option theirs
+git fetch && git reset --hard origin/master
+
+//----
+
+git config --global user.name "marco xot"
+git config --global user.email marco.sottana@gmail.com
+git config --global credential.helper "store --file ~/.gitcredential"
+=======
+git config --global credential.https://github.com.username marco76tv
+git config --global credential.https://github.com.username marco76tv
+
+git config --global credential.https://github.com.username marco76tv
+=======
+
+>>>>>>> 7640735e (.)
+
+=======
+>>>>>>> a0985ac6 (up)
+git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
+
+//----------
+
+git submodule sync 
+
+git fsck --lost-found
+/bin/bash^M: bad interpreter: No such file or directory
+
+sed -i -e 's/\r$//' nomefile.sh
+
+//---
+
+git merge master --strategy-option theirs
+git fetch && git reset --hard origin/master
+
+//----
+
+git config --global user.name "marco xot"
+git config --global user.email marco.sottana@gmail.com
+git config --global credential.helper "store --file ~/.gitcredential"
+<<<<<<< HEAD
+=======
+=======
+git config --global credential.https://github.com.username marco76tv
+git config --global credential.https://github.com.username marco76tv
+
+git config --global credential.https://github.com.username marco76tv
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
+
+git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
+
+//----------
+
+git submodule sync 
+
+git fsck --lost-found
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/bin/bash^M: bad interpreter: No such file or directory
+
+sed -i -e 's/\r$//' nomefile.sh
+
+//---
+
+git merge master --strategy-option theirs
+git fetch && git reset --hard origin/master
+
+//----
+
+git config --global user.name "marco xot"
+git config --global user.email marco.sottana@gmail.com
+git config --global credential.helper "store --file ~/.gitcredential"
+>>>>>>> a0985ac6 (up)
+git config --global credential.https://github.com.username marco76tv
+git config --global credential.https://github.com.username marco76tv
+
+//-----
+! [remote rejected]   master -> master (shallow update not allowed)
+
+git rebase --interactive --root
+git commit --amend --no-edit
+git rebase --continue
+//--------------------------
+
+
+
+git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
+
+git submodule sync 
+
+git fsck --lost-found
+git lfs fsck
+git config  lfs.allowincompletepush true
+
+//-----------------------------------------------------------
+
+git config --global core.preloadindex true
+git config --global core.fscache true
+git config --global gc.auto 256
+git config --global status.submoduleSummary true
+git config --global core.ignoreStat true
+git config --global pack.sparse true
+
+//--------------
+
+
+
+git submodule sync 
+
+
+$  git branch --set-upstream-to=origin/master master
+fatal: cannot set up tracking information; starting point 'origin/master' is not a branch
+--- fix
+git remote update
+git remote set-branches --add origin master
+
+
+
+
+
+
+git credential-manager configure
+git config --global credential.credentialStore secretservice
+
+
+
+error: could not update refs/heads/master
+
+-------------------------
+fatal: cannot set up tracking information; starting point 'origin/master' is not a branch
+sol:
+git remote update
+git remote set-branches --add origin master
+git branch --set-upstream-to=origin/master  master
+git rebase
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 4f180474 (first)
+=======
+git fsck --lost-found
+>>>>>>> 6e938396 (merged stuff)
+=======
+git fsck --lost-found
+>>>>>>> 763693e3 (merged stuff)
+=======
+>>>>>>> 9db6edef (.)
+=======
+git fsck --lost-found
+>>>>>>> 33cd718c (merged stuff)
+=======
+git fsck --lost-found
+>>>>>>> ebbe8620 (merged stuff)
+=======
+>>>>>>> 19317203 (.)
+=======
+git fsck --lost-found
+>>>>>>> 01359521 (merged stuff)
+=======
+git fsck --lost-found
+>>>>>>> 8d1c6e68 (merged stuff)
+=======
+>>>>>>> 3f995b47 (.)
+=======
+git fsck --lost-found
+>>>>>>> 7fbb9689 (merged stuff)
+=======
+git fsck --lost-found
+>>>>>>> b16150db (merged stuff)
+=======
+>>>>>>> f6d60d03 (.)
+=======
+git fsck --lost-found
+>>>>>>> a0985ac6 (up)
+=======
+git fsck --lost-found
+>>>>>>> a0985ac6 (up)
+=======
+>>>>>>> 7640735e (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
