@@ -1,6 +1,9 @@
 npm cache clear --force
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 98810cd (rebase 1/3)
 npm i -g laravel-mix@latest postcss@latest webpack-cli@latest webpack@latest cross-env@latest 
 
 se linux aggiungere
@@ -21,6 +24,7 @@ npm update vue-loader
 -------------------------------------------------------------------------------------------------------------------------------------
 npm i -g laravel-mix@latest postcss@latest webpack-cli@latest webpack@latest cross-env@latest n@latest
 
+<<<<<<< HEAD
 =======
 npm i -g laravel-mix@latest
 npm i -g postcss@latest
@@ -29,12 +33,15 @@ npm i -g postcss@latest
 npm i -g laravel-mix@latest
 npm i -g postcss@latest
 >>>>>>> dd31420 (first)
+=======
+>>>>>>> 98810cd (rebase 1/3)
 npm install --save-dev file-loader url-loader
 npm install resolve-url-loader sass sass-loader alpinejs --save-dev
 npm i -g webpack webpack-cli webpack-dev-server 
 
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ---------------------------------
@@ -51,6 +58,14 @@ npm install
 
 
 >>>>>>> dd31420 (first)
+=======
+---------------------------------
+
+rm -rf node_modules
+rm package-lock.json yarn.lock
+npm cache clear --force
+npm install
+>>>>>>> 98810cd (rebase 1/3)
 
 
 

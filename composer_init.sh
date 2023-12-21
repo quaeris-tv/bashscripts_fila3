@@ -121,6 +121,7 @@ php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-ide-helpe
 #test sul codice
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
 =======
 php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
@@ -128,6 +129,9 @@ php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
 =======
 php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
 >>>>>>> dd31420 (first)
+=======
+php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
+>>>>>>> 98810cd (rebase 1/3)
 #test su codice su moduli
 php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 #scrive la docs dei modelli e facades
