@@ -2,6 +2,29 @@
 .fuse_hidden*
 .fuse_hidden**.lock
 *.lock
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a0985ac6 (up)
+=======
+>>>>>>> a0985ac6 (up)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
 package-lock.json
 .fuse_hidden*
 .fuse_hidden*
@@ -18,18 +41,139 @@ package-lock.json
 .fuse_hidden**.lock
 *.lock
 package-lock.json
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
 /vendor
 node_modules
 /docs/vendor
 *.phar
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2d096fff (Ignore vendor files, phar files, cache files, and log files)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
 /vendor
 *.phar
 *.cache
 *.log
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 37b0029 (first)
 *.lock
 .git-blame-ignore-revs
 package-lock.json
 .php-cs-fixer.cache
 package-lock.json
 .git-rewrite/
+<<<<<<< HEAD
 .php-cs-fixer.cache
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+*.lock
+.git-blame-ignore-revs
+<<<<<<< HEAD
+<<<<<<< HEAD
+package-lock.json
+.php-cs-fixer.cache
+<<<<<<< HEAD
+<<<<<<< HEAD
+package-lock.json
+.git-rewrite/
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+.php-cs-fixer.cache
+=======
+*.lock
+package-lock.json
+>>>>>>> 4f180474 (first)
+=======
+package-lock.json
+>>>>>>> 6e938396 (merged stuff)
+=======
+package-lock.json
+>>>>>>> 763693e3 (merged stuff)
+=======
+package-lock.json
+>>>>>>> 04047357 (.)
+=======
+package-lock.json
+>>>>>>> ebbe8620 (merged stuff)
+=======
+package-lock.json
+>>>>>>> bc284f6a (.)
+=======
+package-lock.json
+>>>>>>> 8d1c6e68 (merged stuff)
+=======
+package-lock.json
+>>>>>>> 7bddd1a7 (.)
+=======
+package-lock.json
+>>>>>>> b16150db (merged stuff)
+=======
+package-lock.json
+>>>>>>> 70462c32 (.)
+=======
+package-lock.json.git-blame-ignore-revs
+>>>>>>> 12c88c91 (up)
+=======
+/vendor
+>>>>>>> a0985ac6 (up)
+=======
+/vendor
+>>>>>>> a0985ac6 (up)
+=======
+/vendor
+node_modules
+/docs/vendor
+>>>>>>> 65492f97 (node_modules to ignore)
+=======
+>>>>>>> 9f48fc4d (.)
+=======
+>>>>>>> 9f48fc4d (.)
+=======
+>>>>>>> 2d096fff (Ignore vendor files, phar files, cache files, and log files)
+=======
+*.lock
+>>>>>>> 041c2e45 (Add *.lock to .gitignore)
+=======
+>>>>>>> 8f6505ab (add .git-blame-ignore-revs to .gitignore)
+=======
+package-lock.json
+>>>>>>> 57af28cc (package-lock.json >> .gitignore)
+=======
+>>>>>>> 62009ac1 (.php-cs-fixer.cache >> .gitignore)
+=======
+package-lock.json
+>>>>>>> aa6e8223 (package-lock.json >> .gitignore)
+=======
+>>>>>>> e62b0cb8 (.git-rewrite/ >> .gitignore)
+=======
+=======
+.php-cs-fixer.cache
+>>>>>>> ed812984 (first)
+>>>>>>> bb09ef32 (rebase 1/1)
+=======
+=======
+.php-cs-fixer.cache
+>>>>>>> ed812984 (first)
+>>>>>>> bb09ef32 (rebase 1/1)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)

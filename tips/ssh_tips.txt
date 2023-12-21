@@ -11,6 +11,16 @@ sshfs remote:/path/to/folder local -oauto_cache,reconnect,defer_permissions
 
 https://www.digitalocean.com/community/tutorials/how-to-use-visual-studio-code-for-remote-development-via-the-remote-ssh-plugin
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> aef0c76e (up)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
 
 
 puttygen per convertire da id_rsa a id_rsa.ppk 
@@ -18,3 +28,14 @@ puttygen per convertire da id_rsa a id_rsa.ppk
 
 eval "$(ssh-agent -s)" && ssh-add
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4f180474 (first)
+=======
+>>>>>>> aef0c76e (up)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)

@@ -41,8 +41,31 @@ $data=[
 $data=http_build_query($data);
 
 
+<<<<<<< HEAD
 curl_setopt_array(
     $curl, [
+=======
+<<<<<<< HEAD
+curl_setopt_array(
+    $curl, [
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+curl_setopt_array(
+    $curl, [
+=======
+curl_setopt_array($curl, [
+>>>>>>> a0985ac6 (up)
+=======
+curl_setopt_array($curl, [
+>>>>>>> a0985ac6 (up)
+=======
+curl_setopt_array(
+    $curl, [
+>>>>>>> 15b740a3 (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
     CURLOPT_URL => $url,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
@@ -54,8 +77,31 @@ curl_setopt_array(
     CURLOPT_POST => true,
     CURLOPT_POSTFIELDS => $data,
     CURLOPT_HTTPHEADER => $headers,
+<<<<<<< HEAD
     ]
 );
+=======
+<<<<<<< HEAD
+    ]
+);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    ]
+);
+=======
+]);
+>>>>>>> a0985ac6 (up)
+=======
+]);
+>>>>>>> a0985ac6 (up)
+=======
+    ]
+);
+>>>>>>> 15b740a3 (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
 
 
 $response = curl_exec($curl);

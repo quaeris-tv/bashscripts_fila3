@@ -27,8 +27,31 @@ $headers = [
     'Authorization: Bearer '.$json->token,
 ];
 
+<<<<<<< HEAD
 curl_setopt_array(
     $ch, [
+=======
+<<<<<<< HEAD
+curl_setopt_array(
+    $ch, [
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+curl_setopt_array(
+    $ch, [
+=======
+curl_setopt_array($ch, [
+>>>>>>> a0985ac6 (up)
+=======
+curl_setopt_array($ch, [
+>>>>>>> a0985ac6 (up)
+=======
+curl_setopt_array(
+    $ch, [
+>>>>>>> 15b740a3 (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
     CURLOPT_HTTPHEADER => $headers,
     CURLOPT_URL => $base_url.$addContact,
     CURLOPT_CUSTOMREQUEST => 'POST',
@@ -36,8 +59,31 @@ curl_setopt_array(
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_VERBOSE => true,
     CURLOPT_POSTFIELDS => $data,
+<<<<<<< HEAD
     ]
 );
+=======
+<<<<<<< HEAD
+    ]
+);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    ]
+);
+=======
+]);
+>>>>>>> a0985ac6 (up)
+=======
+]);
+>>>>>>> a0985ac6 (up)
+=======
+    ]
+);
+>>>>>>> 15b740a3 (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
 
 $response = curl_exec($ch);
 

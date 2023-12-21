@@ -53,22 +53,88 @@ echo $url_full.'<br/><br/><br/><br/><br/>'.$url_full1.'<br/><br/><br/>';
 die('aa');
 
 
+<<<<<<< HEAD
 curl_setopt_array(
     $curl, [
+=======
+<<<<<<< HEAD
+curl_setopt_array(
+    $curl, [
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+curl_setopt_array(
+    $curl, [
+=======
+curl_setopt_array($curl, [
+>>>>>>> a0985ac6 (up)
+=======
+curl_setopt_array($curl, [
+>>>>>>> a0985ac6 (up)
+=======
+curl_setopt_array(
+    $curl, [
+>>>>>>> 15b740a3 (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
     CURLOPT_URL => $url_full,
     CURLOPT_RETURNTRANSFER => true,
     //CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
     CURLOPT_TIMEOUT => 30,
+<<<<<<< HEAD
     // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+=======
+<<<<<<< HEAD
+    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+=======
+   // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+>>>>>>> a0985ac6 (up)
+=======
+   // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+>>>>>>> a0985ac6 (up)
+=======
+    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+>>>>>>> 15b740a3 (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
     CURLOPT_CUSTOMREQUEST => 'GET',
     CURLOPT_VERBOSE => true,
     //CURLOPT_POST => true,
     CURLOPT_HTTPGET=>true,
     //CURLOPT_POSTFIELDS => $data,
     CURLOPT_HTTPHEADER => $headers,
+<<<<<<< HEAD
     ]
 );
+=======
+<<<<<<< HEAD
+    ]
+);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    ]
+);
+=======
+]);
+>>>>>>> a0985ac6 (up)
+=======
+]);
+>>>>>>> a0985ac6 (up)
+=======
+    ]
+);
+>>>>>>> 15b740a3 (.)
+>>>>>>> 5d5b6964 (.)
+>>>>>>> 37b0029 (first)
 
 $response = curl_exec($curl);
 $err = curl_error($curl);
