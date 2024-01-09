@@ -18,3 +18,7 @@ E: Package 'php-pdo-sqlite' has no installation candidate
 sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap,pdo-sqlite,sqlite3} php-{json,xml,zip,common,tokenizer,mysql,sqlite3} libapache2-mod-php8* 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2bf991e (first)

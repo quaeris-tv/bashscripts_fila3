@@ -65,3 +65,7 @@ git config --global pack.threads "1"
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2bf991e (first)

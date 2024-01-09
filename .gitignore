@@ -3,6 +3,7 @@
 .fuse_hidden**.lock
 *.lock
 package-lock.json
+<<<<<<< HEAD
 /vendor
 node_modules
 /docs/vendor
@@ -12,3 +13,8 @@ node_modules
 .git-blame-ignore-revs
 .php-cs-fixer.cache
 .git-rewrite/
+=======
+.php-cs-fixer.cache
+*.phar
+*.cache
+>>>>>>> 2bf991e (first)

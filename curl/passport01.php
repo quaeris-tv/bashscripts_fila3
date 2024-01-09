@@ -77,4 +77,8 @@ if ($err) {
     echo 'cURL Error #:'.$err;
 } else {
     echo $response;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2bf991e (first)

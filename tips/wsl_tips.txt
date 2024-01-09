@@ -107,3 +107,7 @@ $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Ubuntu", "User")
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2bf991e (first)
