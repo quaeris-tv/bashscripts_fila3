@@ -1,6 +1,24 @@
+<<<<<<< HEAD
 git submodule foreach $( readlink -f -- "$0"; );
 git fsck --full --unreachable
 git filter-branch -- --all
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+git submodule foreach $( readlink -f -- "$0"; );
+git fsck --full --unreachable
+git filter-branch -- --all
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+git submodule foreach $( readlink -f -- "$0"; );
+git fsck --full --unreachable
+git filter-branch -- --all
+>>>>>>> dev
+>>>>>>> c219998 (first)
 git reflog expire --all --expire=now
 git pack-refs --all --prune
 git repack -A -d
@@ -11,9 +29,65 @@ git gc --aggressive --prune=now --force
 echo "-------- END PRUNE[$(pwd)] ----------";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1283aaa (first)
 =======
 
 >>>>>>> dd31420 (first)
+=======
+=======
+git submodule foreach 'git submodule foreach git fsck --full --unreachable'
+git submodule foreach git fsck --full --unreachable
+=======
+git submodule foreach $( readlink -f -- "$0"; );
+>>>>>>> a424c32 (.)
+git fsck --full --unreachable
+git filter-branch -- --all
+git gc --auto --aggressive
+git gc --aggressive --prune=now --force
+=======
+>>>>>>> 2893209 (Optimize git pruning and garbage collection)
+git reflog expire --all --expire=now
+git pack-refs --all --prune
+git repack -A -d
+git prune
+git gc --auto --aggressive
+git gc --aggressive --prune=now --force
+#read -p "Press [Enter] key to exit..."
+<<<<<<< HEAD
+echo '-------- END PRUNE ----------';
+>>>>>>> a176205 (first)
+=======
+echo "-------- END PRUNE[$(pwd)] ----------";
+>>>>>>> a424c32 (.)
+=======
+>>>>>>> dev
+=======
+git submodule foreach 'git submodule foreach git fsck --full --unreachable'
+git submodule foreach git fsck --full --unreachable
+=======
+git submodule foreach $( readlink -f -- "$0"; );
+>>>>>>> a424c32 (.)
+git fsck --full --unreachable
+git filter-branch -- --all
+git gc --auto --aggressive
+git gc --aggressive --prune=now --force
+=======
+>>>>>>> 2893209 (Optimize git pruning and garbage collection)
+git reflog expire --all --expire=now
+git pack-refs --all --prune
+git repack -A -d
+git prune
+git gc --auto --aggressive
+git gc --aggressive --prune=now --force
+#read -p "Press [Enter] key to exit..."
+<<<<<<< HEAD
+echo '-------- END PRUNE ----------';
+>>>>>>> a176205 (first)
+=======
+echo "-------- END PRUNE[$(pwd)] ----------";
+>>>>>>> a424c32 (.)
+
+>>>>>>> c219998 (first)

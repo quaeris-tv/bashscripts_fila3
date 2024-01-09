@@ -13,10 +13,13 @@ rm package-lock.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dev
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> c219998 (first)
 =======
 >>>>>>> dev
 php -d memory_limit=-1 composer.phar require -W  doctrine/dbal
@@ -45,6 +48,9 @@ php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c219998 (first)
 =======
 php -d memory_limit=-1 composer.phar require -W  doctrine/dbal 
 =======
@@ -111,10 +117,13 @@ php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money
 =======
 php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
+<<<<<<< HEAD
 =======
 >>>>>>> b3a67b2 (first)
 =======
 >>>>>>> dev
+=======
+>>>>>>> c219998 (first)
 // per le immagini
 php -d memory_limit=-1 composer.phar require -W  intervention/image
 // per immagini e fa anche un percorso che gestisce le immagini in dimensione
@@ -127,10 +136,13 @@ php -d memory_limit=-1 composer.phar require -W  intervention/imagecache
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dev
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> c219998 (first)
 =======
 >>>>>>> dev
 php -d memory_limit=-1 composer.phar require -W  spatie/laravel-cookie-consent
@@ -143,6 +155,9 @@ php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c219998 (first)
 =======
 php -d memory_limit=-1 composer.phar require -W  spatie/laravel-cookie-consent 
 =======
@@ -177,10 +192,13 @@ php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler
 =======
 php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
+<<<<<<< HEAD
 =======
 >>>>>>> b3a67b2 (first)
 =======
 >>>>>>> dev
+=======
+>>>>>>> c219998 (first)
 // per le chiamate curl
 php -d memory_limit=-1 composer.phar require -W  guzzlehttp/guzzle
 #per gestire modello home, themes confs
@@ -198,10 +216,13 @@ php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-ide-helpe
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dev
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> c219998 (first)
 =======
 >>>>>>> dev
 php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
@@ -213,6 +234,9 @@ php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c219998 (first)
 =======
 =======
 >>>>>>> a176205 (first)
@@ -244,10 +268,13 @@ php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 #GLOBAL
 #cs fixer
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
+<<<<<<< HEAD
 =======
 >>>>>>> b3a67b2 (first)
 =======
 >>>>>>> dev
+=======
+>>>>>>> c219998 (first)
 php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
 #laravel installer
 php -d memory_limit=-1 composer.phar global require laravel/installer

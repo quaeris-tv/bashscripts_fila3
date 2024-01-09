@@ -14,15 +14,69 @@ git config --global user.name "marco xot"
 git config --global user.email marco.sottana@gmail.com
 git config --global credential.helper "store --file ~/.gitcredential"
 
+<<<<<<< HEAD
 //-----
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5ff86c0 (up)
+=======
+>>>>>>> dev
+=======
+>>>>>>> 5ff86c0 (up)
+git config --global core.preloadindex true
+git config --global core.fscache true
+git config --global gc.auto 256
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+//-----
+=======
+=======
+>>>>>>> a176205 (first)
+//-----
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c9c0b6e (up)
+=======
+>>>>>>> 2707c4c (rebase)
+=======
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+
+
+<<<<<<< HEAD
+>>>>>>> a176205 (first)
+=======
+//-----
+>>>>>>> 5ff86c0 (up)
+=======
+//-----
+>>>>>>> dev
+=======
+>>>>>>> a176205 (first)
+=======
+//-----
+>>>>>>> 5ff86c0 (up)
+>>>>>>> c219998 (first)
 git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
 
 //----------
 
 git submodule sync 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 git fsck --lost-found
@@ -32,3 +86,364 @@ git fsck --lost-found
 =======
 git fsck --lost-found
 >>>>>>> dd31420 (first)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+>>>>>>> a176205 (first)
+=======
+>>>>>>> 5ff86c0 (up)
+=======
+>>>>>>> dev
+=======
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+>>>>>>> a176205 (first)
+=======
+>>>>>>> 5ff86c0 (up)
+git fsck --lost-found
+
+//--- fix
+/bin/bash^M: bad interpreter: No such file or directory
+
+sed -i -e 's/\r$//' nomefile.sh
+
+//---
+
+git merge master --strategy-option theirs
+git fetch && git reset --hard origin/master
+
+//----
+
+git config --global user.name "marco xot"
+git config --global user.email marco.sottana@gmail.com
+git config --global credential.helper "store --file ~/.gitcredential"
+=======
+git config --global credential.https://github.com.username marco76tv
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+git config --global credential.https://github.com.username marco76tv
+
+git config --global credential.https://github.com.username marco76tv
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a176205 (first)
+>>>>>>> 28069fa (first)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2707c4c (rebase)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 5ff86c0 (up)
+git config --global credential.https://github.com.username marco76tv
+
+git config --global credential.https://github.com.username marco76tv
+<<<<<<< HEAD
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+>>>>>>> a176205 (first)
+=======
+>>>>>>> 5ff86c0 (up)
+=======
+git config --global credential.https://github.com.username marco76tv
+
+git config --global credential.https://github.com.username marco76tv
+>>>>>>> dev
+=======
+=======
+>>>>>>> 5ff86c0 (up)
+git config --global credential.https://github.com.username marco76tv
+
+git config --global credential.https://github.com.username marco76tv
+<<<<<<< HEAD
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+>>>>>>> a176205 (first)
+=======
+>>>>>>> 5ff86c0 (up)
+
+git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
+
+//----------
+
+git submodule sync 
+
+git fsck --lost-found
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a176205 (first)
+=======
+>>>>>>> 9db6ede (.)
+=======
+=======
+>>>>>>> 2707c4c (rebase)
+
+=======
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+//--- fix
+<<<<<<< HEAD
+>>>>>>> a176205 (first)
+=======
+>>>>>>> 5ff86c0 (up)
+=======
+>>>>>>> dev
+=======
+>>>>>>> a176205 (first)
+=======
+>>>>>>> 5ff86c0 (up)
+/bin/bash^M: bad interpreter: No such file or directory
+
+sed -i -e 's/\r$//' nomefile.sh
+
+//---
+
+git merge master --strategy-option theirs
+git fetch && git reset --hard origin/master
+
+//----
+
+git config --global user.name "marco xot"
+git config --global user.email marco.sottana@gmail.com
+git config --global credential.helper "store --file ~/.gitcredential"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+git config --global credential.https://github.com.username marco76tv
+git config --global credential.https://github.com.username marco76tv
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2707c4c (rebase)
+=======
+=======
+>>>>>>> 5ff86c0 (up)
+git config --global credential.https://github.com.username marco76tv
+git config --global credential.https://github.com.username marco76tv
+<<<<<<< HEAD
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+>>>>>>> a176205 (first)
+=======
+>>>>>>> 5ff86c0 (up)
+=======
+git config --global credential.https://github.com.username marco76tv
+git config --global credential.https://github.com.username marco76tv
+>>>>>>> dev
+=======
+=======
+>>>>>>> 2707c4c (rebase)
+=======
+=======
+>>>>>>> 5ff86c0 (up)
+git config --global credential.https://github.com.username marco76tv
+git config --global credential.https://github.com.username marco76tv
+<<<<<<< HEAD
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+>>>>>>> a176205 (first)
+=======
+>>>>>>> 5ff86c0 (up)
+
+//-----
+! [remote rejected]   master -> master (shallow update not allowed)
+
+git rebase --interactive --root
+git commit --amend --no-edit
+git rebase --continue
+//--------------------------
+
+
+
+git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+git submodule sync 
+
+git fsck --lost-found
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a176205 (first)
+//----------
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 627b089 (.)
+>>>>>>> b5a81e5 (.)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c9c0b6e (up)
+=======
+>>>>>>> 2707c4c (rebase)
+=======
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+
+git submodule sync 
+
+git fsck --lost-found
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2707c4c (rebase)
+>>>>>>> 28069fa (first)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 28069fa (first)
+>>>>>>> 627b089 (.)
+>>>>>>> b5a81e5 (.)
+<<<<<<< HEAD
+=======
+>>>>>>> 9db6ede (.)
+=======
+>>>>>>> 28069fa (first)
+>>>>>>> c9c0b6e (up)
+=======
+>>>>>>> 2707c4c (rebase)
+=======
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+<<<<<<< HEAD
+>>>>>>> a176205 (first)
+=======
+git submodule sync 
+
+git fsck --lost-found
+>>>>>>> 5ff86c0 (up)
+=======
+git submodule sync 
+
+git fsck --lost-found
+>>>>>>> dev
+=======
+>>>>>>> a176205 (first)
+=======
+git submodule sync 
+
+git fsck --lost-found
+>>>>>>> 5ff86c0 (up)
+git lfs fsck
+git config  lfs.allowincompletepush true
+
+//-----------------------------------------------------------
+
+git config --global core.preloadindex true
+git config --global core.fscache true
+git config --global gc.auto 256
+git config --global status.submoduleSummary true
+git config --global core.ignoreStat true
+git config --global pack.sparse true
+
+//--------------
+
+
+
+git submodule sync 
+
+
+$  git branch --set-upstream-to=origin/master master
+fatal: cannot set up tracking information; starting point 'origin/master' is not a branch
+--- fix
+git remote update
+git remote set-branches --add origin master
+
+
+
+
+
+
+git credential-manager configure
+git config --global credential.credentialStore secretservice
+
+
+
+error: could not update refs/heads/master
+
+-------------------------
+fatal: cannot set up tracking information; starting point 'origin/master' is not a branch
+sol:
+git remote update
+git remote set-branches --add origin master
+git branch --set-upstream-to=origin/master  master
+git rebase
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+git fsck --lost-found
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a176205 (first)
+<<<<<<< HEAD
+=======
+>>>>>>> 2707c4c (rebase)
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 28069fa (first)
+>>>>>>> 627b089 (.)
+<<<<<<< HEAD
+=======
+git fsck --lost-found
+>>>>>>> 6e93839 (merged stuff)
+=======
+git fsck --lost-found
+>>>>>>> 763693e (merged stuff)
+=======
+>>>>>>> 9db6ede (.)
+=======
+>>>>>>> 2707c4c (rebase)
+=======
+git fsck --lost-found
+>>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
+<<<<<<< HEAD
+>>>>>>> a176205 (first)
+=======
+git fsck --lost-found
+>>>>>>> 5ff86c0 (up)
+=======
+git fsck --lost-found
+>>>>>>> dev
+=======
+>>>>>>> a176205 (first)
+=======
+git fsck --lost-found
+>>>>>>> 5ff86c0 (up)
+>>>>>>> c219998 (first)

@@ -6,7 +6,31 @@ ini_set('display_errors', true);
 
 $base_url = 'https://multi.local';
 $login = '/api/user/login';
+<<<<<<< HEAD
 $addContact = '/api/quaeris/add-contact';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+$addContact = '/api/add-contact';
+=======
+$addContact = '/api/quaeris/add-contact';
+>>>>>>> a176205 (first)
+=======
+$addContact = '/api/add-contact';
+>>>>>>> f924de7 (Refactor API endpoint for adding contact)
+=======
+$addContact = '/api/add-contact';
+>>>>>>> dev
+=======
+$addContact = '/api/quaeris/add-contact';
+>>>>>>> a176205 (first)
+=======
+$addContact = '/api/add-contact';
+>>>>>>> f924de7 (Refactor API endpoint for adding contact)
+>>>>>>> c219998 (first)
 $email = '';
 $pass = '';
 
@@ -20,15 +44,41 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 $response = curl_exec($ch);
 $json = json_decode($response);
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a176205 (first)
+=======
+>>>>>>> f924de7 (Refactor API endpoint for adding contact)
+=======
+>>>>>>> dev
+=======
+
+
+>>>>>>> a176205 (first)
+=======
+>>>>>>> f924de7 (Refactor API endpoint for adding contact)
+>>>>>>> c219998 (first)
 $headers = [
     // 'Content-Type: application/json',  //error
     'Authorization: Bearer '.$json->token,
 ];
 
+<<<<<<< HEAD
 curl_setopt_array(
     $ch, [
+=======
+curl_setopt_array($ch, [
+>>>>>>> c219998 (first)
     CURLOPT_HTTPHEADER => $headers,
     CURLOPT_URL => $base_url.$addContact,
     CURLOPT_CUSTOMREQUEST => 'POST',
@@ -36,8 +86,12 @@ curl_setopt_array(
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_VERBOSE => true,
     CURLOPT_POSTFIELDS => $data,
+<<<<<<< HEAD
     ]
 );
+=======
+]);
+>>>>>>> c219998 (first)
 
 $response = curl_exec($ch);
 
@@ -63,6 +117,7 @@ curl_close($ch);
   DELETE          oauth/tokens/{token_id} passport.tokens.destroy › Laravel\Passport › AuthorizedAccessTokenControlle…
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   */
 =======
   */
@@ -70,3 +125,6 @@ curl_close($ch);
 =======
   */
 >>>>>>> dd31420 (first)
+=======
+  */
+>>>>>>> c219998 (first)

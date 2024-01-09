@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
@@ -7,6 +8,11 @@ https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10
 >>>>>>> 1283aaa (first)
 =======
 >>>>>>> dd31420 (first)
+=======
+Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
+https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
+
+>>>>>>> c219998 (first)
 Nota Bene: prima dell'installazione, 
 controllare in "Gestione Attività" -> "prestazioni" -> Virtualizzazione 
 sia abilitato.
@@ -27,11 +33,15 @@ Add-AppxPackage .\app_name.appx
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 =======
 >>>>>>> 1283aaa (first)
 =======
 >>>>>>> dd31420 (first)
+=======
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+>>>>>>> c219998 (first)
 
 
 
@@ -44,15 +54,21 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c219998 (first)
 ----------------------------------------------------------
 entrare con root
 wsl -u root
 
 PS C:\Windows\System32> ubuntu config --default-user marco
+<<<<<<< HEAD
 =======
 >>>>>>> 1283aaa (first)
 =======
 >>>>>>> dd31420 (first)
+=======
+>>>>>>> c219998 (first)
 
 --------------------------------------------------
 # Import the public repository GPG keys
@@ -76,6 +92,9 @@ pwsh
 wsl hostname -I
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c219998 (first)
 wsl hostname -I
 
  PS C:\Users\adrien> wsl -l -v
@@ -125,9 +144,13 @@ cd ./Ubuntu
 
 $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Ubuntu", "User")
+<<<<<<< HEAD
 =======
 >>>>>>> 1283aaa (first)
 =======
 >>>>>>> dd31420 (first)
+=======
+
+>>>>>>> c219998 (first)
 
 
