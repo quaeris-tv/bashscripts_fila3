@@ -1,35 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 sudo apt install git npm aptitude 
 
-=======
->>>>>>> 1283aaa (first)
-=======
->>>>>>> dd31420 (first)
-=======
-sudo apt install git npm aptitude 
-
->>>>>>> c219998 (first)
-=======
-sudo apt install git npm aptitude 
-
->>>>>>> b3a67b2 (first)
 switch php version
 sudo update-alternatives --config php
 apt install libapache2-mod-php7.4
 sudo a2dismod php7.4
 sudo a2enmod php8.0
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c219998 (first)
-=======
->>>>>>> b3a67b2 (first)
 
 sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap,pdo-sqlite,sqlite3,dom} php-{json,xml,zip,common,tokenizer,mysql,sqlite3} libapache2-mod-php8* 
 
@@ -42,15 +19,3 @@ E: Package 'php-pdo-sqlite' has no installation candidate
 sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap,pdo-sqlite,sqlite3} php-{json,xml,zip,common,tokenizer,mysql,sqlite3} libapache2-mod-php8* 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 1283aaa (first)
-=======
->>>>>>> dd31420 (first)
-=======
-
->>>>>>> c219998 (first)
-=======
-
->>>>>>> b3a67b2 (first)

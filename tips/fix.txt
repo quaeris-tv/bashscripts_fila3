@@ -1,14 +1,5 @@
 
 /bin/bash^M: bad interpreter: No such file or directory
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> dd31420 (first)
-
-
 sed -i -e 's/\r$//' nomefile.sh
 
 
@@ -24,14 +15,7 @@ git submodule foreach "mv docs/.git docs/a.git && git rm --cached docs && git pu
 
 
 /bin/bash^M: bad interpreter: No such file or directory
-<<<<<<< HEAD
->>>>>>> 1283aaa (first)
-=======
->>>>>>> dd31420 (first)
-=======
->>>>>>> c219998 (first)
-=======
->>>>>>> b3a67b2 (first)
+
 /bin/sh^M: interprete errato: File o directory non esistente
 
 
@@ -69,24 +53,7 @@ git submodule foreach git symbolic-ref HEAD refs/heads/master
 
 
 --- aggiungere una repository push per fare push in piu' repository contemporaneamente
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-git remote set-url --add --push origin https://bitbucket.org/qweb_xot/noconsole.git
-=======
-git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.git
->>>>>>> 1283aaa (first)
-=======
-git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.git
->>>>>>> dd31420 (first)
-=======
-git remote set-url --add --push origin https://bitbucket.org/qweb_xot/noconsole.git
->>>>>>> c219998 (first)
-=======
-git remote set-url --add --push origin https://bitbucket.org/qweb_xot/noconsole.git
->>>>>>> b3a67b2 (first)
-poi riaggiungere la sua originale
+goi riaggiungere la sua originale
 git remote set-url --add --push origin https://github.com/laraxot/noconsole.git
 poi controllare con 
 git remote -v
@@ -106,30 +73,3 @@ thread: Resource temporarily unavailable
 git config --global pack.threads "1"
 
 
-
-
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 1283aaa (first)
-=======
-
-
-
->>>>>>> dd31420 (first)
-=======
-
->>>>>>> c219998 (first)
-=======
-
->>>>>>> b3a67b2 (first)
