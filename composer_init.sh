@@ -7,63 +7,34 @@ rm composer.lock
 rm package-lock.json
 
 ############## priority 1 ####################
-php -d memory_limit=-1 composer.phar require -W thecodingmachine/safe
-php -d memory_limit=-1 composer.phar require -W filament/filament
-php -d memory_limit=-1 composer.phar require -W nwidart/laravel-modules
-php -d memory_limit=-1 composer.phar require -W savannabits/filament-modules:dev-main
-php -d memory_limit=-1 composer.phar require -W calebporzio/sushi
-#non lo usiamo
-#php -d memory_limit=-1 composer.phar require -W staudenmeir/eloquent-has-many-deep
-#gia' presente in filament
-#php -d memory_limit=-1 composer.phar require -W spatie/laravel-livewire-wizard
-php -d memory_limit=-1 composer.phar require -W cknow/laravel-money
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs coolsam/modules
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs filament/filament
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs konnco/filament-import
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs thecodingmachine/safe
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs laravel/passport
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs socialiteproviders/auth0
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs jenssegers/agent
+php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs owenvoke/blade-fontawesome
+php artisan icons:cache
 
-################ LARAVEL ########################
+############### SPATIE #######################
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs spatie/laravel-cookie-consent
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs spatie/laravel-permission
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs spatie/laravel-queueable-action
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs spatie/laravel-data
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs spatie/laravel-tags
+#php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs spatie/laravel-event-sourcing
 
-# per il login c'e' gia' filament
-#php -d memory_limit=-1 composer.phar require -W  laravel/ui
-#per gestire api
-php -d memory_limit=-1 composer.phar require -W laravel/passport
-#doctrine mi serve per le funzioni in piu' e per le migrazioni
-php -d memory_limit=-1 composer.phar require -W doctrine/dbal
-#scout per la ricerca, forse da sostituire con query builder di spatie
-#php -d memory_limit=-1 composer.phar require -W  laravel/scout
-# per avere gli errori in slack, non lo utilizziamo da un po
-#php -d memory_limit=-1 composer.phar require -W  laravel/slack-notification-channel
-# per fare login da facebook, google etc
-php -d memory_limit=-1 composer.phar require -W laravel/socialite
-# per le chiamate curl
-php -d memory_limit=-1 composer.phar require -W guzzlehttp/guzzle
 
-############  SPATIE ######################
+########### dev #######################
+#php -d memory_limit=-1 composer.phar require -W --dev --ignore-platform-reqs thecodingmachine/phpstan-safe-rule
+#php -d memory_limit=-1 composer.phar require -W --dev --ignore-platform-reqs barryvdh/laravel-debugbar
+#php -d memory_limit=-1 composer.phar require -W --dev --ignore-platform-reqs barryvdh/laravel-ide-helper
+#php -d memory_limit=-1 composer.phar require -W --dev --ignore-platform-reqs larastan/larastan
+#php -d memory_limit=-1 composer.phar require -W --dev --ignore-platform-reqs orchestra/testbench
 
-#per gestire cookie
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-cookie-consent
-#php -d memory_limit=-1 composer.phar require -W spatie/laravel-dashboard
-#php -d memory_limit=-1 composer.phar require -W spatie/laravel-dashboard-time-weather-tile
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-permission
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-queueable-action
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-sitemap
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-sluggable
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-data
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-database-mail-templates
-#modelservice andra sostituito con modelinfo
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-model-info
-#i filtri su rows
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-query-builder
-#status evoluti
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-model-states
-#per gestire le immagini
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-medialibrary
-#per gestire i tags
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-tags
-#per gestire gli status
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-model-status
-#da problemi con pest
-#php -d memory_limit=-1 composer.phar require -W spatie/once
-php -d memory_limit=-1 composer.phar require -W spatie/eloquent-sortable
-php -d memory_limit=-1 composer.phar require -W spatie/laravel-translatable
 
+<<<<<<< HEAD
 ########### OTHERS ########################
 
 # per gestire i form filament
@@ -172,3 +143,5 @@ php -d memory_limit=-1 composer.phar require --dev barryvdh/laravel-ide-helper
 php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
 #laravel installer
 php -d memory_limit=-1 composer.phar global require laravel/installer
+=======
+>>>>>>> dev
