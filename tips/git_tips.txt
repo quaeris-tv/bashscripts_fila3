@@ -24,7 +24,11 @@ git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anch
 git submodule sync 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 git fsck --lost-found
 =======
 git fsck --lost-found
 >>>>>>> 1283aaa (first)
+=======
+git fsck --lost-found
+>>>>>>> dd31420 (first)

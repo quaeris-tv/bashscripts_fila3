@@ -18,6 +18,10 @@ puttygen per convertire da id_rsa a id_rsa.ppk
 
 eval "$(ssh-agent -s)" && ssh-add
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 1283aaa (first)
+=======
+
+>>>>>>> dd31420 (first)

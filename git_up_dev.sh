@@ -14,6 +14,7 @@ git merge dev
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #git merge master 
 =======
 git merge master 
@@ -27,11 +28,26 @@ git merge master
 =======
 #git merge master 
 >>>>>>> fcc9fa2 (rebase 1/2)
+=======
+=======
+>>>>>>> 632fcf11 (Add git_up_dev.sh script for handling dev branch)
+<<<<<<< HEAD
+git merge master 
+=======
+>>>>>>> d05b8561 (Add git_up_dev.sh script for handling dev branch)
+<<<<<<< HEAD
+>>>>>>> a93b63c7 (Add git_up_dev.sh script for handling dev branch)
+=======
+=======
+>>>>>>> d05b8561 (Add git_up_dev.sh script for handling dev branch)
+>>>>>>> 632fcf11 (Add git_up_dev.sh script for handling dev branch)
+>>>>>>> dd31420 (first)
 echo "-------- END BRANCH[$(pwd)] ----------";
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout dev --
 git pull origin dev --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 #read -p "Press [Enter] key to exit..."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 echo "-------- END PULL[$(pwd)] ----------";
@@ -53,3 +69,6 @@ echo "-------- END PULL[$(pwd)] ----------";
 =======
 echo "-------- END PULL[$(pwd)] ----------";
 >>>>>>> fcc9fa2 (rebase 1/2)
+=======
+echo "-------- END PULL[$(pwd)] ----------";
+>>>>>>> dd31420 (first)

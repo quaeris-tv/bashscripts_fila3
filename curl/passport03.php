@@ -62,7 +62,11 @@ curl_close($ch);
   GET|HEAD        oauth/tokens .... passport.tokens.index › Laravel\Passport › AuthorizedAccessTokenController@forUser
   DELETE          oauth/tokens/{token_id} passport.tokens.destroy › Laravel\Passport › AuthorizedAccessTokenControlle…
 <<<<<<< HEAD
+<<<<<<< HEAD
   */
 =======
   */
 >>>>>>> 1283aaa (first)
+=======
+  */
+>>>>>>> dd31420 (first)
