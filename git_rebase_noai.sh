@@ -3,6 +3,7 @@ for(( i=1; i<=$1; i++ ))
 do
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git add -A && git commit -am "rebase $i" && git rebase --continue || git rebase --continue || git push -u --force || echo "loop: $i"
 #git add -A && aicommits && git rebase --continue || git rebase --continue || git push -u --force || echo "loop: $i"
 done 
@@ -16,3 +17,8 @@ git add -A && git commit -am "rebase $i" && git rebase --continue || git rebase 
 #git add -A && aicommits && git rebase --continue || git rebase --continue || git push -u --force || echo "loop: $i"
 done 
 >>>>>>> c219998 (first)
+=======
+git add -A && git commit -am "rebase $i" && git rebase --continue || git rebase --continue || git push -u --force || echo "loop: $i"
+#git add -A && aicommits && git rebase --continue || git rebase --continue || git push -u --force || echo "loop: $i"
+done 
+>>>>>>> b3a67b2 (first)

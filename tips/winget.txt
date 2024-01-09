@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 winget install -e --id TheDocumentFoundation.LibreOffice
@@ -17,3 +18,8 @@ winget install -e --id SublimeHQ.SublimeText.4
 
 winget install -e --id TheDocumentFoundation.LibreOffice
 >>>>>>> c219998 (first)
+=======
+
+
+winget install -e --id TheDocumentFoundation.LibreOffice
+>>>>>>> b3a67b2 (first)

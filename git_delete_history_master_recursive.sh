@@ -10,6 +10,7 @@ git push -uf origin master  # Force push master branch to github
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 git push -u origin master  # Force push master branch to github
 <<<<<<< HEAD
@@ -23,4 +24,6 @@ git pull origin master
 >>>>>>> dd31420 (first)
 =======
 >>>>>>> c219998 (first)
+=======
+>>>>>>> b3a67b2 (first)
 git gc --aggressive --prune=all     # remove the old files

@@ -11,6 +11,7 @@ git merge dev
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #git merge master 
 =======
 <<<<<<< HEAD
@@ -62,11 +63,15 @@ git merge master
 #git merge master 
 >>>>>>> b3a67b2 (first)
 >>>>>>> eee2a47 (.)
+=======
+#git merge master 
+>>>>>>> b3a67b2 (first)
 echo "-------- END BRANCH[$(pwd)] ----------";
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout dev --
 git pull origin dev --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 #read -p "Press [Enter] key to exit..."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,3 +101,6 @@ echo "-------- END PULL[$(pwd)] ----------";
 =======
 echo "-------- END PULL[$(pwd)] ----------";
 >>>>>>> c219998 (first)
+=======
+echo "-------- END PULL[$(pwd)] ----------";
+>>>>>>> b3a67b2 (first)

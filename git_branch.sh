@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 git submodule foreach $( readlink -f -- "$0";)
 git branch --set-upstream-to=origin/master master
 git branch -u origin/master
@@ -32,10 +33,16 @@ git submodule foreach $( readlink -f -- "$0";)
 git branch --set-upstream-to=origin/master master
 git branch -u origin/master
 >>>>>>> b3a67b2 (first)
+=======
+git submodule foreach $( readlink -f -- "$0";)
+git branch --set-upstream-to=origin/master master
+git branch -u origin/master
+>>>>>>> b3a67b2 (first)
 git merge master
 git checkout master --
 #read -p "Press [Enter] key to exit..."
 echo "-------- END BRANCH[$(pwd)] ----------";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -103,3 +110,5 @@ echo "-------- END BRANCH[$(pwd)] ----------";
 =======
 >>>>>>> b3a67b2 (first)
 >>>>>>> eee2a47 (.)
+=======
+>>>>>>> b3a67b2 (first)
