@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 377ca21 (Update git initialization and pull scripts)
 =======
@@ -21,7 +22,12 @@
 >>>>>>> 377ca21 (Update git initialization and pull scripts)
 =======
 >>>>>>> 94fdcd0 (Update git initialization and pull scripts)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)
 git submodule foreach $( readlink -f -- "$0"; );
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout master --
@@ -44,6 +50,7 @@ echo "-------- END PULL [$(pwd)]----------";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 git submodule foreach $( readlink -f -- "$0";)
@@ -96,4 +103,9 @@ echo "-------- END PULL [$(pwd)]----------";
 >>>>>>> 377ca21 (Update git initialization and pull scripts)
 =======
 >>>>>>> 94fdcd0 (Update git initialization and pull scripts)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)

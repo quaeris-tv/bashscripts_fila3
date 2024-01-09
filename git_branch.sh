@@ -10,6 +10,7 @@ git branch -u origin/master
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git submodule foreach $( readlink -f -- "$0";)
 git branch --set-upstream-to=origin/master master
 git branch -u origin/master
@@ -26,10 +27,16 @@ git branch -u origin/master
 >>>>>>> dev
 =======
 >>>>>>> a6fcef9 (Update git branch and rebase scripts)
+=======
+git submodule foreach $( readlink -f -- "$0";)
+git branch --set-upstream-to=origin/master master
+git branch -u origin/master
+>>>>>>> b3a67b2 (first)
 git merge master
 git checkout master --
 #read -p "Press [Enter] key to exit..."
 echo "-------- END BRANCH[$(pwd)] ----------";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -90,4 +97,9 @@ echo '-------- END BRANCH ----------';
 =======
 echo "-------- END BRANCH[$(pwd)] ----------";
 >>>>>>> caec2df (Update git scripts and add directory information)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)

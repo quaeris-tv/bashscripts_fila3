@@ -5,13 +5,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> caec2df (Update git scripts and add directory information)
 =======
 >>>>>>> dev
 =======
 >>>>>>> caec2df (Update git scripts and add directory information)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)
 git submodule foreach $( readlink -f -- "$0";)
 git add --renormalize -A
 #git add -A && git commit -am 'up'  || git rebase --continue || echo '---------------------------empty'
@@ -29,6 +35,7 @@ echo "-------- END PUSH[$(pwd)] ----------";
 >>>>>>> dd31420 (first)
 =======
 echo "-------- END PUSH[$(pwd)] ----------";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,4 +71,9 @@ echo '-------- END PUSH ----------';
 >>>>>>> a176205 (first)
 =======
 >>>>>>> caec2df (Update git scripts and add directory information)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)

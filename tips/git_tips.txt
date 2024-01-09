@@ -24,17 +24,21 @@ git config --global credential.helper "store --file ~/.gitcredential"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5ff86c0 (up)
 =======
 >>>>>>> dev
 =======
 >>>>>>> 5ff86c0 (up)
+=======
+>>>>>>> b3a67b2 (first)
 git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,7 +73,13 @@ git config --global gc.auto 256
 =======
 //-----
 >>>>>>> 5ff86c0 (up)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+//-----
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)
 git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
 
 //----------
@@ -89,6 +99,7 @@ git fsck --lost-found
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +117,8 @@ git fsck --lost-found
 >>>>>>> a176205 (first)
 =======
 >>>>>>> 5ff86c0 (up)
+=======
+>>>>>>> b3a67b2 (first)
 git fsck --lost-found
 
 //--- fix
@@ -125,6 +138,7 @@ git config --global user.email marco.sottana@gmail.com
 git config --global credential.helper "store --file ~/.gitcredential"
 =======
 git config --global credential.https://github.com.username marco76tv
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,6 +184,11 @@ git config --global credential.https://github.com.username marco76tv
 >>>>>>> a176205 (first)
 =======
 >>>>>>> 5ff86c0 (up)
+=======
+git config --global credential.https://github.com.username marco76tv
+
+git config --global credential.https://github.com.username marco76tv
+>>>>>>> b3a67b2 (first)
 
 git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
 
@@ -178,6 +197,7 @@ git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anch
 git submodule sync 
 
 git fsck --lost-found
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,6 +229,8 @@ git fsck --lost-found
 >>>>>>> a176205 (first)
 =======
 >>>>>>> 5ff86c0 (up)
+=======
+>>>>>>> b3a67b2 (first)
 /bin/bash^M: bad interpreter: No such file or directory
 
 sed -i -e 's/\r$//' nomefile.sh
@@ -223,6 +245,7 @@ git fetch && git reset --hard origin/master
 git config --global user.name "marco xot"
 git config --global user.email marco.sottana@gmail.com
 git config --global credential.helper "store --file ~/.gitcredential"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -263,6 +286,10 @@ git config --global credential.https://github.com.username marco76tv
 >>>>>>> a176205 (first)
 =======
 >>>>>>> 5ff86c0 (up)
+=======
+git config --global credential.https://github.com.username marco76tv
+git config --global credential.https://github.com.username marco76tv
+>>>>>>> b3a67b2 (first)
 
 //-----
 ! [remote rejected]   master -> master (shallow update not allowed)
@@ -281,6 +308,7 @@ git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anch
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git submodule sync 
 
 git fsck --lost-found
@@ -353,6 +381,11 @@ git submodule sync
 
 git fsck --lost-found
 >>>>>>> 5ff86c0 (up)
+=======
+git submodule sync 
+
+git fsck --lost-found
+>>>>>>> b3a67b2 (first)
 git lfs fsck
 git config  lfs.allowincompletepush true
 
@@ -403,6 +436,7 @@ git rebase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git fsck --lost-found
 =======
 <<<<<<< HEAD
@@ -446,4 +480,10 @@ git fsck --lost-found
 =======
 git fsck --lost-found
 >>>>>>> 5ff86c0 (up)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+git fsck --lost-found
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)

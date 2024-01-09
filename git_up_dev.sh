@@ -10,6 +10,7 @@ git merge dev
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #git merge master 
 =======
 <<<<<<< HEAD
@@ -54,7 +55,13 @@ git merge master
 =======
 git merge master 
 >>>>>>> f9571bd (Add git_up_dev.sh script with necessary commands for updating the dev branch)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+#git merge master 
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)
 echo "-------- END BRANCH[$(pwd)] ----------";
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout dev --
