@@ -12,4 +12,8 @@ php -d memory_limit=-1 composer.phar global require -W friendsofphp/php-cs-fixer
 php -d memory_limit=-1 composer.phar global require -W phpro/grumphp
 #phpstan
 php -d memory_limit=-1 composer.phar global require -W --dev nunomaduro/larastan
+<<<<<<< HEAD
 php -d memory_limit=-1 composer.phar global require -W --dev phpstan/phpstan
+=======
+php -d memory_limit=-1 composer.phar global require -W --dev phpstan/phpstan
+>>>>>>> 1283aaa (first)

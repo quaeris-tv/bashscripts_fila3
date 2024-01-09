@@ -61,4 +61,8 @@ curl_close($ch);
   POST            oauth/token/refresh ... passport.token.refresh › Laravel\Passport › TransientTokenController@refresh
   GET|HEAD        oauth/tokens .... passport.tokens.index › Laravel\Passport › AuthorizedAccessTokenController@forUser
   DELETE          oauth/tokens/{token_id} passport.tokens.destroy › Laravel\Passport › AuthorizedAccessTokenControlle…
+<<<<<<< HEAD
   */
+=======
+  */
+>>>>>>> 1283aaa (first)

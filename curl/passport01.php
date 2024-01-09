@@ -53,20 +53,34 @@ echo $url_full.'<br/><br/><br/><br/><br/>'.$url_full1.'<br/><br/><br/>';
 die('aa');
 
 
+<<<<<<< HEAD
 curl_setopt_array($curl, [
+=======
+curl_setopt_array(
+    $curl, [
+>>>>>>> 1283aaa (first)
     CURLOPT_URL => $url_full,
     CURLOPT_RETURNTRANSFER => true,
     //CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
     CURLOPT_TIMEOUT => 30,
+<<<<<<< HEAD
    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+=======
+    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+>>>>>>> 1283aaa (first)
     CURLOPT_CUSTOMREQUEST => 'GET',
     CURLOPT_VERBOSE => true,
     //CURLOPT_POST => true,
     CURLOPT_HTTPGET=>true,
     //CURLOPT_POSTFIELDS => $data,
     CURLOPT_HTTPHEADER => $headers,
+<<<<<<< HEAD
 ]);
+=======
+    ]
+);
+>>>>>>> 1283aaa (first)
 
 $response = curl_exec($curl);
 $err = curl_error($curl);
@@ -77,4 +91,8 @@ if ($err) {
     echo 'cURL Error #:'.$err;
 } else {
     echo $response;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1283aaa (first)

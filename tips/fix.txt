@@ -1,5 +1,25 @@
 
 /bin/bash^M: bad interpreter: No such file or directory
+<<<<<<< HEAD
+=======
+
+
+sed -i -e 's/\r$//' nomefile.sh
+
+
+
+sed -i -e 's/\r$//' ./bashscripts/git_push.sh
+sed -i -e 's/\r$//' ./bashscripts/git_pull.sh
+sed -i -e 's/\r$//' ./bashscripts/git_branch.sh
+
+
+
+
+git submodule foreach "mv docs/.git docs/a.git && git rm --cached docs && git pull --rebase || git pull --rebase || echo '--no--' "
+
+
+/bin/bash^M: bad interpreter: No such file or directory
+>>>>>>> 1283aaa (first)
 /bin/sh^M: interprete errato: File o directory non esistente
 
 
@@ -37,7 +57,11 @@ git submodule foreach git symbolic-ref HEAD refs/heads/master
 
 
 --- aggiungere una repository push per fare push in piu' repository contemporaneamente
+<<<<<<< HEAD
 git remote set-url --add --push origin https://bitbucket.org/qweb_xot/noconsole.git
+=======
+git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.git
+>>>>>>> 1283aaa (first)
 poi riaggiungere la sua originale
 git remote set-url --add --push origin https://github.com/laraxot/noconsole.git
 poi controllare con 
@@ -65,3 +89,9 @@ git config --global pack.threads "1"
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 1283aaa (first)
