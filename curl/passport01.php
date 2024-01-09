@@ -78,7 +78,11 @@ if ($err) {
 } else {
     echo $response;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 2bf991e (first)
+=======
+}
+>>>>>>> 5f13fe2 (first)

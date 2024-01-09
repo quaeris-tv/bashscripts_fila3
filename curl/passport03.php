@@ -7,10 +7,14 @@ ini_set('display_errors', true);
 $base_url = 'https://multi.local';
 $login = '/api/user/login';
 <<<<<<< HEAD
+<<<<<<< HEAD
 $addContact = '/api/quaeris/add-contact';
 =======
 $addContact = '/api/add-contact';
 >>>>>>> 2bf991e (first)
+=======
+$addContact = '/api/add-contact';
+>>>>>>> 5f13fe2 (first)
 $email = '';
 $pass = '';
 
@@ -25,21 +29,28 @@ $response = curl_exec($ch);
 $json = json_decode($response);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 2bf991e (first)
+=======
+>>>>>>> 5f13fe2 (first)
 $headers = [
     // 'Content-Type: application/json',  //error
     'Authorization: Bearer '.$json->token,
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 curl_setopt_array(
     $ch, [
 =======
 curl_setopt_array($ch, [
 >>>>>>> 2bf991e (first)
+=======
+curl_setopt_array($ch, [
+>>>>>>> 5f13fe2 (first)
     CURLOPT_HTTPHEADER => $headers,
     CURLOPT_URL => $base_url.$addContact,
     CURLOPT_CUSTOMREQUEST => 'POST',
@@ -48,11 +59,15 @@ curl_setopt_array($ch, [
     CURLOPT_VERBOSE => true,
     CURLOPT_POSTFIELDS => $data,
 <<<<<<< HEAD
+<<<<<<< HEAD
     ]
 );
 =======
 ]);
 >>>>>>> 2bf991e (first)
+=======
+]);
+>>>>>>> 5f13fe2 (first)
 
 $response = curl_exec($ch);
 
@@ -77,7 +92,11 @@ curl_close($ch);
   GET|HEAD        oauth/tokens .... passport.tokens.index › Laravel\Passport › AuthorizedAccessTokenController@forUser
   DELETE          oauth/tokens/{token_id} passport.tokens.destroy › Laravel\Passport › AuthorizedAccessTokenControlle…
 <<<<<<< HEAD
+<<<<<<< HEAD
   */
 =======
   */
 >>>>>>> 2bf991e (first)
+=======
+  */
+>>>>>>> 5f13fe2 (first)

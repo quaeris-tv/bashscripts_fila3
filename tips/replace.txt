@@ -1,6 +1,7 @@
  //rinominare tutti i file di tipo PlutoInterface in PlutoContravy
  
 <<<<<<< HEAD
+<<<<<<< HEAD
  for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
 
  //--
@@ -11,3 +12,6 @@
 =======
  for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
 >>>>>>> 2bf991e (first)
+=======
+ for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
+>>>>>>> 5f13fe2 (first)

@@ -4,6 +4,7 @@
 *.lock
 package-lock.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 /vendor
 node_modules
 /docs/vendor
@@ -18,3 +19,8 @@ node_modules
 *.phar
 *.cache
 >>>>>>> 2bf991e (first)
+=======
+.php-cs-fixer.cache
+*.phar
+*.cache
+>>>>>>> 5f13fe2 (first)

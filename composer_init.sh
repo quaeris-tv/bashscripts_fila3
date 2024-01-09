@@ -8,6 +8,7 @@ rm package-lock.json
 
 ############## priority 1 ####################
 <<<<<<< HEAD
+<<<<<<< HEAD
 #php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs coolsam/modules
 #php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs filament/filament
 #php -d memory_limit=-1 composer.phar require -W --ignore-platform-reqs konnco/filament-import
@@ -36,6 +37,8 @@ php artisan icons:cache
 
 
 =======
+=======
+>>>>>>> 5f13fe2 (first)
 php -d memory_limit=-1 composer.phar require -W thecodingmachine/safe
 php -d memory_limit=-1 composer.phar require -W filament/filament
 php -d memory_limit=-1 composer.phar require -W nwidart/laravel-modules
@@ -160,4 +163,7 @@ php -d memory_limit=-1 composer.phar require --dev barryvdh/laravel-ide-helper
 php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
 #laravel installer
 php -d memory_limit=-1 composer.phar global require laravel/installer
+<<<<<<< HEAD
 >>>>>>> 2bf991e (first)
+=======
+>>>>>>> 5f13fe2 (first)

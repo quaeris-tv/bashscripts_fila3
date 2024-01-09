@@ -10,6 +10,10 @@ git remote set-branches --add origin master
 git push --recurse-submodules=on-demand
 git branch --set-upstream-to=origin/master master
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2bf991e (first)
+=======
+
+>>>>>>> 5f13fe2 (first)
