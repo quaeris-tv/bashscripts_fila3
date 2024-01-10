@@ -72,22 +72,3 @@ thread: Resource temporarily unavailable
 
 git config --global pack.threads "1"
 
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 2bf991e (first)
-=======
-
->>>>>>> 5f13fe2 (first)
->>>>>>> dev

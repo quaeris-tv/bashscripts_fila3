@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
@@ -108,13 +106,3 @@ cd ./Ubuntu
 $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Ubuntu", "User")
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 2bf991e (first)
-=======
-
->>>>>>> 5f13fe2 (first)
->>>>>>> dev
