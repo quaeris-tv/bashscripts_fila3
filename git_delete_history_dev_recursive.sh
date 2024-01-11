@@ -6,14 +6,5 @@ git commit -am "first"
 git branch -D dev  # Deletes the dev branch
 git branch -m dev  # Rename the current branch to dev
 git gc --aggressive --prune=all     # remove the old files
-<<<<<<< HEAD
 git push -uf origin dev  # Force push dev branch to github
-=======
-<<<<<<< HEAD
-git push -uf origin dev  # Force push dev branch to github
-=======
-git push -u origin dev  # Force push dev branch to github
-git pull origin dev 
->>>>>>> dev
->>>>>>> dev
 git gc --aggressive --prune=all     # remove the old files
