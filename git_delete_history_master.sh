@@ -1,4 +1,3 @@
-git submodule foreach $( readlink -f -- "$0";)
 git checkout --orphan newBranch
 git add --renormalize -A
 git add -A  # Add all files and commit them

@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
->>>>>>> 4f180474 (first)
-=======
->>>>>>> 7640735e (.)
->>>>>>> 5d5b6964 (.)
->>>>>>> 37b0029 (first)
+Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
+https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
+
 Nota Bene: prima dell'installazione, 
 controllare in "Gestione Attività" -> "prestazioni" -> Virtualizzazione 
 sia abilitato.
@@ -31,19 +22,8 @@ curl.exe -L -o ubuntu-2004.appx https://aka.ms/wslubuntu2004
 
 Add-AppxPackage .\app_name.appx
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
->>>>>>> 4f180474 (first)
-=======
->>>>>>> 7640735e (.)
->>>>>>> 5d5b6964 (.)
->>>>>>> 37b0029 (first)
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 
 
@@ -54,24 +34,11 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ----------------------------------------------------------
 entrare con root
 wsl -u root
 
 PS C:\Windows\System32> ubuntu config --default-user marco
->>>>>>> 4f180474 (first)
-=======
->>>>>>> 7640735e (.)
->>>>>>> 5d5b6964 (.)
->>>>>>> 37b0029 (first)
-
 --------------------------------------------------
 # Import the public repository GPG keys
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
@@ -92,13 +59,6 @@ pwsh
 
 //-- per sapere ip
 wsl hostname -I
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 wsl hostname -I
 
  PS C:\Users\adrien> wsl -l -v
@@ -148,11 +108,4 @@ cd ./Ubuntu
 
 $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Ubuntu", "User")
-
->>>>>>> 4f180474 (first)
-=======
->>>>>>> 7640735e (.)
->>>>>>> 5d5b6964 (.)
->>>>>>> 37b0029 (first)
-
 
