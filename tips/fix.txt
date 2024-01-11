@@ -1,15 +1,5 @@
 
 /bin/bash^M: bad interpreter: No such file or directory
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5d5b6964 (.)
->>>>>>> 37b0029 (first)
-
-
 sed -i -e 's/\r$//' nomefile.sh
 
 
@@ -23,46 +13,22 @@ sed -i -e 's/\r$//' ./bashscripts/git_branch.sh
 
 git submodule foreach "mv docs/.git docs/a.git && git rm --cached docs && git pull --rebase || git pull --rebase || echo '--no--' "
 
-<<<<<<< HEAD
 
 /bin/bash^M: bad interpreter: No such file or directory
 /bin/sh^M: interprete errato: File o directory non esistente
-=======
-<<<<<<< HEAD
 
 /bin/bash^M: bad interpreter: No such file or directory
 /bin/sh^M: interprete errato: File o directory non esistente
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-/bin/bash^M: bad interpreter: No such file or directory
-=======
->>>>>>> 4f180474 (first)
-/bin/sh^M: interprete errato: File o directory non esistente
-=======
->>>>>>> 7640735e (.)
-=======
 
 /bin/bash^M: bad interpreter: No such file or directory
 /bin/sh^M: interprete errato: File o directory non esistente
->>>>>>> 579efe10 (.)
->>>>>>> 5d5b6964 (.)
->>>>>>> 37b0029 (first)
+
+/bin/bash^M: bad interpreter: No such file or directory
+/bin/sh^M: interprete errato: File o directory non esistente
 
 
 sed -i -e 's/\r$//' nomefile.sh
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 579efe10 (.)
->>>>>>> 5d5b6964 (.)
->>>>>>> 37b0029 (first)
 OPPURE NELLA CARTELLA, PER FARE TUTTI SH ASSIEME
 
 find ./ -type f -exec  sed -i -e 's/\r$//' *.sh {} \;
@@ -95,23 +61,6 @@ git submodule foreach git symbolic-ref HEAD refs/heads/master
 
 
 --- aggiungere una repository push per fare push in piu' repository contemporaneamente
-<<<<<<< HEAD
-git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.git
-=======
-<<<<<<< HEAD
-git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.git
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.git
-=======
-git remote set-url --add --push origin https://bitbucket.org/qweb_xot/noconsole.git
->>>>>>> 4f180474 (first)
-=======
-git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.git
->>>>>>> 579efe10 (.)
->>>>>>> 5d5b6964 (.)
->>>>>>> 37b0029 (first)
 poi riaggiungere la sua originale
 git remote set-url --add --push origin https://github.com/laraxot/noconsole.git
 poi controllare con 
@@ -131,44 +80,6 @@ thread: Resource temporarily unavailable
 
 git config --global pack.threads "1"
 
-
-
-
-
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 7640735e (.)
-
-
 sed -i -e 's/\r$//' ./bashscripts/git_push.sh
 sed -i -e 's/\r$//' ./bashscripts/git_pull.sh
 sed -i -e 's/\r$//' ./bashscripts/git_branch.sh
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 4f180474 (first)
-=======
->>>>>>> f641d17c (.)
-=======
->>>>>>> 5d5b6964 (.)
->>>>>>> 37b0029 (first)
-
-
-
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 579efe10 (.)
->>>>>>> 5d5b6964 (.)
->>>>>>> 37b0029 (first)
