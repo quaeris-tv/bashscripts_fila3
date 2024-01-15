@@ -3,6 +3,7 @@ git add --renormalize -A
 #git add -A && aicommits  || echo '---------------------------empty'
 git add -A && git commit -am "up"  || echo '---------------------------empty'
 git push origin master -u --progress 'origin' || git push --set-upstream origin master
+git push origin dev -u --progress 'origin' || echo ''
 echo "-------- END PUSH[$(pwd)] ----------";
 git checkout master --
 git branch --set-upstream-to=origin/master master
