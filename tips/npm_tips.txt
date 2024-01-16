@@ -1,6 +1,32 @@
 npm cache clear --force
 npm i -g laravel-mix@latest
 npm i -g postcss@latest
+npm i -g laravel-mix@latest
+npm i -g postcss@latest
+npm i -g laravel-mix@latest
+npm i -g postcss@latest
+npm i -g laravel-mix@latest postcss@latest webpack-cli@latest webpack@latest cross-env@latest 
+
+se linux aggiungere
+n@latest
+--------------------------------------------------------------------------------------------------------------------------------------
+quando si fa un nuovo tema
+npm i --save-dev bootstrap jquery jquery-ui lodash moment path axios jquery-migrate livewire-vue laravel-mix laravel-mix-polyfill webpack webpack-cli html-webpack-plugin webpack-dev-server webpack-dev-middleware
+-- vue --
+npm i --save-dev vue-loader vue-template-compiler vue-loader-plugin
+-- loader --
+npm i --save-dev css-loader file-loader mini-css-extract-plugin style-loader url-loader  resolve-url-loader
+--- fonts ---
+npm i --save-dev @fortawesome/fontawesome-free bootstrap-icons
+--- css ---
+npm i --save-dev postcss postcss-preset-env
+npm update vue-loader
+
+-------------------------------------------------------------------------------------------------------------------------------------
+npm i -g laravel-mix@latest postcss@latest webpack-cli@latest webpack@latest cross-env@latest n@latest
+
+npm i -g laravel-mix@latest
+npm i -g postcss@latest
 npm install --save-dev file-loader url-loader
 npm install resolve-url-loader sass sass-loader alpinejs --save-dev
 npm i -g webpack webpack-cli webpack-dev-server 
@@ -8,7 +34,10 @@ npm i -g webpack webpack-cli webpack-dev-server
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
 
-
+rm -rf node_modules
+rm package-lock.json yarn.lock
+npm cache clear --force
+npm install
 
 
 
