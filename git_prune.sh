@@ -9,7 +9,3 @@ git gc --auto --aggressive
 git gc --aggressive --prune=now --force
 #read -p "Press [Enter] key to exit..."
 echo "-------- END PRUNE[$(pwd)] ----------";
-<<<<<<< HEAD
-=======
-
->>>>>>> dev

@@ -3,7 +3,6 @@
 .fuse_hidden**.lock
 *.lock
 package-lock.json
-<<<<<<< HEAD
 /vendor
 node_modules
 /docs/vendor
@@ -19,8 +18,3 @@ node_modules
 
 
 
-=======
-.php-cs-fixer.cache
-*.phar
-*.cache
->>>>>>> dev

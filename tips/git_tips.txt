@@ -18,23 +18,17 @@ git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
 
-<<<<<<< HEAD
 git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
 
-=======
->>>>>>> dev
 
 //-----
 git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
 
 //----------
 
-<<<<<<< HEAD
 
-=======
->>>>>>> dev
 git submodule sync 
 
 git fsck --lost-found
@@ -67,10 +61,7 @@ git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anch
 git submodule sync 
 
 git fsck --lost-found
-<<<<<<< HEAD
 git fsck --lost-found
-=======
->>>>>>> dev
 /bin/bash^M: bad interpreter: No such file or directory
 
 sed -i -e 's/\r$//' nomefile.sh
@@ -103,9 +94,6 @@ git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anch
 git submodule sync 
 
 git fsck --lost-found
-<<<<<<< HEAD
->>>>>>> dev
-=======
 >>>>>>> dev
 git lfs fsck
 git config  lfs.allowincompletepush true
@@ -151,8 +139,3 @@ git remote update
 git remote set-branches --add origin master
 git branch --set-upstream-to=origin/master  master
 git rebase
-<<<<<<< HEAD
-=======
-
-git fsck --lost-found
->>>>>>> dev
