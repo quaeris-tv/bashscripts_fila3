@@ -1,8 +1,11 @@
 https://www.digitalocean.com/community/tutorials/how-to-use-visual-studio-code-for-remote-development-via-the-remote-ssh-plugin
 
 sudo apt-get install sshfs
+<<<<<<< HEAD
  sudo yum install fuse-sshfs
 sudo yum install fuse-sshfs
+=======
+>>>>>>> dev
 sudo yum install fuse-sshfs
 
 
@@ -11,6 +14,7 @@ sshfs -o cache_timeout=115200 -o attr_timeout=115200 ...
 sshfs remote:/path/to/folder local -oauto_cache,reconnect,defer_permissions
 
 
+<<<<<<< HEAD
 https://www.digitalocean.com/community/tutorials/how-to-use-visual-studio-code-for-remote-development-via-the-remote-ssh-plugin
 
 
@@ -22,6 +26,8 @@ eval "$(ssh-agent -s)" && ssh-add
 =======
 =======
 >>>>>>> 5f13fe2 (first)
+=======
+>>>>>>> dev
 
 eval "$(ssh-agent -s)" && ssh-add
 
