@@ -51,6 +51,7 @@ git checkout master --
 git pull origin master --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 #read -p "Press [Enter] key to exit..."
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "-------- END PULL[$(pwd)] ----------";
 <<<<<<< HEAD
 =======
@@ -135,3 +136,5 @@ echo "-------- END PULL[$(pwd)] ----------";
 >>>>>>> 2d9f4fb (Rename git_up.sh and git_up_noai.sh to git_up_master.sh and git_up_master_noai.sh respectively)
 =======
 >>>>>>> 409c33a (.)
+=======
+>>>>>>> master

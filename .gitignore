@@ -73,6 +73,7 @@ package-lock.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,6 +112,8 @@ package-lock.json
 >>>>>>> 409c33a (.)
 =======
 >>>>>>> 777ed0f (conflict)
+=======
+>>>>>>> master
 /vendor
 node_modules
 /docs/vendor
@@ -122,6 +125,7 @@ node_modules
 .git-blame-ignore-revs
 .php-cs-fixer.cache
 .git-rewrite/
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .php-cs-fixer.cache
@@ -206,12 +210,15 @@ package-lock.json
 package-lock.json
 =======
 >>>>>>> 409c33a (.)
+=======
+>>>>>>> master
 
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -278,3 +285,5 @@ package-lock.json
 >>>>>>> b320580 (first)
 =======
 >>>>>>> 777ed0f (conflict)
+=======
+>>>>>>> master
