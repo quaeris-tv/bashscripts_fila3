@@ -56,21 +56,30 @@ die('aa');
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 curl_setopt_array($curl, [
 =======
 curl_setopt_array(
     $curl, [
 >>>>>>> 1283aaa (first)
+=======
+curl_setopt_array(
+    $curl, [
+>>>>>>> dd31420 (first)
     CURLOPT_URL => $url_full,
     CURLOPT_RETURNTRANSFER => true,
     //CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
     CURLOPT_TIMEOUT => 30,
 <<<<<<< HEAD
+<<<<<<< HEAD
    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 =======
     // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 >>>>>>> 1283aaa (first)
+=======
+    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+>>>>>>> dd31420 (first)
     CURLOPT_CUSTOMREQUEST => 'GET',
     CURLOPT_VERBOSE => true,
     //CURLOPT_POST => true,
@@ -78,11 +87,16 @@ curl_setopt_array(
     //CURLOPT_POSTFIELDS => $data,
     CURLOPT_HTTPHEADER => $headers,
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]);
 =======
     ]
 );
 >>>>>>> 1283aaa (first)
+=======
+    ]
+);
+>>>>>>> dd31420 (first)
 
 $response = curl_exec($curl);
 $err = curl_error($curl);
@@ -94,8 +108,15 @@ if ($err) {
 } else {
     echo $response;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
+=======
+=======
+}
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)

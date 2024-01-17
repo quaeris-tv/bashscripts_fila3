@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 sudo apt install git npm aptitude 
 
 <<<<<<< HEAD
@@ -7,13 +8,19 @@ sudo apt install git npm aptitude
 =======
 =======
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
+=======
+=======
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)
 switch php version
 sudo update-alternatives --config php
 apt install libapache2-mod-php7.4
 sudo a2dismod php7.4
 sudo a2enmod php8.0
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap,pdo-sqlite,sqlite3,dom} php-{json,xml,zip,common,tokenizer,mysql,sqlite3} libapache2-mod-php8* 
@@ -31,4 +38,9 @@ sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mb
 
 =======
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
+=======
+=======
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)

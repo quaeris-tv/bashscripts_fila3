@@ -1,9 +1,15 @@
 
 /bin/bash^M: bad interpreter: No such file or directory
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)
 
 >>>>>>> 9146629 (rebase 2)
 
@@ -23,9 +29,15 @@ git submodule foreach "mv docs/.git docs/a.git && git rm --cached docs && git pu
 
 /bin/bash^M: bad interpreter: No such file or directory
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1283aaa (first)
 >>>>>>> 9146629 (rebase 2)
+=======
+>>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)
 /bin/sh^M: interprete errato: File o directory non esistente
 
 
@@ -64,10 +76,14 @@ git submodule foreach git symbolic-ref HEAD refs/heads/master
 
 --- aggiungere una repository push per fare push in piu' repository contemporaneamente
 <<<<<<< HEAD
+<<<<<<< HEAD
 git remote set-url --add --push origin https://bitbucket.org/qweb_xot/noconsole.git
 =======
 git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.git
 >>>>>>> 1283aaa (first)
+=======
+git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.git
+>>>>>>> dd31420 (first)
 poi riaggiungere la sua originale
 git remote set-url --add --push origin https://github.com/laraxot/noconsole.git
 poi controllare con 
@@ -98,9 +114,18 @@ git config --global pack.threads "1"
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
+=======
+=======
+
+
+
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)

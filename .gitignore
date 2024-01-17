@@ -4,10 +4,16 @@
 *.lock
 package-lock.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 9146629 (rebase 2)
+=======
+=======
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)
 .fuse_hidden*
 .fuse_hidden*
 .fuse_hidden**.lock
@@ -23,15 +29,22 @@ package-lock.json
 .fuse_hidden**.lock
 *.lock
 package-lock.json
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 1283aaa (first)
 >>>>>>> 9146629 (rebase 2)
+=======
+>>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)
 /vendor
 node_modules
 /docs/vendor
 *.phar
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.cache
 *.log
 .git-blame-ignore-revs
@@ -43,6 +56,8 @@ node_modules
 *.cache
 =======
 =======
+=======
+>>>>>>> dd31420 (first)
 /vendor
 *.phar
 *.cache
@@ -54,5 +69,11 @@ package-lock.json
 package-lock.json
 .git-rewrite/
 .php-cs-fixer.cache
+<<<<<<< HEAD
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
+=======
+=======
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)

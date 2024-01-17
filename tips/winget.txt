@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 winget install -e --id VSCodium.VSCodium
 winget install -e --id SublimeHQ.SublimeText.4
 =======
+=======
+>>>>>>> e58576c (rebase 5)
 <<<<<<< HEAD
 
 
@@ -10,4 +13,11 @@ winget install -e --id TheDocumentFoundation.LibreOffice
 winget install -e --id VSCodium.VSCodium
 winget install -e --id SublimeHQ.SublimeText.4
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
+=======
+=======
+winget install -e --id VSCodium.VSCodium
+winget install -e --id SublimeHQ.SublimeText.4
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)

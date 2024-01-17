@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
 =======
 >>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
 Nota Bene: prima dell'installazione, 
 controllare in "Gestione Attività" -> "prestazioni" -> Virtualizzazione 
 sia abilitato.
@@ -23,13 +26,19 @@ curl.exe -L -o ubuntu-2004.appx https://aka.ms/wslubuntu2004
 Add-AppxPackage .\app_name.appx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 <<<<<<< HEAD
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 =======
 =======
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
+=======
+=======
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)
 
 
 
@@ -41,6 +50,7 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ----------------------------------------------------------
 entrare con root
 wsl -u root
@@ -48,6 +58,8 @@ wsl -u root
 PS C:\Windows\System32> ubuntu config --default-user marco
 =======
 >>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
 
 --------------------------------------------------
 # Import the public repository GPG keys
@@ -69,6 +81,7 @@ pwsh
 
 //-- per sapere ip
 wsl hostname -I
+<<<<<<< HEAD
 <<<<<<< HEAD
 wsl hostname -I
 
@@ -123,6 +136,8 @@ $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 =======
 =======
 >>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
 
 
 >>>>>>> 9146629 (rebase 2)

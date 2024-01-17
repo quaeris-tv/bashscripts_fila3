@@ -5,6 +5,7 @@ git merge master
 git checkout master --
 #read -p "Press [Enter] key to exit..."
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "-------- END BRANCH[$(pwd)] ----------";
 =======
 <<<<<<< HEAD
@@ -12,4 +13,10 @@ echo "-------- END BRANCH[$(pwd)] ----------";
 =======
 echo "-------- END BRANCH[$(pwd)] ----------";
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
+=======
+=======
+echo "-------- END BRANCH[$(pwd)] ----------";
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)

@@ -19,6 +19,7 @@ puttygen per convertire da id_rsa a id_rsa.ppk
 
 eval "$(ssh-agent -s)" && ssh-add
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 eval "$(ssh-agent -s)" && ssh-add
 
@@ -30,8 +31,16 @@ sudo chown -R $(whoami):www-data ./
 sudo chmod -R 775 ./
 sudo chmod o+s ./
 =======
+=======
+>>>>>>> e58576c (rebase 5)
 <<<<<<< HEAD
 =======
 
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
+=======
+=======
+
+>>>>>>> dd31420 (first)
+>>>>>>> e58576c (rebase 5)
