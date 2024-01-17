@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git submodule foreach $( readlink -f -- "$0";)
 git branch --set-upstream-to=origin/master master
 git branch -u origin/master
@@ -131,3 +132,5 @@ echo "-------- END BRANCH[$(pwd)] ----------";
 >>>>>>> 568344a (rebase 9)
 =======
 >>>>>>> 8f35797 (up)
+=======
+>>>>>>> 409c33a (.)

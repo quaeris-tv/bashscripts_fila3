@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,11 +23,14 @@
 >>>>>>> eee2a47 (.)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> 409c33a (.)
 git submodule foreach $( readlink -f -- "$0";)
 git add --renormalize -A
 #git add -A && git commit -am 'up'  || git rebase --continue || echo '---------------------------empty'
 git add -A && aicommits  || echo '---------------------------empty'
 git push origin master -u --progress 'origin' || git push --set-upstream origin master
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,3 +107,6 @@ echo "-------- END PUSH[$(pwd)] ----------";
 >>>>>>> 568344a (rebase 9)
 =======
 >>>>>>> 8f35797 (up)
+=======
+echo "-------- END PUSH[$(pwd)] ----------";
+>>>>>>> 409c33a (.)

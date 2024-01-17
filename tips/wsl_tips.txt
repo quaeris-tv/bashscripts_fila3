@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
@@ -11,6 +12,8 @@ https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10
 =======
 >>>>>>> dd31420 (first)
 =======
+=======
+>>>>>>> 409c33a (.)
 Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
@@ -180,6 +183,7 @@ $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0809004 (rebase 7)
@@ -200,3 +204,6 @@ $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 >>>>>>> 9146629 (rebase 2)
 =======
 >>>>>>> 8f35797 (up)
+=======
+
+>>>>>>> 409c33a (.)

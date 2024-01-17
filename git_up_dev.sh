@@ -14,6 +14,7 @@ git merge dev
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 132df7e (rebase 4)
@@ -97,11 +98,15 @@ git merge master
 =======
 #git merge master 
 >>>>>>> 8f35797 (up)
+=======
+#git merge master 
+>>>>>>> 409c33a (.)
 echo "-------- END BRANCH[$(pwd)] ----------";
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout dev --
 git pull origin dev --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 #read -p "Press [Enter] key to exit..."
+<<<<<<< HEAD
 echo "-------- END PULL[$(pwd)] ----------";
 <<<<<<< HEAD
 =======
@@ -149,3 +154,6 @@ echo "-------- END PULL[$(pwd)] ----------";
 >>>>>>> 568344a (rebase 9)
 =======
 >>>>>>> 8f35797 (up)
+=======
+echo "-------- END PULL[$(pwd)] ----------";
+>>>>>>> 409c33a (.)

@@ -113,6 +113,7 @@ thread: Resource temporarily unavailable
 
 git config --global pack.threads "1"
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -156,3 +157,5 @@ git config --global pack.threads "1"
 >>>>>>> 568344a (rebase 9)
 =======
 >>>>>>> 8f35797 (up)
+=======
+>>>>>>> 409c33a (.)

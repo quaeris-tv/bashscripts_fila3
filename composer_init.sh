@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/bin/sh
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -178,3 +179,5 @@ php -d memory_limit=-1 composer.phar global require laravel/installer
 >>>>>>> 9146629 (rebase 2)
 =======
 >>>>>>> 8f35797 (up)
+=======
+>>>>>>> 409c33a (.)

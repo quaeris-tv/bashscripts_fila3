@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .git-rewrite
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,10 +55,14 @@ package-lock.json
 >>>>>>> eee2a47 (.)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+.git-rewrite
+>>>>>>> 409c33a (.)
 .fuse_hidden*
 .fuse_hidden**.lock
 *.lock
 package-lock.json
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,6 +101,8 @@ package-lock.json
 =======
 >>>>>>> dd31420 (first)
 >>>>>>> e58576c (rebase 5)
+=======
+>>>>>>> 409c33a (.)
 /vendor
 node_modules
 /docs/vendor
@@ -107,6 +114,7 @@ node_modules
 .git-blame-ignore-revs
 .php-cs-fixer.cache
 .git-rewrite/
+<<<<<<< HEAD
 <<<<<<< HEAD
 .php-cs-fixer.cache
 *.phar
@@ -188,12 +196,15 @@ package-lock.json
 .fuse_hidden**.lock
 *.lock
 package-lock.json
+=======
+>>>>>>> 409c33a (.)
 
 
 
 
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
@@ -249,3 +260,5 @@ package-lock.json
 >>>>>>> 568344a (rebase 9)
 =======
 >>>>>>> 8f35797 (up)
+=======
+>>>>>>> 409c33a (.)
