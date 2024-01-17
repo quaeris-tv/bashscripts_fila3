@@ -39,6 +39,7 @@ php -d memory_limit=-1 composer.phar require -W guzzlehttp/guzzle
 
 ############  SPATIE ######################
 
+<<<<<<< HEAD
 #per gestire cookie
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-cookie-consent
 #php -d memory_limit=-1 composer.phar require -W spatie/laravel-dashboard
@@ -175,3 +176,5 @@ php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
 #laravel installer
 php -d memory_limit=-1 composer.phar global require laravel/installer
 >>>>>>> 9146629 (rebase 2)
+=======
+>>>>>>> 8f35797 (up)

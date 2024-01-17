@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/bin/sh
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php
@@ -103,3 +104,5 @@ php -d memory_limit=-1 composer.phar global require -W --dev larastan/larastan
 php -d memory_limit=-1 composer.phar global require -W --dev phpstan/phpstan
 >>>>>>> b3a67b2 (first)
 >>>>>>> 568344a (rebase 9)
+=======
+>>>>>>> 8f35797 (up)

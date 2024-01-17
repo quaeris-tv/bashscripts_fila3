@@ -2,6 +2,7 @@
  
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -9,6 +10,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>> 568344a (rebase 9)
+=======
+>>>>>>> 8f35797 (up)
  for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
 
  //--
@@ -16,6 +19,7 @@
 
  //--- rinomina tutti i file da *.php a *.old
  for file in *.php; do mv -- "$file" "${file%.php}.old"; done
+<<<<<<< HEAD
 <<<<<<< HEAD
  for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
 =======
@@ -29,3 +33,8 @@
  for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
 >>>>>>> b3a67b2 (first)
 >>>>>>> 568344a (rebase 9)
+=======
+
+ for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
+
+>>>>>>> 8f35797 (up)

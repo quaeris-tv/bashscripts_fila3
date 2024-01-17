@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .git-rewrite
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -246,3 +247,5 @@ package-lock.json
 *.cache
 >>>>>>> b3a67b2 (first)
 >>>>>>> 568344a (rebase 9)
+=======
+>>>>>>> 8f35797 (up)

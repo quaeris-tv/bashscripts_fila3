@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 sudo mount -t cifs  //osmc4/nas04 /media/nas04 -o username=osmc,password=osmc,nounix,sec=ntlmssp,rw,uid=zorin
 
 sudo chown -R $USER:$USER /home/$USER/.composer
@@ -277,3 +278,5 @@ nohup python bgservice.py &
 =======
 >>>>>>> b3a67b2 (first)
 >>>>>>> 568344a (rebase 9)
+=======
+>>>>>>> 8f35797 (up)
