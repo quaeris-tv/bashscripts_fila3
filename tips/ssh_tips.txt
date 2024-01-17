@@ -12,6 +12,7 @@ sudo yum install fuse-sshfs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 sudo yum install fuse-sshfs
 =======
  sudo yum install fuse-sshfs
@@ -28,8 +29,17 @@ sudo yum install fuse-sshfs
 =======
 sudo yum install fuse-sshfs
 >>>>>>> 109674b (up)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+<<<<<<< HEAD
 >>>>>>> 0809004 (rebase 7)
+=======
+=======
+=======
+sudo yum install fuse-sshfs
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)
+>>>>>>> b4f13a0 (rebase 8)
 
 
 sshfs -C -o cache_timeout=80000 myself@work:~/files_at_work ~/my_home
@@ -80,6 +90,7 @@ sudo chmod o+s ./
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 109674b (up)
 
@@ -102,6 +113,8 @@ https://www.digitalocean.com/community/tutorials/how-to-use-visual-studio-code-f
 >>>>>>> 109674b (up)
 =======
 >>>>>>> dev
+=======
+>>>>>>> b3a67b2 (first)
 
 eval "$(ssh-agent -s)" && ssh-add
 
@@ -112,6 +125,7 @@ sudo chown www-data:www-data -R /var/www
 sudo chown -R $(whoami):www-data ./
 sudo chmod -R 775 ./
 sudo chmod o+s ./
+<<<<<<< HEAD
 =======
 https://www.digitalocean.com/community/tutorials/how-to-use-visual-studio-code-for-remote-development-via-the-remote-ssh-plugin
 >>>>>>> a176205 (first)
@@ -121,5 +135,14 @@ https://www.digitalocean.com/community/tutorials/how-to-use-visual-studio-code-f
 eval "$(ssh-agent -s)" && ssh-add
 =======
 >>>>>>> 107640c (.)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+<<<<<<< HEAD
 >>>>>>> 0809004 (rebase 7)
+=======
+=======
+=======
+
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)
+>>>>>>> b4f13a0 (rebase 8)

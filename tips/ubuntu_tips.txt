@@ -11,13 +11,19 @@ sudo chown www-data:www-data -R /var/www
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 109674b (up)
 =======
 >>>>>>> dev
 =======
 >>>>>>> 109674b (up)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)
 sudo chown -R $(whoami):www-data ./
 sudo chmod -R 775 ./
 sudo chmod o+s ./
@@ -40,8 +46,11 @@ setfacl -d -m g:www-data:rw /full/path/to/laravel/storage/logs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dev
+=======
+>>>>>>> b3a67b2 (first)
 
 sudo find laravel -type d -exec chgrp www-data {} +
 sudo find laravel -type d -exec chmod g+s {} +
@@ -49,6 +58,7 @@ sudo find storage/logs -type d -exec chmod o+s {} +
 
 setfacl -d -m g:www-data:rw /full/path/to/laravel/storage/logs
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a176205 (first)
@@ -84,6 +94,8 @@ sudo find storage/logs -type d -exec chmod o+s {} +
 setfacl -d -m g:www-data:rw /full/path/to/laravel/storage/logs
 
 >>>>>>> 54ce1e6 (Change file permissions and group for Laravel directories and logs in Ubuntu)
+=======
+>>>>>>> b3a67b2 (first)
 ---------------------------------------
 >>>>>>> 0809004 (rebase 7)
 do-release-upgrade
@@ -127,6 +139,7 @@ sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mb
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap} php-{json,xml,zip,common,tokenizer,mysql} libapache2-mod-php8*
 =======
 sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap} php-{json,xml,zip,common,tokenizer,mysql} libapache2-mod-php8* 
@@ -143,6 +156,9 @@ sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mb
 =======
 sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap} php-{json,xml,zip,common,tokenizer,mysql} libapache2-mod-php8*
 >>>>>>> 109674b (up)
+=======
+sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap} php-{json,xml,zip,common,tokenizer,mysql} libapache2-mod-php8*
+>>>>>>> b3a67b2 (first)
 
 
 

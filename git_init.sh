@@ -5,9 +5,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dev
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)
 git submodule foreach $( readlink -f -- "$0";)
 git config pull.rebase true
 git config remote.origin.push HEAD
@@ -31,6 +37,7 @@ git branch --set-upstream-to=origin/master master
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/bin/sh
 git submodule foreach "git config pull.rebase true"
@@ -79,4 +86,9 @@ git submodule foreach git branch --set-upstream-to=origin/master master
 =======
 
 >>>>>>> 5eb74ee (.)
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+=======
+=======
+>>>>>>> b3a67b2 (first)
+>>>>>>> eee2a47 (.)
