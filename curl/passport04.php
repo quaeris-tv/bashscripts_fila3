@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b320580 (first)
 <?php
 
 declare(strict_types=1);
@@ -48,6 +51,7 @@ $data=http_build_query($data);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 curl_setopt_array($curl, [
 =======
 curl_setopt_array(
@@ -63,6 +67,9 @@ curl_setopt_array($curl, [
 =======
 curl_setopt_array($curl, [
 >>>>>>> b3a67b2 (first)
+=======
+curl_setopt_array($curl, [
+>>>>>>> b320580 (first)
     CURLOPT_URL => $url,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
@@ -78,6 +85,7 @@ curl_setopt_array($curl, [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]);
 =======
     ]
@@ -93,6 +101,9 @@ curl_setopt_array($curl, [
 =======
 ]);
 >>>>>>> b3a67b2 (first)
+=======
+]);
+>>>>>>> b320580 (first)
 
 
 $response = curl_exec($curl);
@@ -105,6 +116,9 @@ if ($err) {
 } else {
     echo $response;
 }
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
 =======
 >>>>>>> 8f35797 (up)
+=======
+>>>>>>> b320580 (first)

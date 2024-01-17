@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,11 +36,14 @@
 >>>>>>> b3a67b2 (first)
 =======
 >>>>>>> 409c33a (.)
+=======
+>>>>>>> b320580 (first)
 git submodule foreach $( readlink -f -- "$0"; );
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout master --
 git pull origin master --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 #read -p "Press [Enter] key to exit..."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,3 +145,6 @@ echo "-------- END PULL [$(pwd)]----------";
 >>>>>>> 8f35797 (up)
 =======
 >>>>>>> 409c33a (.)
+=======
+echo "-------- END PULL [$(pwd)]----------";
+>>>>>>> b320580 (first)

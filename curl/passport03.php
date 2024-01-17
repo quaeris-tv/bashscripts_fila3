@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b320580 (first)
 <?php
 
 declare(strict_types=1);
@@ -10,6 +13,7 @@ ini_set('display_errors', true);
 
 $base_url = 'https://multi.local';
 $login = '/api/user/login';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 $addContact = '/api/quaeris/add-contact';
@@ -46,6 +50,9 @@ $addContact = '/api/add-contact';
 =======
 $addContact = '/api/add-contact';
 >>>>>>> b3a67b2 (first)
+=======
+$addContact = '/api/add-contact';
+>>>>>>> b320580 (first)
 $email = '';
 $pass = '';
 
@@ -61,6 +68,7 @@ $json = json_decode($response);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -92,11 +100,14 @@ $json = json_decode($response);
 >>>>>>> eee2a47 (.)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> b320580 (first)
 $headers = [
     // 'Content-Type: application/json',  //error
     'Authorization: Bearer '.$json->token,
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 curl_setopt_array(
@@ -107,6 +118,9 @@ curl_setopt_array($ch, [
 =======
 curl_setopt_array($ch, [
 >>>>>>> b3a67b2 (first)
+=======
+curl_setopt_array($ch, [
+>>>>>>> b320580 (first)
     CURLOPT_HTTPHEADER => $headers,
     CURLOPT_URL => $base_url.$addContact,
     CURLOPT_CUSTOMREQUEST => 'POST',
@@ -114,6 +128,7 @@ curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_VERBOSE => true,
     CURLOPT_POSTFIELDS => $data,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     ]
@@ -124,6 +139,9 @@ curl_setopt_array($ch, [
 =======
 ]);
 >>>>>>> b3a67b2 (first)
+=======
+]);
+>>>>>>> b320580 (first)
 
 $response = curl_exec($ch);
 
@@ -147,6 +165,7 @@ curl_close($ch);
   POST            oauth/token/refresh ... passport.token.refresh › Laravel\Passport › TransientTokenController@refresh
   GET|HEAD        oauth/tokens .... passport.tokens.index › Laravel\Passport › AuthorizedAccessTokenController@forUser
   DELETE          oauth/tokens/{token_id} passport.tokens.destroy › Laravel\Passport › AuthorizedAccessTokenControlle…
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,3 +197,6 @@ curl_close($ch);
 >>>>>>> 8f35797 (up)
 =======
 >>>>>>> 409c33a (.)
+=======
+  */
+>>>>>>> b320580 (first)

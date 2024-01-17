@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b320580 (first)
 <?php
 
 declare(strict_types=1);
@@ -61,6 +64,7 @@ die('aa');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 curl_setopt_array($curl, [
 =======
 curl_setopt_array(
@@ -76,6 +80,9 @@ curl_setopt_array($curl, [
 =======
 curl_setopt_array($curl, [
 >>>>>>> b3a67b2 (first)
+=======
+curl_setopt_array($curl, [
+>>>>>>> b320580 (first)
     CURLOPT_URL => $url_full,
     CURLOPT_RETURNTRANSFER => true,
     //CURLOPT_ENCODING => '',
@@ -85,6 +92,7 @@ curl_setopt_array($curl, [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 =======
     // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
@@ -98,6 +106,9 @@ curl_setopt_array($curl, [
 =======
    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 >>>>>>> b3a67b2 (first)
+=======
+   // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+>>>>>>> b320580 (first)
     CURLOPT_CUSTOMREQUEST => 'GET',
     CURLOPT_VERBOSE => true,
     //CURLOPT_POST => true,
@@ -108,6 +119,7 @@ curl_setopt_array($curl, [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]);
 =======
     ]
@@ -123,6 +135,9 @@ curl_setopt_array($curl, [
 =======
 ]);
 >>>>>>> b3a67b2 (first)
+=======
+]);
+>>>>>>> b320580 (first)
 
 $response = curl_exec($curl);
 $err = curl_error($curl);
@@ -133,6 +148,7 @@ if ($err) {
     echo 'cURL Error #:'.$err;
 } else {
     echo $response;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -164,3 +180,6 @@ if ($err) {
 >>>>>>> 8f35797 (up)
 =======
 >>>>>>> 409c33a (.)
+=======
+}
+>>>>>>> b320580 (first)

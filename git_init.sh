@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,8 @@
 >>>>>>> eee2a47 (.)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> b320580 (first)
 git submodule foreach $( readlink -f -- "$0";)
 git config pull.rebase true
 git config remote.origin.push HEAD
@@ -28,6 +31,7 @@ git config advice.skippedCherryPicks false
 git remote set-branches --add origin master
 git push --recurse-submodules=on-demand
 git branch --set-upstream-to=origin/master master
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,3 +103,6 @@ git submodule foreach git branch --set-upstream-to=origin/master master
 =======
 
 >>>>>>> b3a67b2 (first)
+=======
+
+>>>>>>> b320580 (first)

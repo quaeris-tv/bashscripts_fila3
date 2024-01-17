@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +58,8 @@ git submodule foreach "mv docs/.git docs/a.git && git rm --cached docs && git pu
 =======
 
 >>>>>>> 8f35797 (up)
+=======
+>>>>>>> b320580 (first)
 /bin/sh^M: interprete errato: File o directory non esistente
 
 
@@ -94,7 +97,12 @@ git submodule foreach git symbolic-ref HEAD refs/heads/master
 
 
 --- aggiungere una repository push per fare push in piu' repository contemporaneamente
+<<<<<<< HEAD
 goi riaggiungere la sua originale
+=======
+git remote set-url --add --push origin https://bitbucket.org/qweb_xot/noconsole.git
+poi riaggiungere la sua originale
+>>>>>>> b320580 (first)
 git remote set-url --add --push origin https://github.com/laraxot/noconsole.git
 poi controllare con 
 git remote -v
@@ -114,10 +122,13 @@ thread: Resource temporarily unavailable
 git config --global pack.threads "1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> b320580 (first)
 
 
 
@@ -125,6 +136,7 @@ git config --global pack.threads "1"
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,3 +171,7 @@ git config --global pack.threads "1"
 >>>>>>> 8f35797 (up)
 =======
 >>>>>>> 409c33a (.)
+=======
+
+
+>>>>>>> b320580 (first)

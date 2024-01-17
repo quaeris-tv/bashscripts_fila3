@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -44,3 +45,6 @@
  for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
 
 >>>>>>> 409c33a (.)
+=======
+ for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
+>>>>>>> b320580 (first)

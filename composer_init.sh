@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> b320580 (first)
 #!/bin/sh
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php
@@ -41,6 +44,9 @@ php -d memory_limit=-1 composer.phar require -W guzzlehttp/guzzle
 ############  SPATIE ######################
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b320580 (first)
 #per gestire cookie
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-cookie-consent
 #php -d memory_limit=-1 composer.phar require -W spatie/laravel-dashboard
@@ -127,6 +133,7 @@ php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-ide-helpe
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
 =======
 php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
@@ -165,6 +172,9 @@ php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
 =======
 php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
 >>>>>>> b3a67b2 (first)
+=======
+php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
+>>>>>>> b320580 (first)
 #test su codice su moduli
 php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 #scrive la docs dei modelli e facades
@@ -176,8 +186,11 @@ php -d memory_limit=-1 composer.phar require --dev barryvdh/laravel-ide-helper
 php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
 #laravel installer
 php -d memory_limit=-1 composer.phar global require laravel/installer
+<<<<<<< HEAD
 >>>>>>> 9146629 (rebase 2)
 =======
 >>>>>>> 8f35797 (up)
 =======
 >>>>>>> 409c33a (.)
+=======
+>>>>>>> b320580 (first)

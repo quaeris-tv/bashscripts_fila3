@@ -6,6 +6,7 @@ do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #git add -A && git commit -am "rebase $i" && git rebase --continue || git rebase --continue || git push -u --force || echo "loop: $i"
 git add -A && aicommits && git rebase --continue || git rebase --continue || git push -u --force || echo "loop: $i"
 done 
@@ -91,3 +92,8 @@ done
 git add -A && aicommits && git rebase --continue || git rebase --continue || git push -uf || echo "loop: $i"
 done 
 >>>>>>> 409c33a (.)
+=======
+#git add -A && git commit -am "rebase $i" && git rebase --continue || git rebase --continue || git push -u --force || echo "loop: $i"
+git add -A && aicommits && git rebase --continue || git rebase --continue || git push -u --force || echo "loop: $i"
+done 
+>>>>>>> b320580 (first)
