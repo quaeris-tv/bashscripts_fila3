@@ -19,28 +19,40 @@ git config --global credential.helper "store --file ~/.gitcredential"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 409c33a (.)
+=======
 git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
 
+>>>>>>> 777ed0f (conflict)
+git config --global core.preloadindex true
+git config --global core.fscache true
+git config --global gc.auto 256
+
+<<<<<<< HEAD
 =======
 >>>>>>> b320580 (first)
 git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
 
+=======
+>>>>>>> 777ed0f (conflict)
 
 //-----
 git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
 
 //----------
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> b320580 (first)
+=======
+>>>>>>> 777ed0f (conflict)
 git submodule sync 
 
 git fsck --lost-found
@@ -174,7 +186,10 @@ git submodule sync
 =======
 
 git fsck --lost-found
+<<<<<<< HEAD
 >>>>>>> 409c33a (.)
+=======
+>>>>>>> 777ed0f (conflict)
 git fsck --lost-found
 /bin/bash^M: bad interpreter: No such file or directory
 
@@ -219,9 +234,13 @@ git submodule sync
 
 git fsck --lost-found
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dev
 =======
 >>>>>>> b320580 (first)
+=======
+>>>>>>> dev
+>>>>>>> 777ed0f (conflict)
 git lfs fsck
 git config  lfs.allowincompletepush true
 
@@ -266,6 +285,7 @@ git remote update
 git remote set-branches --add origin master
 git branch --set-upstream-to=origin/master  master
 git rebase
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -528,3 +548,5 @@ git fsck --lost-found
 
 git fsck --lost-found
 >>>>>>> b320580 (first)
+=======
+>>>>>>> 777ed0f (conflict)

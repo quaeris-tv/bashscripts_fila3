@@ -253,8 +253,11 @@ sudo chmod -R 775 /var/www/html/laravelapp/storage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b320580 (first)
+=======
+>>>>>>> 777ed0f (conflict)
 sudo a2enmod rewrite
 
 

@@ -72,6 +72,7 @@ package-lock.json
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +109,8 @@ package-lock.json
 >>>>>>> e58576c (rebase 5)
 =======
 >>>>>>> 409c33a (.)
+=======
+>>>>>>> 777ed0f (conflict)
 /vendor
 node_modules
 /docs/vendor
@@ -210,6 +213,7 @@ package-lock.json
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> a99fba961259c24c163e1570f1db973e01d23e65
@@ -272,3 +276,5 @@ package-lock.json
 *.phar
 *.cache
 >>>>>>> b320580 (first)
+=======
+>>>>>>> 777ed0f (conflict)

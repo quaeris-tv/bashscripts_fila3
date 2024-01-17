@@ -1,11 +1,13 @@
 git submodule foreach $( readlink -f -- "$0";)
 git add --renormalize -A
-<<<<<<< HEAD
 #git add -A && aicommits  || echo '---------------------------empty'
 git add -A && oco  || echo '---------------------------empty'
+<<<<<<< HEAD
 =======
 git add -A && aicommits  || echo '---------------------------empty'
 >>>>>>> b320580 (first)
+=======
+>>>>>>> 777ed0f (conflict)
 git push origin dev -u --progress 'origin' || git push --set-upstream origin dev
 echo "-------- END PUSH[$(pwd)] ----------";
 git checkout dev --

@@ -204,6 +204,7 @@ $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0809004 (rebase 7)
@@ -232,3 +233,8 @@ $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 
 
 >>>>>>> b320580 (first)
+=======
+
+
+
+>>>>>>> 777ed0f (conflict)

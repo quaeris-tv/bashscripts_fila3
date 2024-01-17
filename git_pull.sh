@@ -49,6 +49,7 @@ git pull origin master --autostash --recurse-submodules --allow-unrelated-histor
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "-------- END PULL [$(pwd)]----------";
 =======
 <<<<<<< HEAD
@@ -148,3 +149,6 @@ echo "-------- END PULL [$(pwd)]----------";
 =======
 echo "-------- END PULL [$(pwd)]----------";
 >>>>>>> b320580 (first)
+=======
+echo "-------- END PULL [$(pwd)]----------";
+>>>>>>> 777ed0f (conflict)

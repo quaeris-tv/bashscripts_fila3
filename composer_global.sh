@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/bin/sh
 =======
 >>>>>>> 409c33a (.)
 =======
 #!/bin/sh
 >>>>>>> b320580 (first)
+=======
+>>>>>>> 777ed0f (conflict)
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
@@ -125,9 +128,13 @@ php -d memory_limit=-1 composer.phar global require -W --dev phpstan/phpstan
 =======
 #cs fixer
 php -d memory_limit=-1 composer.phar global require -W friendsofphp/php-cs-fixer
+<<<<<<< HEAD
 #grumphp
 php -d memory_limit=-1 composer.phar global require -W phpro/grumphp
 #phpstan
+=======
+php -d memory_limit=-1 composer.phar global require -W phpro/grumphp
+>>>>>>> 777ed0f (conflict)
 php -d memory_limit=-1 composer.phar global require -W --dev larastan/larastan
 php -d memory_limit=-1 composer.phar global require -W --dev phpstan/phpstan
 >>>>>>> b320580 (first)

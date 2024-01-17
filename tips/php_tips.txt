@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 777ed0f (conflict)
 sudo apt install git npm aptitude 
 
 <<<<<<< HEAD
@@ -54,6 +57,7 @@ sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mb
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -89,3 +93,8 @@ sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mb
 
 
 >>>>>>> b320580 (first)
+=======
+
+
+
+>>>>>>> 777ed0f (conflict)
