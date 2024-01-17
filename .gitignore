@@ -1,5 +1,6 @@
 .git-rewrite
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,10 +51,13 @@ package-lock.json
 =======
 >>>>>>> b3a67b2 (first)
 >>>>>>> eee2a47 (.)
+=======
+>>>>>>> b3a67b2 (first)
 .fuse_hidden*
 .fuse_hidden**.lock
 *.lock
 package-lock.json
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -233,4 +237,12 @@ package-lock.json
 *.cache
 >>>>>>> b3a67b2 (first)
 >>>>>>> eee2a47 (.)
+<<<<<<< HEAD
 >>>>>>> b4f13a0 (rebase 8)
+=======
+=======
+.php-cs-fixer.cache
+*.phar
+*.cache
+>>>>>>> b3a67b2 (first)
+>>>>>>> 568344a (rebase 9)

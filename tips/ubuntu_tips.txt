@@ -5,6 +5,7 @@ sudo chown -R $USER:$USER /home/$USER/.composer
 sudo chown www-data:www-data -R /var/www
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,10 +25,13 @@ sudo chown www-data:www-data -R /var/www
 =======
 >>>>>>> b3a67b2 (first)
 >>>>>>> eee2a47 (.)
+=======
+>>>>>>> b3a67b2 (first)
 sudo chown -R $(whoami):www-data ./
 sudo chmod -R 775 ./
 sudo chmod o+s ./
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 sudo find laravel -type d -exec chgrp www-data {} +
@@ -38,6 +42,8 @@ setfacl -d -m g:www-data:rw /full/path/to/laravel/storage/logs
 
 ---------------------------------------
 =======
+=======
+>>>>>>> 568344a (rebase 9)
 <<<<<<< HEAD
 ---------------------------------------
 =======
@@ -51,6 +57,8 @@ setfacl -d -m g:www-data:rw /full/path/to/laravel/storage/logs
 >>>>>>> dev
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> b3a67b2 (first)
 
 sudo find laravel -type d -exec chgrp www-data {} +
 sudo find laravel -type d -exec chmod g+s {} +
@@ -58,6 +66,7 @@ sudo find storage/logs -type d -exec chmod o+s {} +
 
 setfacl -d -m g:www-data:rw /full/path/to/laravel/storage/logs
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -94,6 +103,8 @@ sudo find storage/logs -type d -exec chmod o+s {} +
 setfacl -d -m g:www-data:rw /full/path/to/laravel/storage/logs
 
 >>>>>>> 54ce1e6 (Change file permissions and group for Laravel directories and logs in Ubuntu)
+=======
+>>>>>>> b3a67b2 (first)
 =======
 >>>>>>> b3a67b2 (first)
 ---------------------------------------
@@ -108,9 +119,15 @@ chown -R root/usr/lib/sudo
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c219998 (first)
 >>>>>>> 0809004 (rebase 7)
+=======
+>>>>>>> c219998 (first)
+=======
+>>>>>>> b3a67b2 (first)
+>>>>>>> 568344a (rebase 9)
 nano ~/.bash_profile
 
 And paste
@@ -128,9 +145,12 @@ sudo apt-get install -y php libapache2-mod-php php7.4-{cli,bcmath,bz2,intl,gd,mb
 apt-get install apache2 php7.4 libapache2-mod-php7.4 php7.4-curl php-pear php7.4-gd php7.4-dev php7.4-zip php7.4-mbstring php7.4-mysql php7.4-xml curl -y
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap} php-{json,xml,zip,common,tokenizer,mysql} libapache2-mod-php8*
 
 =======
+=======
+>>>>>>> 568344a (rebase 9)
 <<<<<<< HEAD
 =======
 
@@ -163,7 +183,17 @@ sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mb
 
 
 >>>>>>> c219998 (first)
+<<<<<<< HEAD
 >>>>>>> 0809004 (rebase 7)
+=======
+=======
+
+sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap} php-{json,xml,zip,common,tokenizer,mysql} libapache2-mod-php8*
+
+
+
+>>>>>>> b3a67b2 (first)
+>>>>>>> 568344a (rebase 9)
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
 ------------------------------------------
@@ -180,6 +210,7 @@ sudo chown -R www-data:www-data /var/www/html/laravelapp
 sudo chmod -R 775 /var/www/html/laravelapp/storage
 
 -----------------------------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,6 +249,8 @@ sudo a2enmod rewrite
 >>>>>>> e58576c (rebase 5)
 =======
 =======
+=======
+>>>>>>> b3a67b2 (first)
 sudo a2enmod rewrite
 
 
@@ -236,5 +269,11 @@ source ~/.bashrc
 //--------------------------------
 
 nohup python bgservice.py &
+<<<<<<< HEAD
 >>>>>>> c219998 (first)
+<<<<<<< HEAD
 >>>>>>> 0809004 (rebase 7)
+=======
+=======
+>>>>>>> b3a67b2 (first)
+>>>>>>> 568344a (rebase 9)

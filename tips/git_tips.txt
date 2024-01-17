@@ -15,6 +15,7 @@ git config --global user.email marco.sottana@gmail.com
 git config --global credential.helper "store --file ~/.gitcredential"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
@@ -58,6 +59,9 @@ git config --global credential.https://github.com.username marco76tv
 =======
 <<<<<<< HEAD
 >>>>>>> 0809004 (rebase 7)
+=======
+<<<<<<< HEAD
+>>>>>>> 568344a (rebase 9)
 //-----
 
 >>>>>>> 1283aaa (first)
@@ -81,11 +85,14 @@ git config --global credential.https://github.com.username marco76tv
 >>>>>>> 5ff86c0 (up)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> b3a67b2 (first)
 git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,6 +135,9 @@ git config --global gc.auto 256
 //-----
 >>>>>>> b3a67b2 (first)
 >>>>>>> eee2a47 (.)
+=======
+//-----
+>>>>>>> b3a67b2 (first)
 git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
 
 //----------
@@ -136,6 +146,7 @@ git submodule sync
 git fsck --lost-found
 /bin/bash^M: bad interpreter: No such file or directory
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -226,6 +237,8 @@ git fsck --lost-found
 >>>>>>> e58576c (rebase 5)
 =======
 >>>>>>> 0809004 (rebase 7)
+=======
+>>>>>>> 568344a (rebase 9)
 <<<<<<< HEAD
 git fsck --lost-found
 =======
@@ -263,6 +276,8 @@ git fsck --lost-found
 >>>>>>> 5ff86c0 (up)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> b3a67b2 (first)
 git fsck --lost-found
 
 //--- fix
@@ -282,6 +297,7 @@ git config --global user.email marco.sottana@gmail.com
 git config --global credential.helper "store --file ~/.gitcredential"
 =======
 git config --global credential.https://github.com.username marco76tv
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -333,6 +349,11 @@ git config --global credential.https://github.com.username marco76tv
 
 git config --global credential.https://github.com.username marco76tv
 >>>>>>> b3a67b2 (first)
+=======
+git config --global credential.https://github.com.username marco76tv
+
+git config --global credential.https://github.com.username marco76tv
+>>>>>>> b3a67b2 (first)
 
 git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
 
@@ -341,6 +362,7 @@ git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anch
 git submodule sync 
 
 git fsck --lost-found
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -375,6 +397,8 @@ git fsck --lost-found
 >>>>>>> 5ff86c0 (up)
 =======
 >>>>>>> b3a67b2 (first)
+=======
+>>>>>>> b3a67b2 (first)
 /bin/bash^M: bad interpreter: No such file or directory
 
 sed -i -e 's/\r$//' nomefile.sh
@@ -389,6 +413,7 @@ git fetch && git reset --hard origin/master
 git config --global user.name "marco xot"
 git config --global user.email marco.sottana@gmail.com
 git config --global credential.helper "store --file ~/.gitcredential"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -430,6 +455,10 @@ git config --global credential.https://github.com.username marco76tv
 >>>>>>> a176205 (first)
 =======
 >>>>>>> 5ff86c0 (up)
+=======
+git config --global credential.https://github.com.username marco76tv
+git config --global credential.https://github.com.username marco76tv
+>>>>>>> b3a67b2 (first)
 =======
 git config --global credential.https://github.com.username marco76tv
 git config --global credential.https://github.com.username marco76tv
@@ -453,6 +482,7 @@ git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anch
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git submodule sync 
 
 git fsck --lost-found
@@ -525,6 +555,11 @@ git submodule sync
 
 git fsck --lost-found
 >>>>>>> 5ff86c0 (up)
+=======
+git submodule sync 
+
+git fsck --lost-found
+>>>>>>> b3a67b2 (first)
 =======
 git submodule sync 
 
@@ -575,6 +610,7 @@ git remote set-branches --add origin master
 git branch --set-upstream-to=origin/master  master
 git rebase
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -634,4 +670,10 @@ git fsck --lost-found
 git fsck --lost-found
 >>>>>>> b3a67b2 (first)
 >>>>>>> eee2a47 (.)
+<<<<<<< HEAD
 >>>>>>> b4f13a0 (rebase 8)
+=======
+=======
+git fsck --lost-found
+>>>>>>> b3a67b2 (first)
+>>>>>>> 568344a (rebase 9)

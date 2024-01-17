@@ -7,6 +7,7 @@ rm composer.lock
 rm package-lock.json
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #cs fixer 
 =======
 <<<<<<< HEAD
@@ -38,10 +39,14 @@ rm package-lock.json
 #cs fixer
 >>>>>>> b3a67b2 (first)
 >>>>>>> eee2a47 (.)
+=======
+#cs fixer
+>>>>>>> b3a67b2 (first)
 php -d memory_limit=-1 composer.phar global require -W friendsofphp/php-cs-fixer
 #grumphp
 php -d memory_limit=-1 composer.phar global require -W phpro/grumphp
 #phpstan
+<<<<<<< HEAD
 <<<<<<< HEAD
 php -d memory_limit=-1 composer.phar global require -W --dev nunomaduro/larastan
 <<<<<<< HEAD
@@ -90,4 +95,11 @@ php -d memory_limit=-1 composer.phar global require -W --dev larastan/larastan
 >>>>>>> b3a67b2 (first)
 php -d memory_limit=-1 composer.phar global require -W --dev phpstan/phpstan
 >>>>>>> c219998 (first)
+<<<<<<< HEAD
 >>>>>>> 0809004 (rebase 7)
+=======
+=======
+php -d memory_limit=-1 composer.phar global require -W --dev larastan/larastan
+php -d memory_limit=-1 composer.phar global require -W --dev phpstan/phpstan
+>>>>>>> b3a67b2 (first)
+>>>>>>> 568344a (rebase 9)

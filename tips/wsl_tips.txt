@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
@@ -13,6 +14,11 @@ Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
 >>>>>>> c219998 (first)
+=======
+Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
+https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
+
+>>>>>>> b3a67b2 (first)
 Nota Bene: prima dell'installazione, 
 controllare in "Gestione Attività" -> "prestazioni" -> Virtualizzazione 
 sia abilitato.
@@ -34,6 +40,7 @@ Add-AppxPackage .\app_name.appx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 <<<<<<< HEAD
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
@@ -51,7 +58,13 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 =======
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 >>>>>>> c219998 (first)
+<<<<<<< HEAD
 >>>>>>> 0809004 (rebase 7)
+=======
+=======
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+>>>>>>> b3a67b2 (first)
+>>>>>>> 568344a (rebase 9)
 
 
 
@@ -65,13 +78,17 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c219998 (first)
+=======
+>>>>>>> b3a67b2 (first)
 ----------------------------------------------------------
 entrare con root
 wsl -u root
 
 PS C:\Windows\System32> ubuntu config --default-user marco
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 1283aaa (first)
@@ -79,6 +96,8 @@ PS C:\Windows\System32> ubuntu config --default-user marco
 >>>>>>> dd31420 (first)
 =======
 >>>>>>> c219998 (first)
+=======
+>>>>>>> b3a67b2 (first)
 
 --------------------------------------------------
 # Import the public repository GPG keys
@@ -103,8 +122,11 @@ wsl hostname -I
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c219998 (first)
+=======
+>>>>>>> b3a67b2 (first)
 wsl hostname -I
 
  PS C:\Users\adrien> wsl -l -v
@@ -156,9 +178,12 @@ $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Ubuntu", "User")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0809004 (rebase 7)
+=======
+>>>>>>> 568344a (rebase 9)
 =======
 >>>>>>> 1283aaa (first)
 =======
@@ -166,6 +191,9 @@ $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 =======
 
 >>>>>>> c219998 (first)
+=======
+
+>>>>>>> b3a67b2 (first)
 
 
 >>>>>>> 9146629 (rebase 2)

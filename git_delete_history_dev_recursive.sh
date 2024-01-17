@@ -10,6 +10,7 @@ git gc --aggressive --prune=all     # remove the old files
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git push -uf origin dev  # Force push dev branch to github
 =======
 git push -u origin dev  # Force push dev branch to github
@@ -27,4 +28,7 @@ git push -uf origin dev  # Force push dev branch to github
 =======
 git push -uf origin dev  # Force push dev branch to github
 >>>>>>> c219998 (first)
+=======
+git push -uf origin dev  # Force push dev branch to github
+>>>>>>> b3a67b2 (first)
 git gc --aggressive --prune=all     # remove the old files
