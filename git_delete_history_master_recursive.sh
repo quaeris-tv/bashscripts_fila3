@@ -10,5 +10,9 @@ git gc --aggressive --prune=all     # remove the old files
 git push -uf origin master  # Force push master branch to github
 =======
 git push -u origin master  # Force push master branch to github
+<<<<<<< HEAD
 >>>>>>> 1283aaa (first)
+=======
+git pull origin master
+>>>>>>> c944ae5 (.)
 git gc --aggressive --prune=all     # remove the old files
