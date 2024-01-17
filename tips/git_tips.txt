@@ -14,14 +14,10 @@ git config --global user.name "marco xot"
 git config --global user.email marco.sottana@gmail.com
 git config --global credential.helper "store --file ~/.gitcredential"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//-----
+git config --global core.preloadindex true
+git config --global core.fscache true
+git config --global gc.auto 256
 
-
-=======
-=======
->>>>>>> 5f13fe2 (first)
 git config --global core.preloadindex true
 git config --global core.fscache true
 git config --global gc.auto 256
@@ -31,6 +27,7 @@ git config --global gc.auto 256
 git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
 
 //----------
+
 
 git submodule sync 
 
@@ -56,23 +53,20 @@ git config --global credential.https://github.com.username marco76tv
 git config --global credential.https://github.com.username marco76tv
 
 git config --global credential.https://github.com.username marco76tv
-
-<<<<<<< HEAD
->>>>>>> 2bf991e (first)
 =======
->>>>>>> 5f13fe2 (first)
+//-----
+
+>>>>>>> 1283aaa (first)
+=======
+//-----
+
+>>>>>>> dd31420 (first)
+
 git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anche i submoduli
 
 //----------
 
 git submodule sync 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-git fsck --lost-found
-=======
-=======
->>>>>>> 5f13fe2 (first)
 git fsck --lost-found
 /bin/bash^M: bad interpreter: No such file or directory
 
@@ -106,6 +100,7 @@ git config --global submodule.recurse true  // cosi' al fetch ed al pull fa anch
 git submodule sync 
 
 git fsck --lost-found
+>>>>>>> dev
 git lfs fsck
 git config  lfs.allowincompletepush true
 
@@ -150,9 +145,10 @@ git remote update
 git remote set-branches --add origin master
 git branch --set-upstream-to=origin/master  master
 git rebase
-
-git fsck --lost-found
-<<<<<<< HEAD
->>>>>>> 2bf991e (first)
 =======
->>>>>>> 5f13fe2 (first)
+>>>>>>> 1283aaa (first)
+=======
+>>>>>>> dd31420 (first)
+=======
+git fsck --lost-found
+>>>>>>> 98810cd (rebase 1/3)

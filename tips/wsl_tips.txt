@@ -20,6 +20,7 @@ curl.exe -L -o ubuntu-2004.appx https://aka.ms/wslubuntu2004
 Add-AppxPackage .\app_name.appx
 
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 
 
@@ -105,13 +106,3 @@ cd ./Ubuntu
 
 $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Ubuntu", "User")
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 2bf991e (first)
-=======
-
->>>>>>> 5f13fe2 (first)
