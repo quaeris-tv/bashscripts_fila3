@@ -45,6 +45,7 @@ $data=http_build_query($data);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 curl_setopt_array($curl, [
 =======
 curl_setopt_array(
@@ -54,6 +55,9 @@ curl_setopt_array(
 curl_setopt_array(
     $curl, [
 >>>>>>> dd31420 (first)
+=======
+curl_setopt_array($curl, [
+>>>>>>> c219998 (first)
     CURLOPT_URL => $url,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
@@ -67,6 +71,7 @@ curl_setopt_array(
     CURLOPT_HTTPHEADER => $headers,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]);
 =======
     ]
@@ -76,6 +81,9 @@ curl_setopt_array(
     ]
 );
 >>>>>>> dd31420 (first)
+=======
+]);
+>>>>>>> c219998 (first)
 
 
 $response = curl_exec($curl);

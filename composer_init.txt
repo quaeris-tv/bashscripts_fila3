@@ -7,35 +7,19 @@ rm composer.lock
 rm package-lock.json
 // doctrine mi serve per le funzioni in piu' e per le migrazioni
 <<<<<<< HEAD
-php -d memory_limit=-1 composer.phar require -W  doctrine/dbal 
-// scout per la ricerca, forse da sostituire con query builder di spatie
-php -d memory_limit=-1 composer.phar require -W  laravel/scout 
-// per avere gli errori in slack, non lo utilizziamo da un po
-php -d memory_limit=-1 composer.phar require -W  laravel/slack-notification-channel 
-// per fare login da facebook, google etc
-php -d memory_limit=-1 composer.phar require -W  laravel/socialite 
-// per gestire i form
-php -d memory_limit=-1 composer.phar require -W  laravelcollective/html 
-// per le traduzioni
-php -d memory_limit=-1 composer.phar require -W  mcamara/laravel-localization 
-// moduli
-php -d memory_limit=-1 composer.phar require -W  nwidart/laravel-modules 
-// relazioni con profondita > 2
-php -d memory_limit=-1 composer.phar require -W  staudenmeir/eloquent-has-many-deep 
-// per selezionare immagini nei form
-php -d memory_limit=-1 composer.phar require -W  unisharp/laravel-filemanager 
-// per il login
-php -d memory_limit=-1 composer.phar require -W  laravel/ui 
-// per i js
-php -d memory_limit=-1 composer.phar require -W  livewire/livewire 
-// per le monete
-php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> dev
+=======
+>>>>>>> b3a67b2 (first)
+=======
+>>>>>>> c219998 (first)
 =======
 >>>>>>> dev
 php -d memory_limit=-1 composer.phar require -W  doctrine/dbal
@@ -62,6 +46,11 @@ php -d memory_limit=-1 composer.phar require -W  livewire/livewire
 // per le monete
 php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c219998 (first)
 =======
 php -d memory_limit=-1 composer.phar require -W  doctrine/dbal 
 =======
@@ -128,6 +117,12 @@ php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money
 =======
 php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
+<<<<<<< HEAD
+=======
+>>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
+=======
 >>>>>>> c219998 (first)
 // per le immagini
 php -d memory_limit=-1 composer.phar require -W  intervention/image
@@ -135,19 +130,19 @@ php -d memory_limit=-1 composer.phar require -W  intervention/image
 php -d memory_limit=-1 composer.phar require -W  intervention/imagecache
 // cookie law
 <<<<<<< HEAD
-php -d memory_limit=-1 composer.phar require -W  spatie/laravel-cookie-consent 
-// per accellerare le risposte
-php -d memory_limit=-1 composer.phar require -W  genealabs/laravel-model-caching 
-// per gestire i campi status
-#php -d memory_limit=-1 composer.phar require -W  asantibanez/laravel-eloquent-state-machines
-// per selezionare dei tag html
-php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> dev
+=======
+>>>>>>> b3a67b2 (first)
+=======
+>>>>>>> c219998 (first)
 =======
 >>>>>>> dev
 php -d memory_limit=-1 composer.phar require -W  spatie/laravel-cookie-consent
@@ -158,6 +153,11 @@ php -d memory_limit=-1 composer.phar require -W  genealabs/laravel-model-caching
 // per selezionare dei tag html
 php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c219998 (first)
 =======
 php -d memory_limit=-1 composer.phar require -W  spatie/laravel-cookie-consent 
 =======
@@ -192,6 +192,12 @@ php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler
 =======
 php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
+<<<<<<< HEAD
+=======
+>>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
+=======
 >>>>>>> c219998 (first)
 // per le chiamate curl
 php -d memory_limit=-1 composer.phar require -W  guzzlehttp/guzzle
@@ -206,30 +212,17 @@ php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-ide-helpe
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
-=======
-=======
->>>>>>> e58576c (rebase 5)
-=======
->>>>>>> 0809004 (rebase 7)
-<<<<<<< HEAD
-php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
-=======
-php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
->>>>>>> 1283aaa (first)
-<<<<<<< HEAD
->>>>>>> 9146629 (rebase 2)
-=======
-=======
-php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
->>>>>>> dd31420 (first)
-<<<<<<< HEAD
->>>>>>> e58576c (rebase 5)
-=======
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
+=======
+>>>>>>> b3a67b2 (first)
+=======
+>>>>>>> c219998 (first)
 =======
 >>>>>>> dev
 php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
@@ -239,40 +232,21 @@ php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 #GLOBAL
 #cs fixer
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c219998 (first)
 =======
 =======
 >>>>>>> a176205 (first)
 php -d memory_limit=-1 composer.phar require -W --dev nunomaduro/larastan
->>>>>>> c219998 (first)
->>>>>>> 0809004 (rebase 7)
 //test su codice su moduli
 php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 
 #GLOBAL 
 #cs fixer 
 <<<<<<< HEAD
-php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
-#laravel installer
-<<<<<<< HEAD
-<<<<<<< HEAD
-php -d memory_limit=-1 composer.phar global require laravel/installer
-=======
-<<<<<<< HEAD
-php -d memory_limit=-1 composer.phar global require laravel/installer
-=======
-php -d memory_limit=-1 composer.phar global require laravel/installer
->>>>>>> 1283aaa (first)
-<<<<<<< HEAD
->>>>>>> 9146629 (rebase 2)
-=======
-=======
-php -d memory_limit=-1 composer.phar global require laravel/installer
->>>>>>> dd31420 (first)
-<<<<<<< HEAD
->>>>>>> e58576c (rebase 5)
-=======
-=======
-<<<<<<< HEAD
 >>>>>>> a176205 (first)
 =======
 php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
@@ -294,8 +268,13 @@ php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
 #GLOBAL
 #cs fixer
 >>>>>>> 5c07603 (Update composer dependencies and add larastan/larastan)
+<<<<<<< HEAD
+=======
+>>>>>>> b3a67b2 (first)
+=======
+>>>>>>> dev
+=======
+>>>>>>> c219998 (first)
 php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
 #laravel installer
 php -d memory_limit=-1 composer.phar global require laravel/installer
->>>>>>> c219998 (first)
->>>>>>> 0809004 (rebase 7)

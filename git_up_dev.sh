@@ -10,19 +10,25 @@ git branch -u origin/dev
 git merge dev
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 132df7e (rebase 4)
+=======
+>>>>>>> 0809004 (rebase 7)
 <<<<<<< HEAD
 #git merge master 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> c219998 (first)
 <<<<<<< HEAD
 #git merge master 
 =======
 git merge master 
+<<<<<<< HEAD
 >>>>>>> cbb3d89d (Add and update git code for dev branch)
 =======
 >>>>>>> d05b8561 (Add git_up_dev.sh script for handling dev branch)
@@ -53,12 +59,25 @@ git merge master
 >>>>>>> d05b8561 (Add git_up_dev.sh script for handling dev branch)
 >>>>>>> 632fcf11 (Add git_up_dev.sh script for handling dev branch)
 >>>>>>> dd31420 (first)
+<<<<<<< HEAD
 >>>>>>> e58576c (rebase 5)
+=======
+=======
+>>>>>>> 7bf24b0 (Add git_up_dev.sh script with necessary commands for updating the dev branch)
+=======
+git merge master 
+>>>>>>> 35d1d97 (Add git_up_dev.sh script with necessary commands for updating the dev branch)
+=======
+git merge master 
+>>>>>>> f9571bd (Add git_up_dev.sh script with necessary commands for updating the dev branch)
+>>>>>>> c219998 (first)
+>>>>>>> 0809004 (rebase 7)
 echo "-------- END BRANCH[$(pwd)] ----------";
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout dev --
 git pull origin dev --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 #read -p "Press [Enter] key to exit..."
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,4 +112,10 @@ echo "-------- END PULL[$(pwd)] ----------";
 =======
 echo "-------- END PULL[$(pwd)] ----------";
 >>>>>>> dd31420 (first)
+<<<<<<< HEAD
 >>>>>>> e58576c (rebase 5)
+=======
+=======
+echo "-------- END PULL[$(pwd)] ----------";
+>>>>>>> c219998 (first)
+>>>>>>> 0809004 (rebase 7)
