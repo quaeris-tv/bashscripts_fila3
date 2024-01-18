@@ -1,5 +1,0 @@
- //rinominare tutti i file di tipo PlutoInterface in PlutoContravy
- 
-
- for f in *Interface*; echo do  mv -i -- "$f" "${f//Interface/Contract}"; done
-

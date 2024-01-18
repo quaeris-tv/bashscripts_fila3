@@ -9,10 +9,3 @@ git config advice.skippedCherryPicks false
 git remote set-branches --add origin master
 git push --recurse-submodules=on-demand
 git branch --set-upstream-to=origin/master master
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 409c33a (.)
-=======
->>>>>>> master
