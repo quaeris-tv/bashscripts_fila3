@@ -63,7 +63,6 @@ sudo chmod -R 775 /var/www/html/laravelapp/storage
 
 -----------------------------------------------
 sudo a2enmod rewrite
-sudo a2enmod rewrite
 
 
 composer global require friendsofphp/php-cs-fixer

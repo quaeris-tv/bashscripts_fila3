@@ -3,3 +3,4 @@ git submodule update --progress --init --recursive --force --merge --rebase --re
 git checkout master --
 git pull origin master --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 #read -p "Press [Enter] key to exit..."
+echo "-------- END PULL [$(pwd)]----------";
