@@ -3,11 +3,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> dd31420 (first)
 
 
+=======
+>>>>>>> master
 sed -i -e 's/\r$//' nomefile.sh
 
 
@@ -29,6 +32,15 @@ git submodule foreach "mv docs/.git docs/a.git && git rm --cached docs && git pu
 >>>>>>> dd31420 (first)
 =======
 >>>>>>> 98810cd (rebase 1/3)
+/bin/sh^M: interprete errato: File o directory non esistente
+
+/bin/bash^M: bad interpreter: No such file or directory
+/bin/sh^M: interprete errato: File o directory non esistente
+
+/bin/bash^M: bad interpreter: No such file or directory
+/bin/sh^M: interprete errato: File o directory non esistente
+
+/bin/bash^M: bad interpreter: No such file or directory
 /bin/sh^M: interprete errato: File o directory non esistente
 
 
@@ -69,6 +81,7 @@ git submodule foreach git symbolic-ref HEAD refs/heads/master
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git remote set-url --add --push origin https://bitbucket.org/qweb_xot/noconsole.git
 =======
 git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.git
@@ -79,6 +92,8 @@ git remote set-url --add --push origin https://bitbucket.org/laraxot/noconsole.g
 =======
 git remote set-url --add --push origin https://bitbucket.org/qweb_xot/noconsole.git
 >>>>>>> 98810cd (rebase 1/3)
+=======
+>>>>>>> master
 poi riaggiungere la sua originale
 git remote set-url --add --push origin https://github.com/laraxot/noconsole.git
 poi controllare con 
@@ -98,6 +113,7 @@ thread: Resource temporarily unavailable
 
 git config --global pack.threads "1"
 
+<<<<<<< HEAD
 
 
 
@@ -120,3 +136,8 @@ git config --global pack.threads "1"
 >>>>>>> dd31420 (first)
 =======
 >>>>>>> 98810cd (rebase 1/3)
+=======
+sed -i -e 's/\r$//' ./bashscripts/git_push.sh
+sed -i -e 's/\r$//' ./bashscripts/git_pull.sh
+sed -i -e 's/\r$//' ./bashscripts/git_branch.sh
+>>>>>>> master

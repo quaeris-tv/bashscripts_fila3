@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
@@ -13,6 +14,14 @@ Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
 https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
 
 >>>>>>> 98810cd (rebase 1/3)
+=======
+Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
+https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
+
+Installare HyperV in Windows 10 e 11 HOME (REQUISITO NECESSARIO)
+https://www.ilsoftware.it/articoli.asp?tag=Come-installare-Hyper-V-in-Windows-10-e-11-Home_24349
+
+>>>>>>> master
 Nota Bene: prima dell'installazione, 
 controllare in "Gestione Attività" -> "prestazioni" -> Virtualizzazione 
 sia abilitato.
@@ -34,6 +43,7 @@ Add-AppxPackage .\app_name.appx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 =======
 >>>>>>> 1283aaa (first)
@@ -42,6 +52,10 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 =======
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 >>>>>>> 98810cd (rebase 1/3)
+=======
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+>>>>>>> master
 
 
 
@@ -52,6 +66,7 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,7 +84,13 @@ PS C:\Windows\System32> ubuntu config --default-user marco
 >>>>>>> dd31420 (first)
 =======
 >>>>>>> 98810cd (rebase 1/3)
+=======
+----------------------------------------------------------
+entrare con root
+wsl -u root
+>>>>>>> master
 
+PS C:\Windows\System32> ubuntu config --default-user marco
 --------------------------------------------------
 # Import the public repository GPG keys
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
@@ -93,8 +114,11 @@ wsl hostname -I
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 98810cd (rebase 1/3)
+=======
+>>>>>>> master
 wsl hostname -I
 
  PS C:\Users\adrien> wsl -l -v
@@ -116,6 +140,7 @@ PS C:\Users\adrien> wsl --set-default "Ubuntu"
 Linking your directory in windows with your server directory
 cd /
 sudo ln -s /mnt/c/Users/windows-user-name-here/Documents/projects /var/www/html
+<<<<<<< HEAD
 
 
 
@@ -152,5 +177,34 @@ $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
 >>>>>>> dd31420 (first)
 =======
 >>>>>>> 98810cd (rebase 1/3)
+=======
+>>>>>>> master
 
+
+
+
+Win+R→type powershell→Ctrl+Shift+Enter
+
+Set-ItemProperty -Path HKCU:\Environment\ -Name Home -Type String -Value $Env:UserProfile
+
+
+
+
+------------- DA PowerShell
+
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+cd c:\
+
+Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
+
+Rename-Item ./Ubuntu.appx ./Ubuntu.zip
+Expand-Archive ./Ubuntu.zip ./Ubuntu
+
+cd ./Ubuntu
+
+.\ubuntu1604.exe
+
+$userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
+[System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Ubuntu", "User")
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 git submodule foreach $( readlink -f -- "$0";)
 git add --renormalize -A
 git add -A && aicommits  || echo '---------------------------empty'
@@ -26,3 +27,5 @@ git checkout master --
 git pull origin master --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 #read -p "Press [Enter] key to exit..."
 echo "-------- END PULL[$(pwd)] ----------";
+=======
+>>>>>>> master

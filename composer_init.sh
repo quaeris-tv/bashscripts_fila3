@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/bin/sh
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php
@@ -143,3 +144,5 @@ php -d memory_limit=-1 composer.phar require --dev barryvdh/laravel-ide-helper
 php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
 #laravel installer
 php -d memory_limit=-1 composer.phar global require laravel/installer
+=======
+>>>>>>> master

@@ -10,6 +10,7 @@ sudo chmod o+s ./
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 sudo find laravel -type d -exec chgrp www-data {} +
 sudo find laravel -type d -exec chmod g+s {} +
@@ -21,11 +22,17 @@ setfacl -d -m g:www-data:rw /full/path/to/laravel/storage/logs
 do-release-upgrade
 
 ---------------------------------------
+=======
+do-release-upgrade
+
+---------------------------------------
+>>>>>>> master
 
 chmod 644/usr/lib/sudo/sudoers.so
 su
 chown -R root/usr/lib/sudo
 
+<<<<<<< HEAD
 
 =======
 ---------------------------------------
@@ -33,6 +40,8 @@ chown -R root/usr/lib/sudo
 =======
 ---------------------------------------
 >>>>>>> dd31420 (first)
+=======
+>>>>>>> master
 nano ~/.bash_profile
 
 And paste
@@ -51,6 +60,7 @@ apt-get install apache2 php7.4 libapache2-mod-php7.4 php7.4-curl php-pear php7.4
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap} php-{json,xml,zip,common,tokenizer,mysql} libapache2-mod-php8*
 
@@ -60,6 +70,12 @@ sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mb
 >>>>>>> 1283aaa (first)
 =======
 >>>>>>> dd31420 (first)
+=======
+
+sudo apt-get install -y php libapache2-mod-php php8.*-{cli,bcmath,bz2,intl,gd,mbstring,mysql,zip,common,curl,xml,imap} php-{json,xml,zip,common,tokenizer,mysql} libapache2-mod-php8* 
+
+
+>>>>>>> master
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
 ------------------------------------------
@@ -80,8 +96,12 @@ sudo chmod -R 775 /var/www/html/laravelapp/storage
 sudo a2enmod rewrite
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> Stashed changes
+>>>>>>> master
 composer global require friendsofphp/php-cs-fixer
 
 PATH="$HOME/.config/composer/vendor/bin:$PATH"
@@ -97,6 +117,7 @@ source ~/.bashrc
 //--------------------------------
 
 nohup python bgservice.py &
+<<<<<<< HEAD
 =======
 >>>>>>> 1283aaa (first)
 =======
@@ -104,3 +125,5 @@ nohup python bgservice.py &
 =======
 sudo a2enmod rewrite
 >>>>>>> 98810cd (rebase 1/3)
+=======
+>>>>>>> master

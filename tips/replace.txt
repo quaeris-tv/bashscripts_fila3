@@ -15,8 +15,12 @@
 
  //--- rinomina tutti i file da *.php a *.old
 <<<<<<< HEAD
+<<<<<<< HEAD
  for file in *.php; do mv -- "$file" "${file%.php}.old"; done
 >>>>>>> 1283aaa (first)
 =======
  for file in *.php; do mv -- "$file" "${file%.php}.old"; done
 >>>>>>> dd31420 (first)
+=======
+ for file in *.php; do mv -- "$file" "${file%.php}.old"; done
+>>>>>>> master

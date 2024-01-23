@@ -62,6 +62,7 @@ git pull origin dev --autostash --recurse-submodules --allow-unrelated-histories
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "-------- END PULL[$(pwd)] ----------";
 =======
 <<<<<<< HEAD
@@ -84,3 +85,6 @@ echo "-------- END PULL[$(pwd)] ----------";
 =======
 echo "-------- END PULL[$(pwd)] ----------";
 >>>>>>> dd31420 (first)
+=======
+echo "-------- END PULL[$(pwd)] ----------";
+>>>>>>> master

@@ -7,6 +7,7 @@ git repack -A -d
 git prune
 git gc --auto --aggressive
 git gc --aggressive --prune=now --force
+git gc --prune=now --aggressive
 #read -p "Press [Enter] key to exit..."
 echo "-------- END PRUNE[$(pwd)] ----------";
 <<<<<<< HEAD
