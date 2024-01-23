@@ -1,3 +1,0 @@
-se It can lead to unexpected results. If you're using phpstan/extension-installer, make sure you have removed corresponding neon files from your project config file
-composer require phpstan/extension-installer
-

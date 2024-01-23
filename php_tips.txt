@@ -1,6 +1,0 @@
-switch php version
-sudo update-alternatives --config php
-apt install libapache2-mod-php7.4
-sudo a2dismod php7.4
-sudo a2enmod php8.0
-
