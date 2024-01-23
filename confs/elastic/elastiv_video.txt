@@ -1,4 +1,0 @@
-
-
-https://pyvideo.org/pycon-italia-2018/python-e-elasticsearch-dal-text-search-a-nlp-e-oltre.html
-

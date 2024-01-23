@@ -1,6 +1,0 @@
-git fetch --unshallow https://github.com/this_is_the_source_url_from_where_you_did_clone_it.git
-
-git remote remove origin
-git init
-git remote add origin https://github.com/your_new_repository_url_here.git
-git push origin master
