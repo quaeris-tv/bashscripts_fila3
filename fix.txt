@@ -9,3 +9,10 @@ sed -i -e 's/\r$//' nomefile.sh
 sed -i -e 's/\r$//' ./bashscripts/git_push.sh
 sed -i -e 's/\r$//' ./bashscripts/git_pull.sh
 sed -i -e 's/\r$//' ./bashscripts/git_branch.sh
+<<<<<<< HEAD
+=======
+
+
+git submodule foreach "mv docs/.git docs/a.git && git rm --cached -rf docs && git pull --rebase || git pull --rebase || git add -A && git commit -am . || echo '--no--'"
+
+>>>>>>> 5f13fe2 (first)

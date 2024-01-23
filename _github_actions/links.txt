@@ -1,0 +1,10 @@
+https://laravel-news.com/laravel-github-actions
+
+https://laravel-news.com/laravel-ci-with-github-action
+
+https://github.com/marketplace/actions/oskar-php-cs-fixer
+
+https://stefanzweifel.dev/posts/2019/09/22/run-prettier-or-php-cs-fixer-with-github-actions
+
+https://akki.ca/blog/fix-the-style-of-your-code-using-github-actions/
+

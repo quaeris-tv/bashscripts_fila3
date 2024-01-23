@@ -1,0 +1,18 @@
+composer global require friendsofphp/php-cs-fixer -W
+
+prestare attenzione alla prima riga   
+Changed current directory to /home/zorin/.config/composer
+
+echo 'export PATH="$HOME/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
+
+source ~/.bashrc
+
+
+---------------
+
+sudo wget https://cs.symfony.com/download/php-cs-fixer-v3.phar -O /usr/bin/php-cs-fixer
+sudo chmod a+x /usr/bin/php-cs-fixer
+Add the php-cs-fixer.executablePath setting to /home/[username]/.vscode-server/data/Machine/settings.json:
+{
+    "php-cs-fixer.executablePath": "/usr/bin/php-cs-fixer"
+}
