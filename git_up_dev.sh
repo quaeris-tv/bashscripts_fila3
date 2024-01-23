@@ -13,7 +13,10 @@ git branch --set-upstream-to=origin/dev dev
 git branch -u origin/dev
 git merge dev
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8863a3b (Remove old files and force push branch to GitHub)
 <<<<<<< HEAD
 #git merge master 
 =======
@@ -30,12 +33,19 @@ git merge master
 #git merge master 
 >>>>>>> decf36077db1822c8ffc41d15fd34ecfcdb048d3
 >>>>>>> 1283aaa (first)
+<<<<<<< HEAD
 >>>>>>> 203f2f7 (first)
+=======
+=======
+#git merge master 
+>>>>>>> fcc9fa2 (rebase 1/2)
+>>>>>>> 8863a3b (Remove old files and force push branch to GitHub)
 echo "-------- END BRANCH[$(pwd)] ----------";
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout dev --
 git pull origin dev --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 #read -p "Press [Enter] key to exit..."
+<<<<<<< HEAD
 <<<<<<< HEAD
 echo "-------- END PULL[$(pwd)] ----------";
 =======
@@ -53,3 +63,6 @@ echo "-------- END PULL[$(pwd)] ----------";
 echo "-------- END PULL[$(pwd)] ----------";
 >>>>>>> decf36077db1822c8ffc41d15fd34ecfcdb048d3
 >>>>>>> 1283aaa (first)
+=======
+echo "-------- END PULL[$(pwd)] ----------";
+>>>>>>> fcc9fa2 (rebase 1/2)
