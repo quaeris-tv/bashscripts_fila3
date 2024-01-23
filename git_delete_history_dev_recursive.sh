@@ -7,9 +7,5 @@ git branch -D dev  # Deletes the dev branch
 git branch -m dev  # Rename the current branch to dev
 git gc --aggressive --prune=all     # remove the old files
 git push -uf origin dev  # Force push dev branch to github
-<<<<<<<< HEAD:git_delete_history_dev_recursive.sh
-git gc --aggressive --prune=all     # remove the old files
-========
 git gc --aggressive --prune=all     # remove the old files
 git gc --auto
->>>>>>>> 244ebdf2ee38eea36ed02f33cb601100bdac9d2c:git_delete_histories_dev.sh
