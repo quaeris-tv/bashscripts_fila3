@@ -10,14 +10,3 @@ git gc --aggressive --prune=now --force
 git gc --prune=now --aggressive
 #read -p "Press [Enter] key to exit..."
 echo "-------- END PRUNE[$(pwd)] ----------";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 1283aaa (first)
-=======
-
->>>>>>> dd31420 (first)
-=======
->>>>>>> 98810cd (rebase 1/3)
