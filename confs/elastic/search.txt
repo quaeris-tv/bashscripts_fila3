@@ -1,0 +1,5 @@
+POST _analyze 
+{
+    "analyzer":"standard",
+    "text":["bla bla bla "]
+}

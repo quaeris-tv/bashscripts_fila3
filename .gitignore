@@ -1,0 +1,8 @@
+.git-rewrite
+.fuse_hidden*
+.fuse_hidden**.lock
+*.lock
+package-lock.json
+.php-cs-fixer.cache
+*.phar
+*.cache

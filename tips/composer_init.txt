@@ -1,0 +1,62 @@
+#!/bin/sh
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+php -r "unlink('composer.lock');"
+rm composer.lock
+rm package-lock.json
+// doctrine mi serve per le funzioni in piu' e per le migrazioni
+php -d memory_limit=-1 composer.phar require -W  doctrine/dbal
+// scout per la ricerca, forse da sostituire con query builder di spatie
+php -d memory_limit=-1 composer.phar require -W  laravel/scout
+// per avere gli errori in slack, non lo utilizziamo da un po
+php -d memory_limit=-1 composer.phar require -W  laravel/slack-notification-channel
+// per fare login da facebook, google etc
+php -d memory_limit=-1 composer.phar require -W  laravel/socialite
+// per gestire i form
+php -d memory_limit=-1 composer.phar require -W  laravelcollective/html
+// per le traduzioni
+php -d memory_limit=-1 composer.phar require -W  mcamara/laravel-localization
+// moduli
+php -d memory_limit=-1 composer.phar require -W  nwidart/laravel-modules
+// relazioni con profondita > 2
+php -d memory_limit=-1 composer.phar require -W  staudenmeir/eloquent-has-many-deep
+// per selezionare immagini nei form
+php -d memory_limit=-1 composer.phar require -W  unisharp/laravel-filemanager
+// per il login
+php -d memory_limit=-1 composer.phar require -W  laravel/ui
+// per i js
+php -d memory_limit=-1 composer.phar require -W  livewire/livewire
+// per le monete
+php -d memory_limit=-1 composer.phar require -W  cknow/laravel-money
+// per le immagini
+php -d memory_limit=-1 composer.phar require -W  intervention/image
+// per immagini e fa anche un percorso che gestisce le immagini in dimensione
+php -d memory_limit=-1 composer.phar require -W  intervention/imagecache
+// cookie law
+php -d memory_limit=-1 composer.phar require -W  spatie/laravel-cookie-consent
+// per accellerare le risposte
+php -d memory_limit=-1 composer.phar require -W  genealabs/laravel-model-caching
+// per gestire i campi status
+#php -d memory_limit=-1 composer.phar require -W  asantibanez/laravel-eloquent-state-machines
+// per selezionare dei tag html
+php -d memory_limit=-1 composer.phar require -W  symfony/dom-crawler
+// per le chiamate curl
+php -d memory_limit=-1 composer.phar require -W  guzzlehttp/guzzle
+#per gestire modello home, themes confs
+php -d memory_limit=-1 composer.phar require -W calebporzio/sushi
+
+//debugbar
+php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-debugbar
+//creazione automatica delle intestazione delle funzioni
+php -d memory_limit=-1 composer.phar require -W --dev barryvdh/laravel-ide-helper
+//test sul codice
+php -d memory_limit=-1 composer.phar require -W --dev larastan/larastan
+//test su codice su moduli
+php -d memory_limit=-1 composer.phar require -W --dev orchestra/testbench
+
+#GLOBAL
+#cs fixer
+php -d memory_limit=-1 composer.phar global require friendsofphp/php-cs-fixer
+#laravel installer
+php -d memory_limit=-1 composer.phar global require laravel/installer
