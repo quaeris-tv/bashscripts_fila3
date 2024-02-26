@@ -1,4 +1,4 @@
-git submodule foreach $( readlink -f -- "$0";)
+git submodule foreach $( readlink -f -- "$0";) $1
 git add --renormalize -A
 git add -A && aicommits  || echo '---------------------------empty'
 git push origin $1 -u --progress 'origin' || git push --set-upstream origin $1
@@ -12,5 +12,6 @@ git submodule update --progress --init --recursive --force --merge --rebase --re
 git checkout $1 --
 git pull origin $1 --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 echo "-------- END PULL[$(pwd) ($1)] ----------";
+git status
 
 
