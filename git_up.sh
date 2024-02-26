@@ -1,9 +1,5 @@
-
-#
 path=$(readlink -f -- "$0 ";)
 branch=$1
-echo 'path:' $path
-echo 'branch:' $branch
 git submodule foreach "$path" $branch
 echo "-------- START[$(pwd) ($path) ($branch)] ----------";
 git add --renormalize -A
