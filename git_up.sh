@@ -2,7 +2,7 @@ path=$(readlink -f -- "$0 ";)
 branch=$1
 where=$(pwd)
 git submodule foreach "$path" $branch
-echo "-------- START[($where) ($path) ($branch)] ----------";
+echo "-------- START[($where) ($branch)] ----------";
 git add --renormalize -A
 git add -A && aicommits  || echo '---------------------------empty'
 git push origin $branch -u --progress 'origin' || git push --set-upstream origin $branch
