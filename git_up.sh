@@ -1,4 +1,10 @@
 #!/bin/sh
+if [ "$1" ]; then
+     echo yes
+else
+    echo 'aggiungere il branch ./bashscripts/git_up.sh  <branch>'
+    exit 1
+fi
 me=$( readlink -f -- "$0";)
 branch=$1
 where=$(pwd)
