@@ -9,6 +9,7 @@ rm package-lock.json
 php -d memory_limit=-1 composer.phar require -W filament/filament:"^3.2" 
 php -d memory_limit=-1 composer.phar require -W coolsam/modules
 php -d memory_limit=-1 composer.phar require -W nwidart/laravel-modules
+php -d memory_limit=-1 composer.phar require -W doctrine/dbal
 ### SPATIE
 php -d memory_limit=-1 composer.phar require -W filament/spatie-laravel-tags-plugin:"^3.2"
 php -d memory_limit=-1 composer.phar require -W filament/spatie-laravel-media-library-plugin:"^3.2"
@@ -18,12 +19,15 @@ php -d memory_limit=-1 composer.phar require -W spatie/laravel-event-sourcing
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-permission
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-queueable-action
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-model-status
+php -d memory_limit=-1 composer.phar require -W spatie/laravel-model-states
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-query-builder
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-activitylog
+php -d memory_limit=-1 composer.phar require -W spatie/laravel-schemaless-attributes
 ### USER 
 php -d memory_limit=-1 composer.phar require -W jenssegers/agent
 php -d memory_limit=-1 composer.phar require -W laravel/passport
 php -d memory_limit=-1 composer.phar require -W socialiteproviders/auth0
+php -d memory_limit=-1 composer.phar require -W tightenco/parental
 ### NOTIFY
 php -d memory_limit=-1 composer.phar require -W kreait/firebase-php
 ### MEDIA
@@ -36,6 +40,7 @@ php -d memory_limit=-1 composer.phar require -W flowframe/laravel-trend
 php -d memory_limit=-1 composer.phar require -W staudenmeir/laravel-adjacency-list
 php -d memory_limit=-1 composer.phar require -W fidum/laravel-eloquent-morph-to-one
 php -d memory_limit=-1 composer.phar require -W calebporzio/sushi
+php -d memory_limit=-1 composer.phar require -W laravel/slack-notification-channel
 ## IMPORT/EXPORT
 php -d memory_limit=-1 composer.phar require -W konnco/filament-import
 php -d memory_limit=-1 composer.phar require -W spipu/html2pdf
