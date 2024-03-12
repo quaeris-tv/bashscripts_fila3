@@ -13,6 +13,7 @@ php -d memory_limit=-1 composer.phar require -W doctrine/dbal
 ### SPATIE
 php -d memory_limit=-1 composer.phar require -W filament/spatie-laravel-tags-plugin:"^3.2"
 php -d memory_limit=-1 composer.phar require -W filament/spatie-laravel-media-library-plugin:"^3.2"
+php -d memory_limit=-1 composer.phar require -W filament/spatie-laravel-translatable-plugin:"^3.2" 
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-cookie-consent
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-data
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-event-sourcing
