@@ -4,7 +4,7 @@ branch=$1
 where=$(pwd)
 git submodule foreach "$me" "$branch"
 echo "-------- START[$where ($branch)] ----------";
-oco || echo '--- no changes'
+git add -A && oco || echo '--- no changes'
 echo "-------- END PUSH[$where ($branch)] ----------";
 git checkout $branch -- || git branch $branch && git checkout $branch
 git merge $branch
