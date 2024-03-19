@@ -1,0 +1,13 @@
+{
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "pestphp/pest-plugin-laravel": "*",
+        "pestphp/pest": "*",
+        "orchestra/pest-plugin-testbench": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
