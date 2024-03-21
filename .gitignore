@@ -8,3 +8,4 @@ package-lock.json
 *.cache
 node_modules
 /node_modules
+vendor/
