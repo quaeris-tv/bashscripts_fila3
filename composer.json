@@ -3,11 +3,18 @@
         "orchestra/testbench": "^9.0",
         "pestphp/pest-plugin-laravel": "*",
         "pestphp/pest": "^2.34",
-        "orchestra/pest-plugin-testbench": "^2.0"
+        "orchestra/pest-plugin-testbench": "^2.0",
+        "nunomaduro/collision": "^8.1",
+        "nunomaduro/phpinsights": "^2.11"
     },
     "config": {
         "allow-plugins": {
-            "pestphp/pest-plugin": true
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
+    },
+    "require": {
+        "filament/filament": "^3.2",
+        "mhmiton/laravel-modules-livewire": "^2.3"
     }
 }
