@@ -2,7 +2,7 @@
 if [ "$1" ]; then
      echo yes
 else
-    echo 'aggiungere il branch ./bashscripts/git_up.sh  <branch>'
+    echo 'aggiungere il branch ./bashscripts/git_up_noai.sh  <branch>'
     exit 1
 fi
 me=$( readlink -f -- "$0";)
