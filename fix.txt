@@ -10,4 +10,7 @@ git submodule foreach "mv docs/.git docs/a.git && git rm --cached -rf docs && gi
 
 git remote set-url --push --add origin  https://github.com/.....
 
+----------
 
+eval "$(ssh-agent -s)" && ssh-add
+ssh-add -L
