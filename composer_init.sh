@@ -41,6 +41,7 @@ php -d memory_limit=-1 composer.phar require -W spatie/image
 ### PROFILE 
 php -d memory_limit=-1 composer.phar require -W tightenco/parental
 ### UI
+php -d memory_limit=-1 composer.phar require -W mhmiton/laravel-modules-livewire
 php -d memory_limit=-1 composer.phar require -W laravel/breeze
 php -d memory_limit=-1 composer.phar require -W owenvoke/blade-fontawesome
 php -d memory_limit=-1 composer.phar require -W laravel/folio
