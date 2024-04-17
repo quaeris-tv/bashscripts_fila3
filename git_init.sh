@@ -1,4 +1,14 @@
-git submodule foreach $( readlink -f -- "$0";)
+#!/bin/sh
+if [ "$1" ]; then
+     echo yes
+else
+    echo 'aggiungere il branch ./bashscripts/git_init.sh  <branch>'
+    exit 1
+fi
+me=$( readlink -f -- "$0";)
+branch=$1
+where=$(pwd)
+git submodule foreach "$me" "$branch"
 git config pull.rebase true
 git config remote.origin.push HEAD
 git config core.autocrlf true

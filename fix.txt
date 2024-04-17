@@ -15,7 +15,3 @@ git remote set-url --push --add origin  https://github.com/.....
 eval "$(ssh-agent -s)" && ssh-add
 ssh-add -L
 
-
-
-
-
