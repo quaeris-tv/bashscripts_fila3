@@ -75,4 +75,3 @@ php -d memory_limit=-1 composer.phar require -W --dev pestphp/pest-plugin-larave
 ### REMOVE
 php -d memory_limit=-1 composer.phar remove laravel/sanctum
 rm config/sanctum.php 
-
