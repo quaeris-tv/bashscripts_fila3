@@ -17,7 +17,5 @@ ssh-add -L
 
 -------------
 
-eval "$(ssh-agent -s)" && ssh-add
-ssh-add -L
 
 
