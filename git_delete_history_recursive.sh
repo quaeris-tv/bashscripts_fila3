@@ -20,3 +20,4 @@ git push -uf origin $branch  # Force push $1 branch to github
 git gc --aggressive --prune=all     # remove the old files
 git gc --auto
 echo "-------- END [$where ($branch)] ----------";
+
