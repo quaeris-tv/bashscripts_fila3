@@ -28,6 +28,7 @@ php -d memory_limit=-1 composer.phar require -W spatie/laravel-activitylog
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-schemaless-attributes
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-feed
 php -d memory_limit=-1 composer.phar require -W spatie/laravel-health
+php -d memory_limit=-1 composer.phar require -W spatie/crawler
 ### USER 
 php -d memory_limit=-1 composer.phar require -W jenssegers/agent
 php -d memory_limit=-1 composer.phar require -W laravel/passport
