@@ -31,7 +31,7 @@ php -d memory_limit=-1 composer.phar require -W spatie/laravel-health
 php -d memory_limit=-1 composer.phar require -W spatie/security-advisories-health-check
 php -d memory_limit=-1 composer.phar require -W spatie/cpu-load-health-check
 php -d memory_limit=-1 composer.phar require -W spatie/crawler
-#php -d memory_limit=-1 composer.phar require -W spatie/url
+php -d memory_limit=-1 composer.phar require -W spatie/url
 php -d memory_limit=-1 composer.phar require -W spatie/color
 ### USER 
 php -d memory_limit=-1 composer.phar require -W jenssegers/agent
