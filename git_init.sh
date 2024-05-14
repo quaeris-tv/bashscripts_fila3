@@ -16,7 +16,7 @@ git config core.safecrlf false
 git config submodule.recurse true
 git config core.fileMode false
 git config advice.skippedCherryPicks false
-git remote set-branches --add origin $1
+git remote set-branches --add origin $branch
 git push --recurse-submodules=on-demand
-git branch --set-upstream-to=origin/$1 $1
+git branch --set-upstream-to=origin/$branch $branch
 
