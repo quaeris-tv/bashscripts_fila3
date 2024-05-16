@@ -11,7 +11,8 @@ where=$(pwd)
 git submodule foreach "$me" "$branch"
 echo "-------- START[$where ($branch)] ----------";
 git add --renormalize -A
-git add -A && aicommits  || echo '---------------------------empty'
+#git add -A && aicommits  || echo '---------------------------empty'ù
+git add -A && oco  || echo '---------------------------empty'
 git push origin $branch -u --progress 'origin' || git push --set-upstream origin $branch
 echo "-------- END PUSH[$where ($branch)] ----------";
 git checkout $branch --
