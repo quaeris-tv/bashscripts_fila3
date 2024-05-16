@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .git-rewrite
 .fuse_hidden*
 .fuse_hidden**.lock
@@ -10,4 +11,17 @@ node_modules
 /node_modules
 vendor/
 .git-blame-ignore-revs
+=======
+.git-rewrite
+.fuse_hidden*
+.fuse_hidden**.lock
+*.lock
+package-lock.json
+.php-cs-fixer.cache
+*.phar
+*.cache
+node_modules
+/node_modules
+vendor/
+>>>>>>> dde94665 (up)
 .git-blame-ignore-revs
