@@ -40,6 +40,8 @@ php -d memory_limit=-1 composer.phar require -W socialiteproviders/auth0
 php -d memory_limit=-1 composer.phar require -W tightenco/parental
 ### NOTIFY
 php -d memory_limit=-1 composer.phar require -W kreait/firebase-php
+php -d memory_limit=-1 composer.phar require -W laravel-notification-channels/telegram
+php -d memory_limit=-1 composer.phar require -W laravel/slack-notification-channel
 ### MEDIA
 php -d memory_limit=-1 composer.phar require -W pbmedia/laravel-ffmpeg
 php -d memory_limit=-1 composer.phar require -W intervention/image
@@ -66,7 +68,6 @@ php -d memory_limit=-1 composer.phar require -W flowframe/laravel-trend
 php -d memory_limit=-1 composer.phar require -W staudenmeir/laravel-adjacency-list
 php -d memory_limit=-1 composer.phar require -W fidum/laravel-eloquent-morph-to-one
 php -d memory_limit=-1 composer.phar require -W calebporzio/sushi
-php -d memory_limit=-1 composer.phar require -W laravel/slack-notification-channel
 php -d memory_limit=-1 composer.phar require -W predis/predis
 
 ### DEV
