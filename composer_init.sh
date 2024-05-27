@@ -5,6 +5,8 @@ php -r "unlink('composer-setup.php');"
 php -r "unlink('composer.lock');"
 rm composer.lock
 rm package-lock.json
+#mv composer.json composer_$(date +"%Y-%m-%d").json
+#php composer.phar init
 
 php -d memory_limit=-1 composer.phar require -W filament/filament
 php -d memory_limit=-1 composer.phar require -W coolsam/modules
