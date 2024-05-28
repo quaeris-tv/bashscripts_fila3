@@ -60,7 +60,7 @@ php -d memory_limit=-1 composer.phar require -W livewire/volt
 php artisan volt:install
 php -d memory_limit=-1 composer.phar require -W guava/filament-icon-picker
 ## IMPORT/EXPORT
-php -d memory_limit=-1 composer.phar require -W konnco/filament-import
+#php -d memory_limit=-1 composer.phar require -W konnco/filament-import
 php -d memory_limit=-1 composer.phar require -W spipu/html2pdf
 php -d memory_limit=-1 composer.phar require -W maatwebsite/excel
 ####
