@@ -55,6 +55,7 @@ php -d memory_limit=-1 composer.phar require -W mhmiton/laravel-modules-livewire
 php -d memory_limit=-1 composer.phar require -W laravel/breeze
 php -d memory_limit=-1 composer.phar require -W owenvoke/blade-fontawesome
 php -d memory_limit=-1 composer.phar require -W laravel/folio
+php -d memory_limit=-1 composer.phar require -W cknow/laravel-money
 php artisan folio:install
 php -d memory_limit=-1 composer.phar require -W livewire/volt
 php artisan volt:install
