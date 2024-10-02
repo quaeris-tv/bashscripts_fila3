@@ -3,20 +3,16 @@
 sed -i -e 's/\r$//' nomefile.sh
 
 ---------
-git submodule foreach "mv docs/.git docs/a.git && git rm --cached -rf docs && git pull --rebase || git pull --rebase || git add -A && git commit -am . || echo '--no--'"
-
-
-----------
-
+Aggiungere un secondo punto di push 
 git remote set-url --push --add origin  https://github.com/.....
 
 ----------
-
+prima di entrare in ssh in un server remoto in cui usiamo git collegato via ssh
 eval "$(ssh-agent -s)" && ssh-add
 ssh-add -L
 
 -------------
-
+per cercare un testo dentro i file 
 grep -Ril "text-to-find-here" .
 
 i stands for ignore case (optional in your case).
@@ -25,4 +21,6 @@ l stands for "show the file name, not the result itself".
 / stands for starting at the root of your machine.
 
 -------------
+Automatically track remote branch with git
+git config --global --add --bool push.autoSetupRemote true
 
