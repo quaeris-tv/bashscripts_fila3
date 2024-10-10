@@ -24,3 +24,7 @@ git checkout $branch --
 git pull origin $branch --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 echo "-------- END PULL[$where ($branch)] ----------";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dbe8fbfa (up)
