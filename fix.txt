@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 /bin/bash^M: bad interpreter: No such file or directory
 sed -i -e 's/\r$//' nomefile.sh
@@ -25,31 +24,3 @@ l stands for "show the file name, not the result itself".
 Automatically track remote branch with git
 git config --global --add --bool push.autoSetupRemote true
 
-=======
-
-/bin/bash^M: bad interpreter: No such file or directory
-sed -i -e 's/\r$//' nomefile.sh
-
----------
-Aggiungere un secondo punto di push 
-git remote set-url --push --add origin  https://github.com/.....
-
-----------
-prima di entrare in ssh in un server remoto in cui usiamo git collegato via ssh
-eval "$(ssh-agent -s)" && ssh-add
-ssh-add -L
-
--------------
-per cercare un testo dentro i file 
-grep -Ril "text-to-find-here" .
-
-i stands for ignore case (optional in your case).
-R stands for recursive.
-l stands for "show the file name, not the result itself".
-/ stands for starting at the root of your machine.
-
--------------
-Automatically track remote branch with git
-git config --global --add --bool push.autoSetupRemote true
-
->>>>>>> dbe8fbfa (up)
