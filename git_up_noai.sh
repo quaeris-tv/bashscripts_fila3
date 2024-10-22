@@ -9,6 +9,7 @@ me=$( readlink -f -- "$0";)
 branch=$1
 where=$(pwd)
 git submodule foreach "$me" "$branch"
+git config core.fileMode false
 git add --renormalize -A
 #git add -A && aicommits  || echo '---------------------------empty'
 git add -A && git commit -am "up"  || echo '---------------------------empty'
