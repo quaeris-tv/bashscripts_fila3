@@ -52,6 +52,7 @@ while IFS= read -r line; do
             git config pull.rebase true
             git config rebase.autoStash true
             git config core.fileMode false
+            git config advice.mergeConflict false
             git pull --autostash --rebase "$NEW_REMOTE"
             echo "----------------------------------------"
         )
