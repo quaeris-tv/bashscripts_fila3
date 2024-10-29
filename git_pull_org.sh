@@ -51,6 +51,7 @@ while IFS= read -r line; do
             #git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
             git config pull.rebase true
             git config rebase.autoStash true
+            git config core.fileMode false
             git pull --autostash --rebase "$NEW_REMOTE"
             echo "----------------------------------------"
         )
