@@ -50,6 +50,7 @@ while IFS= read -r line; do
             #git fetch "$NEW_REMOTE"
             #git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
 <<<<<<< HEAD
+<<<<<<< HEAD
             git config pull.rebase true
             git config rebase.autoStash true
             git config core.fileMode false
@@ -58,6 +59,16 @@ while IFS= read -r line; do
 =======
             git pull "$NEW_REMOTE"
 >>>>>>> e54526d1 (.)
+=======
+            git pull "$NEW_REMOTE"
+=======
+            git config pull.rebase true
+            git config rebase.autoStash true
+            git config core.fileMode false
+            git config advice.mergeConflict false
+            git pull --autostash --rebase "$NEW_REMOTE"
+>>>>>>> d3e61bb2 (.)
+>>>>>>> 60b6575c (🔧 (fix.txt): resolve conflict in fix.txt file regarding file mode changes)
             echo "----------------------------------------"
         )
     fi
