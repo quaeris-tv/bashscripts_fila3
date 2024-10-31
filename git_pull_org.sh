@@ -49,11 +49,15 @@ while IFS= read -r line; do
             # Fetch from new remote and merge
             #git fetch "$NEW_REMOTE"
             #git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
+<<<<<<< HEAD
             git config pull.rebase true
             git config rebase.autoStash true
             git config core.fileMode false
             git config advice.mergeConflict false
             git pull --autostash --rebase "$NEW_REMOTE"
+=======
+            git pull "$NEW_REMOTE"
+>>>>>>> e54526d1 (.)
             echo "----------------------------------------"
         )
     fi
