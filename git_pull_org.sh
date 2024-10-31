@@ -53,13 +53,17 @@ while IFS= read -r line; do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4d6ed90c (.)
+=======
+>>>>>>> a8707c05 (.)
             git config pull.rebase true
             git config rebase.autoStash true
             git config core.fileMode false
             git config advice.mergeConflict false
             git pull --autostash --rebase "$NEW_REMOTE"
+<<<<<<< HEAD
 =======
             git pull "$NEW_REMOTE"
 >>>>>>> e54526d1 (.)
@@ -81,6 +85,8 @@ while IFS= read -r line; do
 >>>>>>> 0c4f21f9 (♻️ (git_pull_org.sh): remove unnecessary conflict markers and clean up git pull script for better readability and maintainability)
 =======
 >>>>>>> 4d6ed90c (.)
+=======
+>>>>>>> a8707c05 (.)
             echo "----------------------------------------"
         )
     fi
