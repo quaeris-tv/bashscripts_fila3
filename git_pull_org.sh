@@ -52,6 +52,9 @@ while IFS= read -r line; do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4d6ed90c (.)
             git config pull.rebase true
             git config rebase.autoStash true
             git config core.fileMode false
@@ -60,6 +63,7 @@ while IFS= read -r line; do
 =======
             git pull "$NEW_REMOTE"
 >>>>>>> e54526d1 (.)
+<<<<<<< HEAD
 =======
             git pull "$NEW_REMOTE"
 =======
@@ -75,6 +79,8 @@ while IFS= read -r line; do
 >>>>>>> 60b6575c (🔧 (fix.txt): resolve conflict in fix.txt file regarding file mode changes)
 =======
 >>>>>>> 0c4f21f9 (♻️ (git_pull_org.sh): remove unnecessary conflict markers and clean up git pull script for better readability and maintainability)
+=======
+>>>>>>> 4d6ed90c (.)
             echo "----------------------------------------"
         )
     fi
