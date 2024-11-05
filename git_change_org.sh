@@ -42,12 +42,8 @@ while IFS= read -r line; do
             REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
             
             # Create new remote URL
-<<<<<<< HEAD
             #NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
             NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
-=======
-            NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
->>>>>>> e54526d1 (.)
             
             echo "Changing into: $NEW_REMOTE"
             
