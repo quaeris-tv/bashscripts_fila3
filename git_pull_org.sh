@@ -56,14 +56,12 @@ while IFS= read -r line; do
 =======
             #git fetch "$NEW_REMOTE"
             #git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             git config pull.rebase true
             git config rebase.autoStash true
             git config core.fileMode false
             git config advice.mergeConflict false
             git pull --autostash --rebase "$NEW_REMOTE"
+<<<<<<< HEAD
             
 =======
             git pull "$NEW_REMOTE"
@@ -84,6 +82,8 @@ while IFS= read -r line; do
 =======
 >>>>>>> 0c4f21f9 (♻️ (git_pull_org.sh): remove unnecessary conflict markers and clean up git pull script for better readability and maintainability)
 >>>>>>> 4befc76b89e00cb8e18154037b2b867049d60648
+=======
+>>>>>>> 548b84aabf0af02f4cd11abead75047cf7240de2
             echo "----------------------------------------"
         )
     fi
