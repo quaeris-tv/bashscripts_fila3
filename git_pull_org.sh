@@ -60,7 +60,7 @@ while IFS= read -r line; do
             git fetch "$NEW_REMOTE"
             git pull --rebase --autostash "$NEW_REMOTE" || {
                 echo "Error: Failed to update submodule $SUBMODULE_PATH from $NEW_REMOTE"
-                return 1
+                
             }
             echo "----------------------------------------"
         )
