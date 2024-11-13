@@ -44,11 +44,7 @@ while IFS= read -r line; do
             # Create new remote URL
             NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
             
-<<<<<<< HEAD
             echo "Pushing to: $NEW_REMOTE"
-=======
-            echo "Pushng to: $NEW_REMOTE"
->>>>>>> 4befc76b89e00cb8e18154037b2b867049d60648
             
             # Fetch from new remote and merge
             #git fetch "$NEW_REMOTE"
