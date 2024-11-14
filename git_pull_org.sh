@@ -45,18 +45,18 @@ while IFS= read -r line; do
             echo "Updating submodule: $SUBMODULE_PATH"
             echo "New remote: $NEW_REMOTE"
             
-            # Set git configurations to avoid unnecessary conflicts and enhance pull behavior
+            # Fetch from new remote and merge
+
+            git config advice.mergeConflict false
+            git config core.fileMode false
             git config pull.rebase true
             git config rebase.autoStash true
-            git config core.fileMode false
-            git config advice.mergeConflict false
             
-            # Fetch from the new remote and rebase if necessary
+            
             git fetch "$NEW_REMOTE"
-            git pull --autostash --rebase "$NEW_REMOTE" || {
-                echo "Error: Failed to update submodule $SUBMODULE_PATH from $NEW_REMOTE"
-                return 1
-            }
+            git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
+            git pull --rebase --autostash "$NEW_REMOTE"
+            
             
             echo "----------------------------------------"
         )
