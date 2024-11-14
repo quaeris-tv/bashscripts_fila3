@@ -8,6 +8,7 @@ fi
 me=$( readlink -f -- "$0";)
 branch=$1
 where=$(pwd)
+git submodule update --progress --init --recursive --force --merge --rebase --remote
 git submodule foreach "$me" "$branch"
 git config core.fileMode false
 git add --renormalize -A
