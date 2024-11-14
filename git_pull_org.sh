@@ -21,36 +21,45 @@ while IFS= read -r line; do
     
     if [[ $line =~ path\ =\ (.+)$ ]]; then
         # Get submodule path and clean it
-        SUBMODULE_PATH=$(echo "${BASH_REMATCH[1]}" | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-        
+        SUBMODULE_PATH="${BASH_REMATCH[1]}"
+        SUBMODULE_PATH=$(echo "$SUBMODULE_PATH" | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+
         echo "Processing submodule: $SUBMODULE_PATH"
         
-        # Check if directory exists
+        # Check if the submodule directory exists
         if [ ! -d "$SUBMODULE_PATH" ]; then
             echo "Warning: Directory $SUBMODULE_PATH does not exist, skipping..."
             continue
         fi
         
-        # Enter submodule directory
+        # Enter the submodule directory
         (
-            cd "$SUBMODULE_PATH" || {
-                echo "Error: Could not enter directory $SUBMODULE_PATH"
-                exit 1
-            }
+            cd "$SUBMODULE_PATH" || { echo "Error: Could not enter directory $SUBMODULE_PATH"; exit 1; }
             
-            # Get repository name from current remote URL
+            # Get the repository name from the current remote URL
             REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
             
-            # Create new remote URL
+            # Create new remote URL based on the provided organization name
             NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
             
-            echo "Pulling from: $NEW_REMOTE"
+            echo "Updating submodule: $SUBMODULE_PATH"
+            echo "New remote: $NEW_REMOTE"
             
+<<<<<<< HEAD
             # Fetch from new remote and merge
 <<<<<<< HEAD
             git config advice.mergeConflict false
+=======
+            # Set git configurations to avoid unnecessary conflicts and enhance pull behavior
+            git config pull.rebase true
+            git config rebase.autoStash true
+>>>>>>> 0fb58d09ee6da0a806d0df1ff8b3e051ae7cd29f
             git config core.fileMode false
+            git config advice.mergeConflict false
+            
+            # Fetch from the new remote and rebase if necessary
             git fetch "$NEW_REMOTE"
+<<<<<<< HEAD
             git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
             git pull --rebase --autostash "$NEW_REMOTE"
 =======
@@ -84,6 +93,13 @@ while IFS= read -r line; do
 >>>>>>> 4befc76b89e00cb8e18154037b2b867049d60648
 =======
 >>>>>>> 548b84aabf0af02f4cd11abead75047cf7240de2
+=======
+            git pull --autostash --rebase "$NEW_REMOTE" || {
+                echo "Error: Failed to update submodule $SUBMODULE_PATH from $NEW_REMOTE"
+                return 1
+            }
+            
+>>>>>>> 0fb58d09ee6da0a806d0df1ff8b3e051ae7cd29f
             echo "----------------------------------------"
         )
     fi
