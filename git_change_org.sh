@@ -59,12 +59,8 @@ while IFS= read -r line; do
             # Ottieni il nome del repository dal remote URL del sottogruppo
             REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
             
-<<<<<<< HEAD
-            # Crea il nuovo URL del remote per il sottogruppo
-=======
             # Create new remote URL
             #NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
->>>>>>> origin/dev
             NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
             
             # Imposta il nuovo URL del remote per il sottogruppo
