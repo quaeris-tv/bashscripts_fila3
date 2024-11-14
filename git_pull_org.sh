@@ -71,6 +71,7 @@ while IFS= read -r line; do
             git config advice.mergeConflict false
             git pull --autostash --rebase "$NEW_REMOTE"
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
             git pull "$NEW_REMOTE"
@@ -100,6 +101,8 @@ while IFS= read -r line; do
             }
             
 >>>>>>> 0fb58d09ee6da0a806d0df1ff8b3e051ae7cd29f
+=======
+>>>>>>> c3f5d813402c3c65088db71170cc7f01213f01b5
             echo "----------------------------------------"
         )
     fi
