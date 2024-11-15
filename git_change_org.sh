@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Ensure that the script is provided with the new organization name
+# Verifica se il nome della nuova organizzazione è stato fornito
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <new-organization-name>"
     exit 1
@@ -8,38 +8,58 @@ fi
 
 NEW_ORG="$1"
 
-# Check if .gitmodules file exists
+# Verifica se il file .gitmodules esiste
 if [ ! -f .gitmodules ]; then
     echo "Error: .gitmodules file not found!"
     exit 1
 fi
 
-# Loop through each line in .gitmodules and process submodules
+# Funzione per aggiornare il remote del repository principale
+update_main_repo_remote() {
+    # Ottieni il nome del repository principale (senza l'estensione .git)
+    REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
+    
+    # Crea il nuovo URL del remote per il repository principale
+    NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
+    
+    # Aggiorna il remote principale (origin) con il nuovo URL
+    echo "Updating main repository remote to: $NEW_REMOTE"
+    git remote set-url origin "$NEW_REMOTE" || {
+        echo "Error: Failed to set new remote URL for the main repository"
+        exit 1
+    }
+}
+
+# Aggiorna il remote per il repository principale
+update_main_repo_remote
+
+# Loop attraverso ogni sottogruppo nel file .gitmodules e aggiorna il remote
 while IFS= read -r line; do
-    # Clean up the line (remove carriage returns and surrounding whitespace)
+    # Pulisci la linea (rimuovi ritorni a capo e spaziatura)
     line=$(echo "$line" | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
     
-    # Look for the submodule path
+    # Cerca il path del sottogruppo
     if [[ $line =~ path\ =\ (.+)$ ]]; then
         SUBMODULE_PATH="${BASH_REMATCH[1]}"
-        # Clean up the submodule path
+        # Pulisci il path del sottogruppo
         SUBMODULE_PATH=$(echo "$SUBMODULE_PATH" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
 
         echo "Processing submodule: $SUBMODULE_PATH"
         
-        # Check if the submodule directory exists
+        # Verifica se la directory del sottogruppo esiste
         if [ ! -d "$SUBMODULE_PATH" ]; then
             echo "Warning: Directory $SUBMODULE_PATH does not exist, skipping..."
             continue
         fi
         
-        # Enter the submodule directory
+        # Entra nella directory del sottogruppo
         (
             cd "$SUBMODULE_PATH" || { echo "Error: Could not enter directory $SUBMODULE_PATH"; exit 1; }
             
-            # Get the repository name from the remote URL
+            # Ottieni il nome del repository dal remote URL del sottogruppo
             REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
             
+<<<<<<< HEAD
 <<<<<<< HEAD
             # Create new remote URL using SSH by default
             NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
@@ -50,14 +70,19 @@ while IFS= read -r line; do
             #NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
             NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
 >>>>>>> c3f5d813402c3c65088db71170cc7f01213f01b5
+=======
+            # Create new remote URL
+            #NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
+            NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
+>>>>>>> 4ffa074bd2c4b53de6049c32953608e287313ce8
             
-            # Set the new remote URL for the submodule
+            # Imposta il nuovo URL del remote per il sottogruppo
             git remote set-url origin "$NEW_REMOTE" || {
                 echo "Error: Failed to set new remote URL for $SUBMODULE_PATH"
                 return 1
             }
             
-            # Optionally: Fetch and pull from the new remote (uncomment if needed)
+            # Opzionale: fetch e pull dal nuovo remote (se necessario, decommenta)
             # git fetch "$NEW_REMOTE" || { echo "Error: Failed to fetch from $NEW_REMOTE"; return 1; }
             # git pull "$NEW_REMOTE" || { echo "Error: Failed to pull from $NEW_REMOTE"; return 1; }
             
@@ -66,4 +91,4 @@ while IFS= read -r line; do
     fi
 done < .gitmodules
 
-echo "All submodules have been updated!"
+echo "All submodules and main repository have been updated!"
