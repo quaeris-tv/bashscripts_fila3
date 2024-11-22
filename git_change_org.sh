@@ -40,9 +40,10 @@ while IFS= read -r line; do
             # Get the repository name from the remote URL
             REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
             
-            # Create new remote URL
-            #NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
+            # Create new remote URL using SSH by default
             NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
+
+            echo "Changing remote URL to: $NEW_REMOTE"
             
             # Set the new remote URL for the submodule
             git remote set-url origin "$NEW_REMOTE" || {

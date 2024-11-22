@@ -14,6 +14,14 @@ if [ ! -f .gitmodules ]; then
     exit 1
 fi
 
+# Function to configure git settings
+configure_git() {
+    git config pull.rebase true
+    git config rebase.autoStash true
+    git config core.fileMode false
+    git config advice.mergeConflict false
+}
+
 # Read .gitmodules file and process each submodule
 while IFS= read -r line; do
     # Remove carriage return and leading/trailing whitespace
@@ -45,19 +53,16 @@ while IFS= read -r line; do
             echo "Updating submodule: $SUBMODULE_PATH"
             echo "New remote: $NEW_REMOTE"
             
-            # Fetch from new remote and merge
-
-            git config advice.mergeConflict false
-            git config core.fileMode false
-            git config pull.rebase true
-            git config rebase.autoStash true
+            # Configure git settings
+            configure_git
             
-            
+            # Fetch and rebase from the new remote
             git fetch "$NEW_REMOTE"
-            git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
-            git pull --rebase --autostash "$NEW_REMOTE"
-            
-            
+            git pull --rebase --autostash "$NEW_REMOTE" || {
+                echo "Error: Failed to update submodule $SUBMODULE_PATH from $NEW_REMOTE"
+                return 1
+            }
+
             echo "----------------------------------------"
         )
     fi
