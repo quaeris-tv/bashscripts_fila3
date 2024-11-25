@@ -24,9 +24,12 @@ l stands for "show the file name, not the result itself".
 Automatically track remote branch with git
 git config --global --add --bool push.autoSetupRemote true
 
+<<<<<<< HEAD
 -------------
 ignore file mode chmod change
 git config core.fileMode false
 
 -------------
 
+=======
+>>>>>>> 61fb4af6 (up)
