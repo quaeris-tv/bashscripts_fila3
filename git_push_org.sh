@@ -49,6 +49,7 @@ while IFS= read -r line; do
             # Optional: Fetch from the new remote and merge (uncomment if needed)
             #git fetch "$NEW_REMOTE"
             #git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
+<<<<<<< HEAD
             
             # Push the submodule to the new remote
             git push -u "$NEW_REMOTE" || {
@@ -56,6 +57,9 @@ while IFS= read -r line; do
                 exit 1
             }
 
+=======
+            git push -u "$NEW_REMOTE" HEAD:dev
+>>>>>>> origin/dev
             echo "----------------------------------------"
         )
     fi
