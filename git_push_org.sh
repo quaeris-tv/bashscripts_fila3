@@ -42,24 +42,15 @@ while IFS= read -r line; do
             REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
             
             # Create new remote URL
-            NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
+            #NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
+            NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
             
             echo "Pushing to: $NEW_REMOTE"
             
             # Optional: Fetch from the new remote and merge (uncomment if needed)
             #git fetch "$NEW_REMOTE"
             #git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
-<<<<<<< HEAD
-            
-            # Push the submodule to the new remote
-            git push -u "$NEW_REMOTE" || {
-                echo "Error: Failed to push submodule $SUBMODULE_PATH to $NEW_REMOTE"
-                exit 1
-            }
-
-=======
-            git push -u "$NEW_REMOTE" HEAD:dev
->>>>>>> origin/dev
+            git push -uf "$NEW_REMOTE" HEAD:dev
             echo "----------------------------------------"
         )
     fi
