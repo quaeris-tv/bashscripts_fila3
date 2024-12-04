@@ -51,9 +51,12 @@ while read -r line; do
     git remote add origin "$SUBMODULE_URL"
     git fetch origin
 
+    git add -A
+    git commit -am "."
+
     # Esegue il pull per unire modifiche remote con quelle locali, risolvendo automaticamente i conflitti
     echo "Eseguo il pull con risoluzione automatica dei conflitti..."
-    git pull origin "$ROOT_BRANCH" --force --rebase --strategy-option=theirs || {
+    git pull origin "$ROOT_BRANCH" --force --rebase --autostash --strategy-option=theirs || {
       echo "Tentativo di risoluzione automatica fallito. Forzo merge."
       git merge --strategy-option=theirs
     }
@@ -63,9 +66,7 @@ while read -r line; do
     echo "Eseguo il merge delle modifiche remote in $SUBMODULE_PATH..."
     git merge origin/"$ROOT_BRANCH" --no-edit
 
-    echo "Eseguo il pull delle modifiche remote..."
-    git pull origin "$ROOT_BRANCH" --force --rebase
-
+    
     # Aggiunge eventuali modifiche locali e le committa
     if [[ -n $(git status --porcelain) ]]; then
       echo "Ci sono modifiche locali in $SUBMODULE_PATH. Le committerò e le sincronizzerò."
