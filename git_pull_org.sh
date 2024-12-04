@@ -62,7 +62,6 @@ while IFS= read -r line; do
                 echo "Error: Failed to update submodule $SUBMODULE_PATH from $NEW_REMOTE"
                 return 1
             }
-
             echo "----------------------------------------"
         )
     fi
