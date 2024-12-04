@@ -56,15 +56,12 @@ while read -r line; do
 
     # Esegue il pull per unire modifiche remote con quelle locali, risolvendo automaticamente i conflitti
     echo "Eseguo il pull con risoluzione automatica dei conflitti..."
-    git pull origin "$ROOT_BRANCH" --force --rebase --autostash --strategy-option=theirs || {
-      echo "Tentativo di risoluzione automatica fallito. Forzo merge."
-      git merge --strategy-option=theirs
-    }
+    git pull origin "$ROOT_BRANCH" --force --rebase --autostash --strategy-option=theirs
     
 
     # Unisce le modifiche remote con quelle locali
     echo "Eseguo il merge delle modifiche remote in $SUBMODULE_PATH..."
-    git merge origin/"$ROOT_BRANCH" --no-edit
+    git merge origin/"$ROOT_BRANCH" --no-edit --strategy-option=theirs
 
     
     # Aggiunge eventuali modifiche locali e le committa
