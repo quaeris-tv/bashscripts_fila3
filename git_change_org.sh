@@ -79,4 +79,4 @@ while IFS= read -r line; do
     fi
 done < .gitmodules
 
-echo "All submodules and main repository have been updated!"
+echo "All submodules have been updated!"
