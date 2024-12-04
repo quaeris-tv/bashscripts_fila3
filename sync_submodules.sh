@@ -53,7 +53,7 @@ while read -r line; do
 
     # Esegue il pull per unire modifiche remote con quelle locali, risolvendo automaticamente i conflitti
     echo "Eseguo il pull con risoluzione automatica dei conflitti..."
-    git pull origin "$ROOT_BRANCH" --strategy-option=theirs || {
+    git pull origin "$ROOT_BRANCH" --force --rebase --strategy-option=theirs || {
       echo "Tentativo di risoluzione automatica fallito. Forzo merge."
       git merge --strategy-option=theirs
     }
@@ -74,7 +74,7 @@ while read -r line; do
     fi
 
     # Pusha le modifiche
-    git push -uf origin HEAD:"$ROOT_BRANCH"
+    git push -u origin HEAD:"$ROOT_BRANCH"
 
     # Torna alla root e cancella la cartella .git
     cd - || exit
