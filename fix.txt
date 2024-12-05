@@ -3,7 +3,7 @@
 sed -i -e 's/\r$//' nomefile.sh
 
 ---------
-Aggiungere un secondo punto di push 
+Aggiungere un secondo punto di push
 git remote set-url --push --add origin  https://github.com/.....
 
 ----------
@@ -12,7 +12,7 @@ eval "$(ssh-agent -s)" && ssh-add
 ssh-add -L
 
 -------------
-per cercare un testo dentro i file 
+per cercare un testo dentro i file
 grep -Ril "text-to-find-here" .
 
 i stands for ignore case (optional in your case).
