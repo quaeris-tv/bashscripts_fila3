@@ -55,7 +55,7 @@ process_submodule() {
         echo "Nuovo remoto: $NEW_REMOTE"
 
         # Aggiorna il remoto (se necessario)
-        git remote set-url origin "$NEW_REMOTE"
+        #git remote set-url origin "$NEW_REMOTE"
 
         # Prova a fare push
         if ! git push origin HEAD:"$TARGET_BRANCH"; then
