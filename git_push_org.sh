@@ -27,6 +27,7 @@ fi
 process_submodule() {
     local SUBMODULE_PATH=$1
 
+    echo "----------------------------------------"
     echo "Elaborazione submodule: $SUBMODULE_PATH"
 
     # Controlla se la directory esiste
@@ -44,6 +45,7 @@ process_submodule() {
 
         # Ottieni il nome del repository dall'URL remoto corrente
         REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
+        ORIGINAL_REMOTE=$(git config --get remote.origin.url)
 
         # Crea il nuovo URL remoto
         if [ "$REMOTE_TYPE" == "https" ]; then
@@ -51,11 +53,10 @@ process_submodule() {
         else
             NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
         fi
+        echo "Nuovo remoto temporaneo: $NEW_REMOTE"
 
-        echo "Nuovo remoto: $NEW_REMOTE"
-
-        # Aggiorna il remoto (se necessario)
-        #git remote set-url origin "$NEW_REMOTE"
+        # Aggiorna temporaneamente il remoto
+        git remote set-url origin "$NEW_REMOTE"
 
         # Prova a fare push
         if ! git push origin HEAD:"$TARGET_BRANCH"; then
@@ -76,8 +77,11 @@ process_submodule() {
             echo "Push completato con successo per $SUBMODULE_PATH"
         fi
 
-        echo "----------------------------------------"
+        # Ripristina l'originale remoto
+        git remote set-url origin "$ORIGINAL_REMOTE"
+        echo "Remoto originale ripristinato: $ORIGINAL_REMOTE"
     )
+    echo "----------------------------------------"
 }
 
 # Leggi il file .gitmodules e processa ogni submodule
@@ -89,4 +93,4 @@ while IFS= read -r line; do
     fi
 done < .gitmodules
 
-echo "Tutti i submodules sono stati elaborati con successo!"
+echo "Elaborazione di tutti i submodules completata!"
