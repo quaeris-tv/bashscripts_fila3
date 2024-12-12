@@ -14,6 +14,26 @@ if [ ! -f .gitmodules ]; then
     exit 1
 fi
 
+# Process the main repository (root repository)
+echo "Processing main repository (root)..."
+
+# Get the repository name from the remote URL
+MAIN_REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
+
+# Create new remote URL using SSH by default
+NEW_MAIN_REMOTE="git@github.com:$NEW_ORG/$MAIN_REPO_NAME.git"
+
+echo "Changing main repository remote URL to: $NEW_MAIN_REMOTE"
+
+# Set the new remote URL for the root repository
+git remote set-url origin "$NEW_MAIN_REMOTE" || {
+    echo "Error: Failed to set new remote URL for main repository"
+    exit 1
+}
+
+echo "Main repository remote URL updated successfully!"
+echo "----------------------------------------"
+
 # Loop through each line in .gitmodules and process submodules
 while IFS= read -r line; do
     # Clean up the line (remove carriage returns and surrounding whitespace)
@@ -43,7 +63,7 @@ while IFS= read -r line; do
             # Create new remote URL using SSH by default
             NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
 
-            echo "Changing remote URL to: $NEW_REMOTE"
+            echo "Changing submodule remote URL to: $NEW_REMOTE"
             
             # Set the new remote URL for the submodule
             git remote set-url origin "$NEW_REMOTE" || {
@@ -60,4 +80,4 @@ while IFS= read -r line; do
     fi
 done < .gitmodules
 
-echo "All submodules have been updated!"
+echo "All submodules and the main repository remote URL have been updated!"
