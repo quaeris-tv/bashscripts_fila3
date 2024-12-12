@@ -1,59 +1,96 @@
 #!/bin/bash
 
-# Check if organization name is provided
-if [ $# -ne 1 ]; then
+# Configurazioni
+TARGET_BRANCH="dev"  # Branch di destinazione per il push
+REMOTE_TYPE="ssh"    # Può essere "ssh" o "https"
+
+# Funzione per mostrare l'uso corretto
+usage() {
     echo "Usage: $0 <new-organization-name>"
     exit 1
+}
+
+# Controlla se è fornito il nome dell'organizzazione
+if [ $# -ne 1 ]; then
+    usage
 fi
 
 NEW_ORG="$1"
 
-# Check if .gitmodules exists
+# Controlla se esiste il file .gitmodules
 if [ ! -f .gitmodules ]; then
-    echo "Error: .gitmodules file not found!"
+    echo "Errore: file .gitmodules non trovato!"
     exit 1
 fi
 
-# Read .gitmodules file and process each submodule
-while IFS= read -r line; do
-    # Remove carriage return and leading/trailing whitespace
-    line=$(echo "$line" | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-    
-    if [[ $line =~ path\ =\ (.+)$ ]]; then
-        # Get submodule path and clean it
-        SUBMODULE_PATH=$(echo "${BASH_REMATCH[1]}" | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-        
-        echo "Processing submodule: $SUBMODULE_PATH"
-        
-        # Check if directory exists
-        if [ ! -d "$SUBMODULE_PATH" ]; then
-            echo "Warning: Directory $SUBMODULE_PATH does not exist, skipping..."
-            continue
-        fi
-        
-        # Enter submodule directory
-        (
-            cd "$SUBMODULE_PATH" || {
-                echo "Error: Could not enter directory $SUBMODULE_PATH"
-                exit 1
-            }
-            
-            # Get repository name from current remote URL
-            REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
-            
-            # Create new remote URL
-            #NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
+# Funzione per elaborare un submodule
+process_submodule() {
+    local SUBMODULE_PATH=$1
+
+    echo "----------------------------------------"
+    echo "Elaborazione submodule: $SUBMODULE_PATH"
+
+    # Controlla se la directory esiste
+    if [ ! -d "$SUBMODULE_PATH" ]; then
+        echo "Avviso: Directory $SUBMODULE_PATH non esiste, saltando..."
+        return
+    fi
+
+    # Entra nella directory del submodule
+    (
+        cd "$SUBMODULE_PATH" || {
+            echo "Errore: impossibile accedere alla directory $SUBMODULE_PATH"
+            return
+        }
+
+        # Ottieni il nome del repository dall'URL remoto corrente
+        REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
+        ORIGINAL_REMOTE=$(git config --get remote.origin.url)
+
+        # Crea il nuovo URL remoto
+        if [ "$REMOTE_TYPE" == "https" ]; then
+            NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
+        else
             NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
-            
-            echo "Pushing to: $NEW_REMOTE"
-            
-            # Optional: Fetch from the new remote and merge (uncomment if needed)
-            #git fetch "$NEW_REMOTE"
-            #git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
-            git push -uf "$NEW_REMOTE" HEAD:dev
-            echo "----------------------------------------"
-        )
+        fi
+        echo "Nuovo remoto temporaneo: $NEW_REMOTE"
+
+        # Aggiorna temporaneamente il remoto
+        git remote set-url origin "$NEW_REMOTE"
+
+        # Prova a fare push
+        if ! git push origin HEAD:"$TARGET_BRANCH"; then
+            echo "Push fallito. Tentativo di sincronizzazione con il remoto..."
+
+            # Tenta di fare pull e sincronizzare
+            git fetch origin
+            if git merge origin/"$TARGET_BRANCH"; then
+                echo "Merge riuscito. Riprovando il push..."
+                git push origin HEAD:"$TARGET_BRANCH"
+            elif git rebase origin/"$TARGET_BRANCH"; then
+                echo "Rebase riuscito. Riprovando il push..."
+                git push origin HEAD:"$TARGET_BRANCH"
+            else
+                echo "Errore durante il merge o il rebase. Controllare manualmente il submodule $SUBMODULE_PATH."
+            fi
+        else
+            echo "Push completato con successo per $SUBMODULE_PATH"
+        fi
+
+        # Ripristina l'originale remoto
+        git remote set-url origin "$ORIGINAL_REMOTE"
+        echo "Remoto originale ripristinato: $ORIGINAL_REMOTE"
+    )
+    echo "----------------------------------------"
+}
+
+# Leggi il file .gitmodules e processa ogni submodule
+while IFS= read -r line; do
+    # Estrai il percorso del submodule
+    if [[ $line =~ path\ =\ (.+)$ ]]; then
+        SUBMODULE_PATH=$(echo "${BASH_REMATCH[1]}" | xargs)
+        process_submodule "$SUBMODULE_PATH"
     fi
 done < .gitmodules
 
-echo "All submodules have been pushed!"
+echo "Elaborazione di tutti i submodules completata!"
