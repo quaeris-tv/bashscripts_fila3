@@ -53,34 +53,23 @@ while IFS= read -r line; do
             echo "Updating submodule: $SUBMODULE_PATH"
             echo "New remote: $NEW_REMOTE"
             
-<<<<<<< Updated upstream
             # Configure git settings
             configure_git
-=======
-            # Fetch from new remote and merge
-            git config advice.mergeConflict false
-            # Set git configurations to avoid unnecessary conflicts and enhance pull behavior
-            git config pull.rebase true
-            git config rebase.autoStash true
-            git config core.fileMode false
-            git config advice.mergeConflict false
->>>>>>> Stashed changes
+            
+            # Update the remote origin
+            git remote set-url origin "$NEW_REMOTE"
             
             # Fetch and rebase from the new remote
-            git fetch "$NEW_REMOTE"
-<<<<<<< Updated upstream
-            git pull --rebase --autostash "$NEW_REMOTE" || {
-                echo "Error: Failed to update submodule $SUBMODULE_PATH from $NEW_REMOTE"
-                return 1
+            git fetch origin || {
+                echo "Error: Failed to fetch from $NEW_REMOTE"
+                exit 1
             }
-=======
-            git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
-            git pull --rebase --autostash "$NEW_REMOTE"
-            #git fetch "$NEW_REMOTE"
-            #git merge "$NEW_REMOTE/$(git rev-parse --abbrev-ref HEAD)" || echo "Failed to merge changes for $SUBMODULE_PATH"
-            # Set git configurations to avoid unnecessary conflicts and enhance pull behavior
             
->>>>>>> Stashed changes
+            git pull --rebase || {
+                echo "Error: Failed to rebase submodule $SUBMODULE_PATH"
+                exit 1
+            }
+            
             echo "----------------------------------------"
         )
     fi
