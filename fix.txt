@@ -11,6 +11,10 @@ prima di entrare in ssh in un server remoto in cui usiamo git collegato via ssh
 eval "$(ssh-agent -s)" && ssh-add
 ssh-add -L
 
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
 -------------
 per cercare un testo dentro i file
 grep -Ril "text-to-find-here" .
