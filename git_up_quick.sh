@@ -54,8 +54,8 @@ update_root() {
         git add .
         git commit -m "Committing local changes in the root repository"
         
-        # Target branch della root (ad esempio 'main')
-        target_branch="main"
+        # Target branch della root (passato come parametro)
+        target_branch="$1"  # Usando il parametro passato
 
         # Prova a fare il push
         if ! git push origin HEAD:"$target_branch"; then
@@ -80,18 +80,27 @@ update_root() {
     fi
 }
 
+# Controlla se è stato passato un parametro per il branch
+if [ -z "$1" ]; then
+    echo "Errore: Devi specificare il branch come parametro!"
+    echo "Uso: $0 <branch>"
+    exit 1
+fi
+
+# Parametro del branch
+branch="$1"
+
 # Verifica lo stato dei submodules
 echo "Verifica stato dei submodules..."
 git submodule status | while read -r line; do
-    # Estrai il percorso del submodule e il branch da usare (ad esempio 'main' o 'master')
+    # Estrai il percorso del submodule
     submodule_path=$(echo "$line" | awk '{ print $2 }')
-    target_branch="main"  # Imposta il branch di destinazione, personalizzalo se necessario
 
     # Aggiorna il submodule solo se ha modifiche
-    update_submodule "$submodule_path" "$target_branch"
+    update_submodule "$submodule_path" "$branch"
 done
 
 # Aggiorna la root del repository principale
-update_root
+update_root "$branch"
 
 echo "Aggiornamento completato!"
