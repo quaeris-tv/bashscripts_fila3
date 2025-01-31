@@ -14,10 +14,22 @@ update_submodule() {
         # Push delle modifiche locali
         git add .
         git commit -m "Committing local changes in $submodule_path"
-        git push
+        
+        # Prova a fare il push
+        if ! git push; then
+            echo "Push fallito per $submodule_path. Provo a risolvere con rebase o merge..."
 
-        # Pull dell'ultimo cambiamento dal repository remoto
-        git pull origin $(git rev-parse --abbrev-ref HEAD)
+            # Se il push fallisce, prova a fare il pull --rebase
+            if git pull --rebase; then
+                echo "Rebase riuscito per $submodule_path. Ora posso fare il push."
+                git push
+            else
+                # Se il rebase fallisce, prova con un merge
+                echo "Rebase fallito. Provo a fare un merge..."
+                git pull --no-rebase
+                git push
+            fi
+        fi
     else
         echo "Il submodule $submodule_path non ha modifiche locali. Nessuna azione necessaria."
     fi
@@ -37,15 +49,21 @@ update_root() {
         # Push delle modifiche locali nella root
         git add .
         git commit -m "Committing local changes in the root repository"
-        git push
+        
+        # Prova a fare il push
+        if ! git push; then
+            echo "Push fallito nella root. Provo a risolvere con rebase o merge..."
 
-        # Esegui il pull nella root, scegliendo il metodo migliore per evitare conflitti
-        # Controlla se ci sono cambiamenti remoti da integrare
-        if git fetch --dry-run | grep -q 'refs/heads/'; then
-            echo "Trovati aggiornamenti remoti, eseguo pull --rebase per mantenere la storia lineare."
-            git pull --rebase
-        else
-            echo "Nessun aggiornamento remoto. Salto il pull."
+            # Se il push fallisce, prova a fare il pull --rebase
+            if git pull --rebase; then
+                echo "Rebase riuscito nella root. Ora posso fare il push."
+                git push
+            else
+                # Se il rebase fallisce, prova con un merge
+                echo "Rebase fallito nella root. Provo a fare un merge..."
+                git pull --no-rebase
+                git push
+            fi
         fi
     else
         echo "Nessuna modifica locale nella root. Nessuna azione necessaria."
