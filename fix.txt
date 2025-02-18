@@ -33,6 +33,6 @@ ignore file mode chmod change
 git config core.fileMode false
 
 -------------
-
+find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
 
 
