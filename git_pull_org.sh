@@ -1,78 +1,55 @@
-#!/bin/bash
+#!/bin/sh
 
-# Check if organization name is provided
-if [ $# -ne 1 ]; then
-    echo "Usage: $0 <new-organization-name>"
+# Controllo parametri
+if [ "$#" -ne 2 ]; then
+    echo "Utilizzo: $0 <nuova-organizzazione> <branch>"
     exit 1
 fi
 
 NEW_ORG="$1"
+BRANCH="$2"
 
-# Check if .gitmodules exists
-if [ ! -f .gitmodules ]; then
-    echo "Error: .gitmodules file not found!"
-    exit 1
-fi
+# Nome dello script stesso per la chiamata ricorsiva
+ME=$(readlink -f -- "$0")
+WHERE=$(pwd)
 
-# Function to configure git settings
-configure_git() {
-    git config pull.rebase true
-    git config rebase.autoStash true
-    git config core.fileMode false
-    git config advice.mergeConflict false
-}
+# Ottiene il nome della repository corrente
+REPO_NAME=$(basename "$(git rev-parse --show-toplevel)")
 
-# Read .gitmodules file and process each submodule
-while IFS= read -r line; do
-    # Remove carriage return and leading/trailing whitespace
-    line=$(echo "$line" | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-    
-    if [[ $line =~ path\ =\ (.+)$ ]]; then
-        # Get submodule path and clean it
-        SUBMODULE_PATH="${BASH_REMATCH[1]}"
-        SUBMODULE_PATH=$(echo "$SUBMODULE_PATH" | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+# Costruisce il nuovo URL remoto
+#NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
+NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
 
-        echo "Processing submodule: $SUBMODULE_PATH"
-        
-        # Check if the submodule directory exists
-        if [ ! -d "$SUBMODULE_PATH" ]; then
-            echo "Warning: Directory $SUBMODULE_PATH does not exist, skipping..."
-            continue
-        fi
-        
-        # Enter the submodule directory
-        (
-            cd "$SUBMODULE_PATH" || { echo "Error: Could not enter directory $SUBMODULE_PATH"; exit 1; }
-            
-            # Get the repository name from the current remote URL
-            REPO_NAME=$(basename "$(git config --get remote.origin.url)" .git)
-            
-            # Create new remote URL based on the provided organization name
-            NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
-            
-            echo "Updating submodule: $SUBMODULE_PATH"
-            echo "New remote: $NEW_REMOTE"
-            
-            # Configure git settings
-            configure_git
-            
-            # Update the remote origin
-            git remote set-url origin "$NEW_REMOTE"
-            
-            # Fetch and rebase from the new remote
-            git fetch origin || {
-                echo "Error: Failed to fetch from $NEW_REMOTE"
-                exit 1
-            }
-            
-            git pull --rebase || {
-                echo "Error: Failed to rebase submodule $SUBMODULE_PATH"
-                exit 1
-            }
-            
-            echo "----------------------------------------"
-        )
-    fi
-done < .gitmodules
 
-echo "All submodules have been updated!"
+echo "📥 [MAIN] Pull da $NEW_REMOTE (branch: $BRANCH)"
+
+# Aggiornamento submoduli
+git submodule update --progress --init --recursive --force --merge --rebase --remote
+git submodule foreach "$ME" "$NEW_ORG" "$BRANCH"
+
+# Configurazione Git
+git config core.fileMode false
+git add --renormalize -A
+
+# Commit automatico se ci sono modifiche
+git add -A && git commit -am "Auto-update" || echo "⚠️  Nessuna modifica da committare"
+
+# Push verso il branch remoto
+git push origin "$BRANCH" -u --progress 'origin' || git push --set-upstream origin "$BRANCH"
+
+echo "✅ PUSH COMPLETATO [$WHERE ($BRANCH)]"
+
+# Checkout del branch corretto
+git checkout "$BRANCH" --
+git branch --set-upstream-to=origin/"$BRANCH" "$BRANCH"
+git branch -u origin/"$BRANCH"
+git merge "$BRANCH"
+
+echo "✅ MERGE COMPLETATO [$WHERE ($BRANCH)]"
+
+# Aggiornamento finale dei submoduli e pull dalla nuova organizzazione
+git submodule update --progress --init --recursive --force --merge --rebase --remote
+git checkout "$BRANCH" --
+git pull "$NEW_REMOTE" "$BRANCH" --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
+
+echo "✅ PULL COMPLETATO [$WHERE ($BRANCH)]"
