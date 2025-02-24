@@ -24,6 +24,10 @@ if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     exit 1
 fi
 
+echo "${YELLOW}==> Aggiornamento submodules...${RESET}"
+git submodule update --progress --init --recursive --force --merge --rebase --remote
+git submodule foreach "$SCRIPT_PATH" "$NEW_ORG" "$BRANCH"
+
 echo "${YELLOW}==> Controllo configurazioni Git...${RESET}"
 
 # Configurazioni Git per evitare problemi
@@ -40,9 +44,7 @@ fi
 
 echo "${GREEN}✔ Branch attivo: $BRANCH${RESET}"
 
-echo "${YELLOW}==> Aggiornamento submodules...${RESET}"
-git submodule update --progress --init --recursive --force --merge --rebase --remote
-git submodule foreach "$SCRIPT_PATH" "$NEW_ORG" "$BRANCH"
+
 
 echo "${YELLOW}==> Normalizzazione e commit delle modifiche...${RESET}"
 git add --renormalize -A
@@ -53,7 +55,7 @@ else
 fi
 
 echo "${YELLOW}==> Push su remoto...${RESET}"
-if ! git push origin "$BRANCH" -u --progress 'origin'; then
+if ! git push origin HEAD:"$BRANCH" -u --progress 'origin'; then
     echo "${YELLOW}⚠ Tentativo di push alternativo...${RESET}"
     git push --set-upstream origin "$BRANCH"
 fi
