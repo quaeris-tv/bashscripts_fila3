@@ -55,7 +55,7 @@ else
 fi
 
 echo "${YELLOW}==> Push su remoto...${RESET}"
-if ! git push origin HEAD:"$BRANCH" -u --progress 'origin'; then
+if ! git push origin HEAD:"$BRANCH" -uf --progress 'origin'; then
     echo "${YELLOW}⚠ Tentativo di push alternativo...${RESET}"
     git push --set-upstream origin "$BRANCH"
 fi
