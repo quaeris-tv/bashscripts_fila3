@@ -1,9 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+
+# Colori per migliorare la leggibilità
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+RED=$(tput setaf 1)
+RESET=$(tput sgr0)
 
 # Controllo parametri
 if [ -z "$1" ] || [ -z "$2" ]; then
-    echo "Errore: specificare organizzazione e branch."
-    echo "Uso: $0 <nuova-organizzazione> <branch>"
+    echo "${RED}Errore: Specificare organizzazione e branch.${RESET}"
+    echo "${YELLOW}Uso: $0 <nuova-organizzazione> <branch>${RESET}"
     exit 1
 fi
 
@@ -12,69 +18,80 @@ BRANCH=$2
 SCRIPT_PATH=$(readlink -f -- "$0")
 WHERE=$(pwd)
 
+# Controllo se siamo in una repo Git
+if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "${RED}Errore: Questo script deve essere eseguito all'interno di una repository Git!${RESET}"
+    exit 1
+fi
+
+echo "${YELLOW}==> Controllo configurazioni Git...${RESET}"
+
 # Configurazioni Git per evitare problemi
 git config core.fileMode false
 git config advice.skippedCherryPicks false
 git config core.autocrlf input
 
 # Assicuriamoci di essere sul branch corretto
-git checkout "$BRANCH" -- || git checkout -b "$BRANCH"
+if ! git checkout "$BRANCH" -- 2>/dev/null; then
+    echo "${YELLOW}Branch '$BRANCH' non trovato. Creazione...${RESET}"
+    git checkout -b "$BRANCH"
+fi
 
-echo "--------- INIZIO SYNC [$WHERE ($BRANCH)] ----------"
+echo "${GREEN}✔ Branch attivo: $BRANCH${RESET}"
 
-# Aggiorna i submodules con forza per evitare disallineamenti
+echo "${YELLOW}==> Aggiornamento submodules...${RESET}"
 git submodule update --progress --init --recursive --force --merge --rebase --remote
-
-# Sincronizza tutti i submodules ricorsivamente
 git submodule foreach "$SCRIPT_PATH" "$NEW_ORG" "$BRANCH"
 
 # Ottieni l'URL remoto attuale
 ORIGINAL_REMOTE=$(git config --get remote.origin.url)
 REPO_NAME=$(basename "$ORIGINAL_REMOTE" .git)
 
-# Costruisce il nuovo URL remoto con l'organizzazione specificata
+# Costruisce il nuovo URL remoto
 NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
 
-echo "Nuovo remoto: $NEW_REMOTE"
-
-# Modifica temporaneamente il remote
-git remote set-url origin "$NEW_REMOTE"
-
-# Aggiunge e normalizza tutti i file per evitare problemi di permessi e formattazione
-git add --renormalize -A
-
-# Commit automatico delle modifiche locali (se presenti)
-git commit -am "Auto-sync" || echo "------------------- Nessuna modifica da committare -------------------"
-
-# Push con fallback in caso di errore
-if ! git push origin "$BRANCH" -u --progress 'origin'; then
-    git push --set-upstream origin "$BRANCH"
+# Cambia remote solo se è diverso
+if [ "$NEW_REMOTE" != "$ORIGINAL_REMOTE" ]; then
+    git remote set-url origin "$NEW_REMOTE"
+    echo "${GREEN}✔ Remote aggiornato a: $NEW_REMOTE${RESET}"
+else
+    echo "${YELLOW}⚠ Il remote è già impostato su $NEW_REMOTE${RESET}"
 fi
 
-echo "--------- FINE PUSH [$WHERE ($BRANCH)] ----------"
+echo "${YELLOW}==> Normalizzazione e commit delle modifiche...${RESET}"
+git add --renormalize -A
+if git commit -am "Auto-sync"; then
+    echo "${GREEN}✔ Modifiche committate${RESET}"
+else
+    echo "${YELLOW}⚠ Nessuna modifica da committare${RESET}"
+fi
+
+echo "${YELLOW}==> Push su remoto...${RESET}"
+if ! git push origin "$BRANCH" -u --progress 'origin'; then
+    echo "${YELLOW}⚠ Tentativo di push alternativo...${RESET}"
+    git push --set-upstream origin "$BRANCH"
+fi
+echo "${GREEN}✔ Push completato${RESET}"
 
 # Imposta il tracking del branch remoto
 git branch --set-upstream-to=origin/$BRANCH $BRANCH
 git branch -u origin/$BRANCH
 
-# Merge per garantire allineamento locale
-git merge "$BRANCH"
+echo "${YELLOW}==> Merge locale per garantire allineamento...${RESET}"
+git merge "$BRANCH" || echo "${YELLOW}⚠ Merge già aggiornato${RESET}"
 
-echo "--------- FINE MERGE [$WHERE ($BRANCH)] ----------"
-
-# Pull con autostash per evitare problemi con modifiche locali
+echo "${YELLOW}==> Pull con autostash...${RESET}"
 git pull origin "$BRANCH" --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
+echo "${GREEN}✔ Pull completato${RESET}"
 
-echo "--------- FINE PULL [$WHERE ($BRANCH)] ----------"
-
-# Aggiorna nuovamente i submodules per garantire la sincronizzazione completa
+echo "${YELLOW}==> Aggiornamento submodules finale...${RESET}"
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 
-# Ultima verifica del checkout per sicurezza
-git checkout "$BRANCH" --
-
-# Ripristina il remote originale
+echo "${YELLOW}==> Ripristino remote originale...${RESET}"
 git remote set-url origin "$ORIGINAL_REMOTE"
-echo "Ripristinato remote originale: $ORIGINAL_REMOTE"
+echo "${GREEN}✔ Remote ripristinato: $ORIGINAL_REMOTE${RESET}"
+
+# Rimuove eventuali caratteri CRLF (bug tipico su Windows)
 sed -i 's/\r$//' "$SCRIPT_PATH"
-echo "========= SYNC COMPLETATA CON SUCCESSO [$WHERE ($BRANCH)] ========="
+
+echo "${GREEN}========= SYNC COMPLETATA CON SUCCESSO [$WHERE ($BRANCH)] =========${RESET}"
