@@ -30,6 +30,7 @@ echo "${YELLOW}==> Controllo configurazioni Git...${RESET}"
 git config core.fileMode false
 git config advice.skippedCherryPicks false
 git config core.autocrlf input
+git config core.ignorecase false
 
 # Assicuriamoci di essere sul branch corretto
 if ! git checkout "$BRANCH" -- 2>/dev/null; then
@@ -42,21 +43,6 @@ echo "${GREEN}✔ Branch attivo: $BRANCH${RESET}"
 echo "${YELLOW}==> Aggiornamento submodules...${RESET}"
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git submodule foreach "$SCRIPT_PATH" "$NEW_ORG" "$BRANCH"
-
-# Ottieni l'URL remoto attuale
-ORIGINAL_REMOTE=$(git config --get remote.origin.url)
-REPO_NAME=$(basename "$ORIGINAL_REMOTE" .git)
-
-# Costruisce il nuovo URL remoto
-NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
-
-# Cambia remote solo se è diverso
-if [ "$NEW_REMOTE" != "$ORIGINAL_REMOTE" ]; then
-    git remote set-url origin "$NEW_REMOTE"
-    echo "${GREEN}✔ Remote aggiornato a: $NEW_REMOTE${RESET}"
-else
-    echo "${YELLOW}⚠ Il remote è già impostato su $NEW_REMOTE${RESET}"
-fi
 
 echo "${YELLOW}==> Normalizzazione e commit delle modifiche...${RESET}"
 git add --renormalize -A
@@ -84,14 +70,5 @@ echo "${YELLOW}==> Pull con autostash...${RESET}"
 git pull origin "$BRANCH" --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 echo "${GREEN}✔ Pull completato${RESET}"
 
-echo "${YELLOW}==> Aggiornamento submodules finale...${RESET}"
-git submodule update --progress --init --recursive --force --merge --rebase --remote
-
-echo "${YELLOW}==> Ripristino remote originale...${RESET}"
-git remote set-url origin "$ORIGINAL_REMOTE"
-echo "${GREEN}✔ Remote ripristinato: $ORIGINAL_REMOTE${RESET}"
-
-# Rimuove eventuali caratteri CRLF (bug tipico su Windows)
-sed -i 's/\r$//' "$SCRIPT_PATH"
-
+sed -i -e 's/\r$//' "$SCRIPT_PATH"
 echo "${GREEN}========= SYNC COMPLETATA CON SUCCESSO [$WHERE ($BRANCH)] =========${RESET}"
