@@ -2,3 +2,8 @@ Pensa ad alta voce e parla a te stesso. preima di rispondere, analizza la richie
 formula un ragionamento passo passo,
  la tua memoria e' la cartella /var/www/html/exa/base_orisbroker_fila3/docs  , 
 percio' aggiornala di continuo e studiala di continuo e prima di fare qualsiasi cosa consultala
+
+
+
+---per traduzioni --
+fields non e'  'source' => 'Sorgente',  ma e'  'source' => ['label'=>'Sorgente'],  e puoi aggiungere anche tooltip e placeholder anche actions stessa logina ma puoi aggiungere anche icon e color, ragiona e migliora e sistema
