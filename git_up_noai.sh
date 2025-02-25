@@ -11,6 +11,8 @@ where=$(pwd)
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git submodule foreach "$me" "$branch"
 git config core.fileMode false
+git config advice.submoduleMergeConflict false
+git config core.ignorecase false
 git add --renormalize -A
 #git add -A && aicommits  || echo '---------------------------empty'
 git add -A && git commit -am "up"  || echo '---------------------------empty'

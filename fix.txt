@@ -34,5 +34,6 @@ git config core.fileMode false
 
 -------------
 find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
+find . -type f -name "*:Zone.Identifier" -exec rm -f {} +
 
 
