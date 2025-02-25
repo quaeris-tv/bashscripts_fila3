@@ -24,5 +24,6 @@ echo "-------- END BRANCH[$where ($branch)] ----------";
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git checkout $branch --
 git pull origin $branch --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
+sed -i -e 's/\r$//' "$me"
 echo "-------- END PULL[$where ($branch)] ----------";
 
