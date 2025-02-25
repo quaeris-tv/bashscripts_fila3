@@ -1,6 +1,5 @@
 #!/bin/sh
 
-<<<<<<< HEAD
 # Controllo parametri
 if [ "$#" -ne 2 ]; then
     echo "Utilizzo: $0 <nuova-organizzazione> <branch>"
@@ -18,96 +17,52 @@ WHERE=$(pwd)
 REPO_NAME=$(basename "$(git rev-parse --show-toplevel)")
 
 # Costruisce il nuovo URL remoto
-#NEW_REMOTE="https://github.com/$NEW_ORG/$REPO_NAME.git"
 NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
-
 
 echo "📥 [MAIN] Pull da $NEW_REMOTE (branch: $BRANCH)"
 
-# Aggiornamento submoduli
-git submodule update --progress --init --recursive --force --merge --rebase --remote
-git submodule foreach "$ME" "$NEW_ORG" "$BRANCH"
-
-# Configurazione Git
-git config core.fileMode false
-git add --renormalize -A
-
-# Commit automatico se ci sono modifiche
-git add -A && git commit -am "Auto-update" || echo "⚠️  Nessuna modifica da committare"
-
-# Push verso il branch remoto
-git push origin "$BRANCH" -u --progress 'origin' || git push --set-upstream origin "$BRANCH"
-
-echo "✅ PUSH COMPLETATO [$WHERE ($BRANCH)]"
-
-# Checkout del branch corretto
-git checkout "$BRANCH" --
-git branch --set-upstream-to=origin/"$BRANCH" "$BRANCH"
-git branch -u origin/"$BRANCH"
-git merge "$BRANCH"
-
-echo "✅ MERGE COMPLETATO [$WHERE ($BRANCH)]"
-
-# Aggiornamento finale dei submoduli e pull dalla nuova organizzazione
-git submodule update --progress --init --recursive --force --merge --rebase --remote
-git checkout "$BRANCH" --
-git pull "$NEW_REMOTE" "$BRANCH" --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
-
-echo "✅ PULL COMPLETATO [$WHERE ($BRANCH)]"
-=======
-if [ -z "$1" ] || [ -z "$2" ]; then
-    echo "Usage: $0 <organization> <branch>"
-    exit 1
-fi
-
-org="$1"
-branch="$2"
-repo_name=$(basename "$(git rev-parse --show-toplevel)")
-script_path=$(readlink -f -- "$0")
-where=$(pwd)
-
-echo "-------- START SYNC [$where ($branch) - ORG: $org] ----------"
-
-# 1️⃣ Configurazioni globali per evitare problemi
+# Configurazioni globali per evitare problemi
 git config core.fileMode false
 git config core.ignorecase false
 git config advice.skippedCherryPicks false
 
-# 2️⃣ Sincronizziamo i submoduli PRIMA di lavorare sul repository principale
+# Sincronizzazione submoduli
 git submodule sync --recursive
 git submodule update --progress --init --recursive --force --merge --rebase --remote
-git submodule foreach "$script_path" "$org" "$branch"
+git submodule foreach "$ME" "$NEW_ORG" "$BRANCH"
 
-# 3️⃣ Sincronizziamo il repository principale
+# Fetch delle ultime modifiche dal repository principale
 git fetch origin --progress --prune
-if git show-ref --verify --quiet refs/heads/"$branch"; then
-    git checkout "$branch"
+
+# Checkout del branch corretto
+if git show-ref --verify --quiet refs/heads/"$BRANCH"; then
+    git checkout "$BRANCH"
 else
-    git checkout -t origin/"$branch" || git checkout -b "$branch"
+    git checkout -t origin/"$BRANCH" || git checkout -b "$BRANCH"
 fi
 
-# 4️⃣ Pull con gestione dei conflitti
-git pull --rebase origin "$branch" --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v || {
+# Pull con gestione dei conflitti
+git pull --rebase origin "$BRANCH" --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v || {
     echo "Rebase failed, attempting conflict resolution..."
     
-    # 🔄 Tentiamo di continuare il rebase automaticamente
+    # Tentativo di continuare il rebase automaticamente
     if git rebase --continue; then
         echo "Rebase continued successfully."
     else
         echo "Rebase conflicts detected. Attempting automatic resolution..."
 
-        # 🛠 Risolviamo automaticamente i conflitti prendendo la versione remota
+        # Risoluzione automatica dei conflitti prendendo la versione remota
         git diff --name-only --diff-filter=U | while read file; do
             git checkout --theirs "$file"
             git add "$file"
         done
 
-        # 🛠 Proviamo a completare il rebase
+        # Proviamo a completare il rebase
         git rebase --continue || {
             echo "Rebase auto-fix failed. Aborting..."
             git rebase --abort
             echo "Attempting merge instead..."
-            git merge origin/$branch || {
+            git merge origin/$BRANCH || {
                 echo "Merge also failed. Manual intervention required!"
                 exit 1
             }
@@ -115,23 +70,26 @@ git pull --rebase origin "$branch" --autostash --recurse-submodules --allow-unre
     fi
 }
 
-# 5️⃣ Normalizziamo i file e committiamo se ci sono modifiche
+# Normalizzazione e commit automatico se ci sono modifiche
 git add --renormalize -A
-git commit -am "sync update" || echo '--------------------------- No changes to commit'
+git commit -am "Auto-update" || echo '⚠️ Nessuna modifica da committare'
 
-# 6️⃣ Push delle modifiche con retry
-git push origin "$branch" --progress || {
+# Push con gestione di eventuali errori
+git push origin "$BRANCH" --progress || {
     echo "Push failed, attempting rebase and retry..."
-    git pull --rebase origin "$branch" && git push origin "$branch"
+    git pull --rebase origin "$BRANCH" && git push origin "$BRANCH"
 }
 
-echo "-------- END PUSH [$where ($branch)] ----------"
+echo "✅ PUSH COMPLETATO [$WHERE ($BRANCH)]"
 
-# 7️⃣ Configuriamo il tracking del branch, se necessario
+# Configurazione tracking del branch
 if ! git rev-parse --abbrev-ref --symbolic-full-name "@{u}" >/dev/null 2>&1; then
-    git branch --set-upstream-to=origin/$branch "$branch" || true
-    git branch -u origin/$branch || true
+    git branch --set-upstream-to=origin/$BRANCH "$BRANCH" || true
+    git branch -u origin/$BRANCH || true
 fi
 
-echo "-------- END SYNC [$where ($branch) - ORG: $org] ----------"
->>>>>>> d759193df0de6dfc712e390ca2f9e6f9b617d838
+# Aggiornamento finale dei submoduli e pull dalla nuova organizzazione
+git submodule update --progress --init --recursive --force --merge --rebase --remote
+git pull "$NEW_REMOTE" "$BRANCH" --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
+
+echo "✅ PULL COMPLETATO [$WHERE ($BRANCH)]"
