@@ -54,12 +54,7 @@ log_info "Branch '$BRANCH' selezionato."
 log_info "Aggiornamento submodules..."
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 
-# Controllo specifico per il submodule problematico
-log_info "Verifica stato submodule 'laravel/Modules/Activity'..."
-if ! git submodule status | grep -q 'laravel/Modules/Activity'; then
-    log_warning "Il submodule 'laravel/Modules/Activity' non è stato inizializzato correttamente. Inizializzandolo ora..."
-    git submodule update --init --recursive --force --remote
-fi
+
 
 # Sincronizza i submodules ricorsivamente
 log_info "Sincronizzazione dei submodules..."
