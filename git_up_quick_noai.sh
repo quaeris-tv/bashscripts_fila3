@@ -1,5 +1,6 @@
 #!/bin/bash
 
+me=$( readlink -f -- "$0";)
 echo "Verificando lo stato dei submodules..."
 
 # Controlla i submodules che hanno modifiche
@@ -27,5 +28,5 @@ else
     git commit -m "Aggiornamento submodules"
     git push origin $(git rev-parse --abbrev-ref HEAD)
 fi
-
+sed -i -e 's/\r$//' "$me"
 echo "Aggiornamento completato!"
