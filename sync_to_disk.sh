@@ -12,6 +12,6 @@ me=$( readlink -f -- "$0";)
 
 echo "Sincronizzazione in corso da '$PWD' a '$DEST_PATH'..."
 
-rsync -avz --relative --exclude='.git' --exclude='build' --exclude='cache'  --exclude='storage' --exclude='venv' --exclude='node_modules' --exclude='vendor' --exclude='stubs' ./ "$DEST_PATH"
+rsync -avz --relative --exclude='.git' --exclude='build' --exclude='cache'  --exclude='storage' --exclude='venv' --exclude='node_modules' --exclude='vendor' ./ "$DEST_PATH"
 sed -i -e 's/\r$//' "$me"
 echo "Sincronizzazione completata!"

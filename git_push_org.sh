@@ -45,10 +45,6 @@ git config core.ignorecase false
 log_info "Recupero degli aggiornamenti dal repository remoto..."
 git fetch origin
 
-# Aggiornamento del repository
-log_info "Recupero degli aggiornamenti dal repository remoto..."
-git fetch origin
-
 # Assicuriamoci di essere sul branch corretto
 log_info "Verifica del branch locale..."
 git checkout "$BRANCH" -- || git checkout -b "$BRANCH"
@@ -57,6 +53,8 @@ log_info "Branch '$BRANCH' selezionato."
 # Aggiorna i submodules con forza per evitare disallineamenti
 log_info "Aggiornamento submodules..."
 git submodule update --progress --init --recursive --force --merge --rebase --remote
+
+
 
 # Sincronizza i submodules ricorsivamente
 log_info "Sincronizzazione dei submodules..."
