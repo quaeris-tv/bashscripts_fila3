@@ -45,13 +45,6 @@ git config core.ignorecase false
 log_info "Recupero degli aggiornamenti dal repository remoto..."
 git fetch origin
 
-<<<<<<< HEAD
-=======
-# Aggiornamento del repository
-log_info "Recupero degli aggiornamenti dal repository remoto..."
-git fetch origin
-
->>>>>>> 91b78c5e (.)
 # Assicuriamoci di essere sul branch corretto
 log_info "Verifica del branch locale..."
 git checkout "$BRANCH" -- || git checkout -b "$BRANCH"
@@ -61,11 +54,8 @@ log_info "Branch '$BRANCH' selezionato."
 log_info "Aggiornamento submodules..."
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 91b78c5e (.)
 # Sincronizza i submodules ricorsivamente
 log_info "Sincronizzazione dei submodules..."
 git submodule foreach "bash $SCRIPT_PATH $NEW_ORG $BRANCH"
@@ -150,7 +140,6 @@ sed -i 's/\r$//' "$SCRIPT_PATH"
 log_info "Recupero modifiche locali..."
 git stash pop
 
-<<<<<<< HEAD
 git push origin --delete cs0.1.01
 git push origin --delete cs0.2.00
 git push origin --delete cs0.2.01
@@ -164,6 +153,4 @@ git push origin --delete cs0.2.08
 git push origin --delete cs0.2.09
 git push origin --delete cs0.2.10
 
-=======
->>>>>>> 91b78c5e (.)
 log_info "========= SYNC COMPLETATA CON SUCCESSO [$WHERE ($BRANCH)] ========="
