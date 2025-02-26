@@ -25,3 +25,4 @@ cache/
 .php-cs-fixer.cache
 *.exe
 *:Zone.Identifier
+.php-cs-fixer.cache
