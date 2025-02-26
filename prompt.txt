@@ -1,14 +1,14 @@
 Pensa ad alta voce e parla a te stesso. preima di rispondere, analizza la richiesta, scomponi i concetti chiave, 
 formula un ragionamento passo passo,
-<<<<<<< HEAD
  la tua memoria e' la cartella docs  , 
 percio' aggiornala di continuo e studiala di continuo e prima di fare qualsiasi cosa consultala
 
 
 
 ---per traduzioni --
-fields non e'  'source' => 'Sorgente',  ma e'  'source' => ['label'=>'Sorgente'],  e puoi aggiungere anche tooltip e placeholder anche actions stessa logina ma puoi aggiungere anche icon e color, ragiona e migliora e sistema
-=======
+fields non e'  'source' => 'Sorgente',  ma e'  'source' => ['label'=>'Sorgente'],  
+e puoi aggiungere anche tooltip e placeholder anche actions stessa logina 
+ma puoi aggiungere anche icon e color, ragiona e migliora e sistema
+
  la tua memoria e' la cartella docs , quando correggi errori devi concentrarti sullo scopo non solo alla correzione dell'errore
 percio' aggiornala di continuo e studiala di continuo e prima di fare qualsiasi cosa consultala
->>>>>>> 997163a1 (up)
