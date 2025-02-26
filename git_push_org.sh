@@ -25,7 +25,7 @@ if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
 fi
 
 echo "${YELLOW}==> Aggiornamento submodules...${RESET}"
-git submodule update --progress --init --recursive --merge --rebase --remote
+#git submodule update --progress --init --recursive --merge --rebase --remote
 git submodule foreach "$SCRIPT_PATH" "$NEW_ORG" "$BRANCH"
 
 echo "${YELLOW}==> Controllo configurazioni Git...${RESET}"
