@@ -148,7 +148,8 @@ sync_repository() {
     if git add -A 2>/dev/null; then
         if ! git diff --quiet --cached; then
             # Ci sono modifiche da committare
-            git commit -m "Sincronizzazione automatica $(date +"%Y-%m-%d %H:%M:%S")" || echo -e "${YELLOW}Nessun cambiamento da committare${NC}"
+            #git commit -m "Sincronizzazione automatica $(date +"%Y-%m-%d %H:%M:%S")" || echo -e "${YELLOW}Nessun cambiamento da committare${NC}"
+            oco --yes
         else
             echo -e "${YELLOW}Nessun cambiamento da committare${NC}"
         fi
@@ -166,7 +167,8 @@ sync_repository() {
     log_step "Commit dopo il pull..."
     git add -A 2>/dev/null || true
     if ! git diff --quiet --cached; then
-        git commit -m "Merge dopo pull $(date +"%Y-%m-%d %H:%M:%S")" || echo -e "${YELLOW}Nessun cambiamento da committare${NC}"
+        #git commit -m "Merge dopo pull $(date +"%Y-%m-%d %H:%M:%S")" || echo -e "${YELLOW}Nessun cambiamento da committare${NC}"
+        oco --yes
     else
         echo -e "${YELLOW}Nessun cambiamento da committare${NC}"
     fi
