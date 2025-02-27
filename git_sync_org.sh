@@ -254,6 +254,8 @@ function show_help() {
 
 # Elaborazione parametri
 NO_CONFIRM=false
+ARGS_TO_PASS=()
+
 for arg in "$@"; do
     case $arg in
         --help)
@@ -261,20 +263,23 @@ for arg in "$@"; do
             ;;
         --no-confirm)
             NO_CONFIRM=true
-            shift
+            ARGS_TO_PASS+=("$arg")
+            ;;
+        *)
+            ARGS_TO_PASS+=("$arg")
             ;;
     esac
 done
 
 # Controllo parametri
-if [ -z "${1:-}" ] || [ -z "${2:-}" ]; then
+if [ -z "${ARGS_TO_PASS[0]:-}" ] || [ -z "${ARGS_TO_PASS[1]:-}" ]; then
     log_error "Parametri mancanti!"
     show_help
     exit 1
 fi
 
-NEW_ORG=$1
-BRANCH=$2
+NEW_ORG="${ARGS_TO_PASS[0]}"
+BRANCH="${ARGS_TO_PASS[1]}"
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 me=$(readlink -f -- "$0")
 MAIN_REPO=$(pwd)
@@ -309,8 +314,8 @@ if [ $SUBMODULE_COUNT -gt 0 ]; then
     log_info "Trovati ${BOLD}$SUBMODULE_COUNT${NC} submodule da sincronizzare."
     echo
     
-    # Sincronizza i submodule
-    git submodule foreach "$me" "$NEW_ORG" "$BRANCH" --no-confirm
+    # Sincronizza i submodule - passando i parametri con ordine corretto
+    git submodule foreach "$me" "$NEW_ORG" "$BRANCH" $([ "$NO_CONFIRM" = true ] && echo "--no-confirm")
 fi
 
 # Sincronizza il repository principale
