@@ -125,13 +125,15 @@ sync_repository() {
     fi
     echo -e "${GREEN}Trovato!${NC}"
     
-    # Aggiungi il nuovo remote temporaneo
-    log_step "Aggiunta del remote temporaneo..."
-    git remote remove new_org_remote 2>/dev/null || true
-    if git remote add new_org_remote "$NEW_REMOTE"; then
-        log_success "Remote temporaneo aggiunto con successo: ${CYAN}new_org_remote${NC}"
+    # Salva il remote URL originale
+    ORIGINAL_URL=$(git config --get remote.origin.url)
+    
+    # Aggiorna temporaneamente l'URL del remote origin
+    log_step "Aggiornamento temporaneo dell'URL del remote origin..."
+    if git remote set-url origin "$NEW_REMOTE"; then
+        log_success "Remote URL aggiornato temporaneamente a: ${CYAN}$NEW_REMOTE${NC}"
     else
-        log_error "Impossibile aggiungere il remote temporaneo"
+        log_error "Impossibile aggiornare il remote URL"
         ((FAILED_REPOS++))
         return 1
     fi
@@ -154,9 +156,9 @@ sync_repository() {
         log_warning "Problemi nell'aggiungere file all'area di stage"
     fi
     
-    # Pull dal repository remoto new_org
-    log_step "Pull dal repository remoto nella nuova organizzazione..."
-    if git pull new_org_remote "$BRANCH" || echo "${YELLOW}Pull non riuscito completamente${NC}"; then
+    # Pull dal repository remoto
+    log_step "Pull dal repository remoto..."
+    if git pull origin "$BRANCH" || echo "${YELLOW}Pull non riuscito completamente${NC}"; then
         echo -e "${GREEN}Pull completato!${NC}"
     fi
     
@@ -169,12 +171,12 @@ sync_repository() {
         echo -e "${YELLOW}Nessun cambiamento da committare${NC}"
     fi
     
-    # Push al repository remoto nella nuova organizzazione
-    log_step "Push al repository remoto nella nuova organizzazione..."
+    # Push al repository remoto
+    log_step "Push al repository remoto..."
     echo -e "${YELLOW}Tentativo di push a ${BOLD}$NEW_REMOTE${NC}${YELLOW} sul branch ${BOLD}$BRANCH${NC}"
     
-    if git push new_org_remote "$BRANCH" 2>/dev/null; then
-        log_success "Push completato con successo alla nuova organizzazione!"
+    if git push -u origin "$BRANCH" 2>/dev/null || git push 2>/dev/null; then
+        log_success "Push completato con successo!"
         ((SYNCED_REPOS++))
     else
         log_warning "Push non riuscito, potrebbe richiedere attenzione manuale"
@@ -193,12 +195,12 @@ sync_repository() {
         echo -e "${GREEN}Rebase completato!${NC}"
     fi
     
-    # Rimozione del remote temporaneo
-    log_step "Rimozione del remote temporaneo..."
-    if git remote remove new_org_remote; then
-        log_success "Remote temporaneo rimosso con successo"
+    # Ripristina il remote URL originale
+    log_step "Ripristino dell'URL del remote originale..."
+    if git remote set-url origin "$ORIGINAL_URL"; then
+        log_success "Remote URL ripristinato a: ${CYAN}$ORIGINAL_URL${NC}"
     else
-        log_warning "Impossibile rimuovere il remote temporaneo"
+        log_warning "Impossibile ripristinare il remote URL originale"
     fi
     
     # Aggiornamento del contatore totale
@@ -301,7 +303,7 @@ echo -e "${BOLD}Branch:${NC} ${CYAN}$BRANCH${NC}"
 echo -e "${BOLD}Repository principale:${NC} ${CYAN}$(basename "$MAIN_REPO")${NC}"
 echo
 
-# Richiedi conferma se non in modalità no-confirm
+# Richiedi conferma solo una volta all'inizio
 if [ "$NO_CONFIRM" = false ]; then
     if ! confirm_action "Vuoi procedere con la sincronizzazione?"; then
         log_info "Operazione annullata dall'utente."
@@ -315,10 +317,10 @@ if [ $SUBMODULE_COUNT -gt 0 ]; then
     log_info "Trovati ${BOLD}$SUBMODULE_COUNT${NC} submodule da sincronizzare."
     echo
     
-    # Sincronizza i submodule - passando i parametri con ordine corretto
-    # Usiamo set +e per evitare che uno script bloccato interrompa l'intero processo
+    # Sincronizza i submodule - passando i parametri con ordine corretto e la flag no-confirm
+    # in modo che non chieda ulteriori conferme
     set +e
-    git submodule foreach "$me" "$NEW_ORG" "$BRANCH" $([ "$NO_CONFIRM" = true ] && echo "--no-confirm") || true
+    git submodule foreach "$me" "$NEW_ORG" "$BRANCH" --no-confirm || true
     set -e
     log_warning "Completata sincronizzazione dei submodule, procedendo con il repository principale"
 fi
