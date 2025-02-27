@@ -45,12 +45,12 @@ sync_repository() {
         log_warning "Repository $REPO_NAME non trovato in $NEW_ORG, passo al successivo"
         return 0
     fi
-    git add -A 
-    git commit -am . 
-    git pull "$NEW_REMOTE"
-    git add -A 
-    git commit -am . 
-    git push "$NEW_REMOTE" "$BRANCH" -u --progress 'origin' || git push --set-upstream origin "$BRANCH"
+    git add -A || echo '-48-'
+    git commit -am . || echo '-49-'
+    git pull "$NEW_REMOTE" || echo '-50-'
+    git add -A  || echo '-51-'
+    git commit -am . || echo '-52-'
+    git push "$NEW_REMOTE" "$BRANCH" -u --progress 'origin' || git push --set-upstream origin "$BRANCH"  || echo '-53-'
 
     return 0
 }
