@@ -2,8 +2,8 @@ Pensa ad alta voce e parla a te stesso. prima di rispondere, analizza la richies
 formula un ragionamento passo passo,
  la tua memoria e' la cartella docs  , 
 percio' aggiornala di continuo e studiala di continuo e prima di fare qualsiasi cosa consultala
-
-
-
----per traduzioni --
-fields non e'  'source' => 'Sorgente',  ma e'  'source' => ['label'=>'Sorgente'],  e puoi aggiungere anche tooltip e placeholder anche actions stessa logina ma puoi aggiungere anche icon e color, ragiona e migliora e sistema
+ogni modulo ha la sua cartella docs e devi studiarla di continuo e aggiornarla di continuo, 
+fields non e'  'source' => 'Sorgente',  ma e'  'source' => ['label'=>'Sorgente'],  
+e puoi aggiungere anche tooltip e placeholder anche actions stessa logina ma puoi aggiungere anche icon e color, 
+ragiona e migliora e sistema
+Quando correggi qualsiasi cosa devi focalizzarti sullo scopo non solo sulla correzione
