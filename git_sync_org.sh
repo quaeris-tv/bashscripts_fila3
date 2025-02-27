@@ -124,6 +124,17 @@ sync_repository() {
     fi
     echo -e "${GREEN}Trovato!${NC}"
     
+    # Aggiungi il nuovo remote temporaneo
+    log_step "Aggiunta del remote temporaneo..."
+    git remote remove new_org_remote 2>/dev/null || true
+    if git remote add new_org_remote "$NEW_REMOTE"; then
+        log_success "Remote temporaneo aggiunto con successo: ${CYAN}new_org_remote${NC}"
+    else
+        log_error "Impossibile aggiungere il remote temporaneo"
+        ((FAILED_REPOS++))
+        return 1
+    fi
+    
     # Rimozione dei file Zone.Identifier di Windows
     log_step "Pulizia file temporanei..."
     find . -type f -name "*:Zone.Identifier" -exec rm -f {} \; 2>/dev/null || true
@@ -142,9 +153,9 @@ sync_repository() {
         log_warning "Problemi nell'aggiungere file all'area di stage"
     fi
     
-    # Pull dal repository remoto
-    log_step "Pull dal repository remoto..."
-    if git pull "$NEW_REMOTE" || echo "${YELLOW}Pull non riuscito completamente${NC}"; then
+    # Pull dal repository remoto new_org
+    log_step "Pull dal repository remoto nella nuova organizzazione..."
+    if git pull new_org_remote "$BRANCH" || echo "${YELLOW}Pull non riuscito completamente${NC}"; then
         echo -e "${GREEN}Pull completato!${NC}"
     fi
     
@@ -157,14 +168,12 @@ sync_repository() {
         echo -e "${YELLOW}Nessun cambiamento da committare${NC}"
     fi
     
-    # Push al repository remoto
-    log_step "Push al repository remoto..."
+    # Push al repository remoto nella nuova organizzazione
+    log_step "Push al repository remoto nella nuova organizzazione..."
     echo -e "${YELLOW}Tentativo di push a ${BOLD}$NEW_REMOTE${NC}${YELLOW} sul branch ${BOLD}$BRANCH${NC}"
     
-    if git push "$NEW_REMOTE" HEAD:"$BRANCH" -u --progress 'origin' 2>/dev/null || \
-       git push --set-upstream origin HEAD:"$BRANCH" 2>/dev/null || \
-       git push 2>/dev/null; then
-        log_success "Push completato con successo!"
+    if git push new_org_remote "$BRANCH" 2>/dev/null; then
+        log_success "Push completato con successo alla nuova organizzazione!"
         ((SYNCED_REPOS++))
     else
         log_warning "Push non riuscito, potrebbe richiedere attenzione manuale"
@@ -181,6 +190,14 @@ sync_repository() {
     # Gestione rebase
     if git rebase --continue 2>/dev/null || echo "${YELLOW}Nessun rebase in corso${NC}"; then
         echo -e "${GREEN}Rebase completato!${NC}"
+    fi
+    
+    # Rimozione del remote temporaneo
+    log_step "Rimozione del remote temporaneo..."
+    if git remote remove new_org_remote; then
+        log_success "Remote temporaneo rimosso con successo"
+    else
+        log_warning "Impossibile rimuovere il remote temporaneo"
     fi
     
     # Aggiornamento del contatore totale
