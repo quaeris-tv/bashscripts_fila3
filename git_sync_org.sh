@@ -120,6 +120,7 @@ sync_repository() {
         echo -e "${RED}Non trovato!${NC}"
         log_warning "Repository $REPO_NAME non trovato in $NEW_ORG, passo al successivo"
         ((SKIPPED_REPOS++))
+        ((TOTAL_REPOS++))
         return 0
     fi
     echo -e "${GREEN}Trovato!${NC}"
@@ -323,7 +324,9 @@ if [ $SUBMODULE_COUNT -gt 0 ]; then
 fi
 
 # Sincronizza il repository principale
-sync_repository "$MAIN_REPO" "$NEW_ORG" "$BRANCH"
+set +e  # Disabilitiamo temporaneamente l'uscita su errore
+sync_repository "$MAIN_REPO" "$NEW_ORG" "$BRANCH" || true
+set -e  # Riattiviamo l'uscita su errore
 
 # Mostra il riepilogo
 show_summary
