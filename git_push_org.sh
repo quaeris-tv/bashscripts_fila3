@@ -35,6 +35,7 @@ git config core.fileMode false
 git config advice.skippedCherryPicks false
 git config core.autocrlf input
 git config core.ignorecase false
+find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
 
 # Assicuriamoci di essere sul branch corretto
 if ! git checkout "$BRANCH" -- 2>/dev/null; then
