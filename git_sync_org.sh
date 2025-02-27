@@ -315,7 +315,11 @@ if [ $SUBMODULE_COUNT -gt 0 ]; then
     echo
     
     # Sincronizza i submodule - passando i parametri con ordine corretto
-    git submodule foreach "$me" "$NEW_ORG" "$BRANCH" $([ "$NO_CONFIRM" = true ] && echo "--no-confirm")
+    # Usiamo set +e per evitare che uno script bloccato interrompa l'intero processo
+    set +e
+    git submodule foreach "$me" "$NEW_ORG" "$BRANCH" $([ "$NO_CONFIRM" = true ] && echo "--no-confirm") || true
+    set -e
+    log_warning "Completata sincronizzazione dei submodule, procedendo con il repository principale"
 fi
 
 # Sincronizza il repository principale
