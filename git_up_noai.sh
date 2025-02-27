@@ -33,7 +33,14 @@ move_config() {
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git submodule foreach "$me" "$branch"
 find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
+move_config "App"
 move_config "Config"
+move_config "Database"
+move_config "Resources"
+move_config "Routes"
+move_config "Tests"
+
+
 git config core.fileMode false
 git config advice.submoduleMergeConflict false
 git config core.ignorecase false
