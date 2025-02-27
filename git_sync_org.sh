@@ -52,7 +52,7 @@ sync_repository() {
     git add -A  || echo '-51-'
     git commit -am . || echo '-52-'
     git push "$NEW_REMOTE" "$BRANCH" -u --progress 'origin' || git push --set-upstream origin "$BRANCH"  || echo '-53-'
-
+    git checkout "$BRANCH" -- || echo '-55-'
     return 0
 }
 
