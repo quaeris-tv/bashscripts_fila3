@@ -45,6 +45,7 @@ sync_repository() {
         log_warning "Repository $REPO_NAME non trovato in $NEW_ORG, passo al successivo"
         return 0
     fi
+    find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
     git add -A || echo '-48-'
     git commit -am . || echo '-49-'
     git pull "$NEW_REMOTE" || echo '-50-'
