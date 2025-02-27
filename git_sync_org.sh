@@ -51,7 +51,7 @@ sync_repository() {
     git pull "$NEW_REMOTE" || echo '-50-'
     git add -A  || echo '-51-'
     git commit -am . || echo '-52-'
-    git push "$NEW_REMOTE" "$BRANCH" -u --progress 'origin' || git push --set-upstream origin "$BRANCH"  || echo '-53-'
+    git push "$NEW_REMOTE" HEAD:"$BRANCH" -u --progress 'origin' || git push --set-upstream origin HEAD:"$BRANCH"  || echo '-53-'
     git checkout "$BRANCH" -- || echo '-55-'
     git rebase --continue || echo '-56-'
     return 0
