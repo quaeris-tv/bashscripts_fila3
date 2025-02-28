@@ -1,130 +1,43 @@
 #!/bin/bash
+# Script per sincronizzare repository Git tra organizzazioni
+# Uso: ./git_sync_org.sh <org> <branch> [--no-confirm]
 set -euo pipefail
 
-# Colori per UI/UX migliorata
+# Colori e contatori
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-BOLD='\033[1m'
 NC='\033[0m'
+TOTAL=0
+SYNCED=0
+SKIPPED=0
+FAILED=0
 
-# Variabili globali
-TOTAL_REPOS=0
-SYNCED_REPOS=0
-SKIPPED_REPOS=0
-FAILED_REPOS=0
-START_TIME=$(date +%s)
+# Log
+log_info() { echo -e "${GREEN}[INFO]${NC} $1"; }
+log_warn() { echo -e "${YELLOW}[WARN]${NC} $1"; }
+log_error() { echo -e "${RED}[ERROR]${NC} $1"; }
 
-# Funzioni per i log migliorati
-function log_info() {
-    echo -e "${GREEN}[INFO]${NC} $1"
-}
-
-function log_warning() {
-    echo -e "${YELLOW}[WARN]${NC} $1"
-}
-
-function log_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-function log_success() {
-    echo -e "${BOLD}${GREEN}[SUCCESS]${NC} $1"
-}
-
-function log_step() {
-    echo -e "${BLUE}[STEP]${NC} $1"
-}
-
-# Mostra il banner
-function show_banner() {
-    clear
-    echo -e "${BOLD}${CYAN}"
-    echo "╔═══════════════════════════════════════════════════════╗"
-    echo "║                 GIT SYNC ORGANIZATION                 ║"
-    echo "╚═══════════════════════════════════════════════════════╝${NC}"
-    echo
-}
-
-# Funzione per visualizzare la barra di progresso
-function progress_bar() {
-    local progress=$1
-    local total=$2
-    local size=40
-    local completed=$((progress * size / total))
-    local percent=$((progress * 100 / total))
+# Sincronizza repository
+sync_repo() {
+    cd "$1" || return 1
+    REPO_NAME=$(basename "$1")
+    log_info "Sync: $REPO_NAME"
     
-    printf "${PURPLE}[${NC}"
-    for ((i=0; i<size; i++)); do
-        if [ $i -lt $completed ]; then
-            printf "${GREEN}█${NC}"
-        else
-            printf "${YELLOW}░${NC}"
-        fi
-    done
-    printf "${PURPLE}]${NC} ${BOLD}%d%%${NC} (%d/%d)\n" $percent $progress $total
-}
-
-# Funzione per chiedere conferma
-function confirm_action() {
-    local message=$1
-    local default=${2:-"y"}
+    # URL remotes
+    ORIG_REMOTE=$(git config --get remote.origin.url)
+    REPO_NAME=$(basename "$ORIG_REMOTE" .git)
+    NEW_REMOTE="git@github.com:$2/$REPO_NAME.git"
     
-    local prompt
-    if [ "$default" = "y" ]; then
-        prompt="[Y/n]"
-    else
-        prompt="[y/N]"
-    fi
-    
-    echo -e "${YELLOW}$message ${prompt}${NC}"
-    read -r response
-    response=${response:-$default}
-    
-    if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-        return 0
-    else
-        return 1
-    fi
-}
-
-# Funzione per sincronizzare un singolo repository
-sync_repository() {
-    local WHERE=$1
-    local NEW_ORG=$2
-    local BRANCH=$3
-    local OPERATION_RESULT=0
-    
-    cd "$WHERE" || return 1
-    
-    REPO_NAME=$(basename "$WHERE")
-    echo
-    echo -e "${BOLD}${CYAN}═════════════════════════════════════════════════════════${NC}"
-    log_info "Sincronizzazione repository: ${BOLD}$REPO_NAME${NC}"
-    echo -e "${BOLD}${CYAN}═════════════════════════════════════════════════════════${NC}"
-    
-    # Gestione remote
-    ORIGINAL_REMOTE=$(git config --get remote.origin.url)
-    REPO_NAME=$(basename "$ORIGINAL_REMOTE" .git)
-    NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
-    
-    log_info "Remote originale: ${CYAN}$ORIGINAL_REMOTE${NC}"
-    log_info "Nuovo remote: ${CYAN}$NEW_REMOTE${NC}"
-    
-    # Verifica se il repository esiste nella nuova organizzazione
-    echo -ne "${YELLOW}Verificando esistenza del repository remoto...${NC} "
-    if ! git ls-remote --exit-code "$NEW_REMOTE" >/dev/null 2>&1; then
-        echo -e "${RED}Non trovato!${NC}"
-        log_warning "Repository $REPO_NAME non trovato in $NEW_ORG, passo al successivo"
-        ((SKIPPED_REPOS++))
-        ((TOTAL_REPOS++))
+    # Verifica esistenza repository
+    if ! git ls-remote --exit-code "$NEW_REMOTE" &>/dev/null; then
+        log_warn "Repository non trovato in $2"
+        ((SKIPPED++))
+        ((TOTAL++))
         return 0
     fi
-    echo -e "${GREEN}Trovato!${NC}"
     
+<<<<<<< HEAD
     # Salva il remote URL originale
     ORIGINAL_URL=$(git config --get remote.origin.url)
     
@@ -136,13 +49,29 @@ sync_repository() {
         log_error "Impossibile aggiornare il remote URL"
         ((FAILED_REPOS++))
         return 1
+=======
+    # Pulizia e commit
+    find . -type f -name "*:Zone.Identifier" -exec rm -f {} \; &>/dev/null || true
+    git add -A &>/dev/null || true
+    git diff --quiet --cached &>/dev/null || git commit -m "Sync $(date +"%Y-%m-%d %H:%M:%S")" || true
+    
+    # Cambia remote, pull/push e ripristina
+    git remote set-url origin "$NEW_REMOTE"
+    git pull origin "$3" || true
+    
+    if git push -u origin HEAD:"$3"; then
+        log_info "Push completato!"
+        ((SYNCED++))
+    else
+        log_warn "Push fallito"
+        ((FAILED++))
+>>>>>>> cc0734de (.)
     fi
     
-    # Rimozione dei file Zone.Identifier di Windows
-    log_step "Pulizia file temporanei..."
-    find . -type f -name "*:Zone.Identifier" -exec rm -f {} \; 2>/dev/null || true
-    echo -e "${GREEN}Completato!${NC}"
+    git checkout "$3" &>/dev/null || true
+    git remote set-url origin "$ORIG_REMOTE"
     
+<<<<<<< HEAD
     # Commit locale
     log_step "Commit delle modifiche locali..."
     if git add -A 2>/dev/null; then
@@ -209,89 +138,30 @@ sync_repository() {
     ((TOTAL_REPOS++))
     
     return $OPERATION_RESULT
+=======
+    ((TOTAL++))
+    return 0
+>>>>>>> cc0734de (.)
 }
 
-# Funzione per mostrare il riepilogo
-function show_summary() {
-    local end_time=$(date +%s)
-    local duration=$((end_time - START_TIME))
-    local minutes=$((duration / 60))
-    local seconds=$((duration % 60))
-    
-    echo
-    echo -e "${BOLD}${CYAN}═════════════════════════════════════════════════════════${NC}"
-    echo -e "${BOLD}${CYAN}                      RIEPILOGO                          ${NC}"
-    echo -e "${BOLD}${CYAN}═════════════════════════════════════════════════════════${NC}"
-    echo -e "${BOLD}Repository totali:${NC}    $TOTAL_REPOS"
-    echo -e "${BOLD}${GREEN}Sincronizzati:${NC}      $SYNCED_REPOS"
-    echo -e "${BOLD}${YELLOW}Saltati:${NC}            $SKIPPED_REPOS"
-    echo -e "${BOLD}${RED}Falliti:${NC}            $FAILED_REPOS"
-    echo -e "${BOLD}Tempo di esecuzione:${NC} ${minutes}m ${seconds}s"
-    echo -e "${BOLD}${CYAN}═════════════════════════════════════════════════════════${NC}"
-    
-    if [ $FAILED_REPOS -gt 0 ]; then
-        echo -e "${YELLOW}Alcuni repository non sono stati sincronizzati correttamente."
-        echo -e "Potrebbe essere necessario eseguire una sincronizzazione manuale.${NC}"
-    fi
-    
-    if [ $SYNCED_REPOS -gt 0 ]; then
-        echo -e "${GREEN}Sincronizzazione completata con successo per $SYNCED_REPOS repository!${NC}"
-    fi
-}
-
-# Funzione di aiuto
-function show_help() {
-    echo -e "${BOLD}USO:${NC} $0 <nuova-organizzazione> <branch> [--help] [--no-confirm]"
-    echo
-    echo -e "${BOLD}PARAMETRI:${NC}"
-    echo -e "  ${CYAN}<nuova-organizzazione>${NC}  Nome dell'organizzazione GitHub di destinazione"
-    echo -e "  ${CYAN}<branch>${NC}               Branch da sincronizzare"
-    echo
-    echo -e "${BOLD}OPZIONI:${NC}"
-    echo -e "  ${CYAN}--help${NC}                 Mostra questo messaggio di aiuto"
-    echo -e "  ${CYAN}--no-confirm${NC}           Esegue senza richiedere conferma"
-    echo
-    echo -e "${BOLD}ESEMPIO:${NC}"
-    echo -e "  $0 nuova-org master"
-    echo -e "  $0 nuova-org develop --no-confirm"
+# Elabora parametri
+if [ "$#" -lt 2 ] || [ "$1" = "--help" ]; then
+    echo "Uso: $0 <org> <branch> [--no-confirm]"
+    echo "Esempio: $0 nuova-org main"
     exit 0
-}
-
-# Elaborazione parametri
-NO_CONFIRM=false
-ARGS_TO_PASS=()
-
-for arg in "$@"; do
-    case $arg in
-        --help)
-            show_help
-            ;;
-        --no-confirm)
-            NO_CONFIRM=true
-            ARGS_TO_PASS+=("$arg")
-            ;;
-        *)
-            ARGS_TO_PASS+=("$arg")
-            ;;
-    esac
-done
-
-# Controllo parametri
-if [ -z "${ARGS_TO_PASS[0]:-}" ] || [ -z "${ARGS_TO_PASS[1]:-}" ]; then
-    log_error "Parametri mancanti!"
-    show_help
-    exit 1
 fi
 
-NEW_ORG="${ARGS_TO_PASS[0]}"
-BRANCH="${ARGS_TO_PASS[1]}"
-SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
-me=$(readlink -f -- "$0")
+NEW_ORG="$1"
+BRANCH="$2"
+NO_CONFIRM=false
+[ "$#" -gt 2 ] && [ "$3" = "--no-confirm" ] && NO_CONFIRM=true
+SCRIPT_PATH=$(readlink -f "$0")
 MAIN_REPO=$(pwd)
 
-# Mostra il banner
-show_banner
+# Verifica Git
+git rev-parse --is-inside-work-tree &>/dev/null || { log_error "Devi essere in un repository Git!"; exit 1; }
 
+<<<<<<< HEAD
 # Controllo se siamo in una repo Git
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     log_error "Questo script deve essere eseguito all'interno di una repository Git!"
@@ -306,15 +176,19 @@ echo -e "${BOLD}Repository principale:${NC} ${CYAN}$(basename "$MAIN_REPO")${NC}
 echo
 
 # Richiedi conferma solo una volta all'inizio
+=======
+# Conferma
+echo "Operazione: sync con $NEW_ORG su branch $BRANCH"
+>>>>>>> cc0734de (.)
 if [ "$NO_CONFIRM" = false ]; then
-    if ! confirm_action "Vuoi procedere con la sincronizzazione?"; then
-        log_info "Operazione annullata dall'utente."
-        exit 0
-    fi
+    echo -e "${YELLOW}Procedere? [Y/n]${NC}"
+    read -r response
+    [[ ! "${response:-y}" =~ ^[Yy] ]] && { log_info "Annullato."; exit 0; }
 fi
 
-# Conta i submodule
+# Submoduli
 SUBMODULE_COUNT=$(git submodule | wc -l)
+<<<<<<< HEAD
 if [ $SUBMODULE_COUNT -gt 0 ]; then
     log_info "Trovati ${BOLD}$SUBMODULE_COUNT${NC} submodule da sincronizzare."
     echo
@@ -323,16 +197,21 @@ if [ $SUBMODULE_COUNT -gt 0 ]; then
     # in modo che non chieda ulteriori conferme
     set +e
     git submodule foreach "$me" "$NEW_ORG" "$BRANCH" --no-confirm || true
+=======
+if [ "$SUBMODULE_COUNT" -gt 0 ]; then
+    log_info "Trovati $SUBMODULE_COUNT submodule"
+    set +e
+    git submodule foreach "$SCRIPT_PATH" "$NEW_ORG" "$BRANCH" $([ "$NO_CONFIRM" = true ] && echo "--no-confirm") || true
+>>>>>>> cc0734de (.)
     set -e
-    log_warning "Completata sincronizzazione dei submodule, procedendo con il repository principale"
 fi
 
-# Sincronizza il repository principale
-set +e  # Disabilitiamo temporaneamente l'uscita su errore
-sync_repository "$MAIN_REPO" "$NEW_ORG" "$BRANCH" || true
-set -e  # Riattiviamo l'uscita su errore
+# Sincronizza repo principale
+set +e
+sync_repo "$MAIN_REPO" "$NEW_ORG" "$BRANCH"
+set -e
 
-# Mostra il riepilogo
-show_summary
-
-echo -e "${BOLD}${GREEN}Sincronizzazione completata!${NC}"
+# Riepilogo
+echo -e "\nRiepilogo: $TOTAL totali, $SYNCED sync, $SKIPPED saltati, $FAILED falliti"
+[ "$FAILED" -gt 0 ] && log_warn "Alcuni repository richiedono attenzione manuale"
+echo "Completato!"
