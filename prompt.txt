@@ -7,3 +7,4 @@ fields non e'  'source' => 'Sorgente',  ma e'  'source' => ['label'=>'Sorgente']
 e puoi aggiungere anche tooltip e placeholder anche actions stessa logina ma puoi aggiungere anche icon e color, 
 ragiona e migliora e sistema
 Quando correggi qualsiasi cosa devi focalizzarti sullo scopo non solo sulla correzione
+non voglio  ->label(   le label son gestite tramite langserviceprovider coi file di traduzioni
