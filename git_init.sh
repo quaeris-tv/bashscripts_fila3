@@ -21,5 +21,6 @@ git config advice.skippedCherryPicks false
 git remote set-branches --add origin $branch
 git push --recurse-submodules=on-demand
 git branch --set-upstream-to=origin/$branch $branch
+git config advice.setUpstreamFailure false
 sed -i -e 's/\r$//' "$me"
 
