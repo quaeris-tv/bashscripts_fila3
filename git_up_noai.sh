@@ -26,6 +26,12 @@ move_config() {
   else
     echo "Errore: Le cartelle $dir_name o $dir_name_lower non esistono."
   fi
+
+  # Aggiungi il controllo per rinominare la cartella _old in caso di conflitto
+  if [ -d "$dir_name_lower"_old ] && [ ! -d "$dir_name_lower" ]; then
+    echo "Rinominando $dir_name_lower_old in $dir_name_lower..."
+    mv "$dir_name_lower"_old "$dir_name_lower"
+  fi
 }
 
 
