@@ -26,6 +26,12 @@ move_config() {
   else
     echo "Errore: Le cartelle $dir_name o $dir_name_lower non esistono."
   fi
+
+  # Aggiungi il controllo per rinominare la cartella _old in caso di conflitto
+  if [ -d "$dir_name_lower"_old ] && [ ! -d "$dir_name_lower" ]; then
+    echo "Rinominando $dir_name_lower_old in $dir_name_lower..."
+    mv "$dir_name_lower"_old "$dir_name_lower"
+  fi
 }
 
 
@@ -58,6 +64,7 @@ git submodule update --progress --init --recursive --force --merge --rebase --re
 git checkout $branch --
 git pull origin $branch --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 #old branches
@@ -70,6 +77,17 @@ git pull origin $branch --autostash --recurse-submodules --allow-unrelated-histo
 #git push origin --delete cs0.2.09
 #git push origin --delete cs0.2.10
 >>>>>>> 30fce8a850f4384ad82e6d4c36deed5f1884866e
+=======
+#old branches
+git push origin --delete cs0.2.03
+git push origin --delete cs0.2.04
+git push origin --delete cs0.2.05
+git push origin --delete cs0.2.06
+git push origin --delete cs0.2.07
+git push origin --delete cs0.2.08
+git push origin --delete cs0.2.09
+git push origin --delete cs0.2.10
+>>>>>>> origin/dev
 sed -i -e 's/\r$//' "$me"
 echo "-------- END PULL[$where ($branch)] ----------";
 

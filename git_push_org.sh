@@ -32,6 +32,9 @@ SCRIPT_PATH=$(readlink -f -- "$0")
 WHERE=$(pwd)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
 # Controllo se siamo in una repo Git
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     echo "${RED}Errore: Questo script deve essere eseguito all'interno di una repository Git!${RESET}"
@@ -43,10 +46,13 @@ git submodule update --progress --init --recursive --merge --rebase --remote
 git submodule foreach "$SCRIPT_PATH" "$NEW_ORG" "$BRANCH"
 
 echo "${YELLOW}==> Controllo configurazioni Git...${RESET}"
+<<<<<<< HEAD
 =======
 log_info "Inizializzazione... ($WHERE)"
 log_info "Organizzazione: $NEW_ORG, Branch: $BRANCH"
 >>>>>>> 30fce8a850f4384ad82e6d4c36deed5f1884866e
+=======
+>>>>>>> origin/dev
 
 # Configurazioni Git per evitare problemi
 log_info "Configurando Git..."
@@ -55,6 +61,7 @@ git config advice.skippedCherryPicks false
 git config core.autocrlf input
 git config core.ignorecase false
 <<<<<<< HEAD
+<<<<<<< HEAD
 find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
 =======
 
@@ -62,12 +69,16 @@ find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
 log_info "Recupero degli aggiornamenti dal repository remoto..."
 git fetch origin
 >>>>>>> 30fce8a850f4384ad82e6d4c36deed5f1884866e
+=======
+find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
+>>>>>>> origin/dev
 
 # Assicuriamoci di essere sul branch corretto
 log_info "Verifica del branch locale..."
 git checkout "$BRANCH" -- || git checkout -b "$BRANCH"
 log_info "Branch '$BRANCH' selezionato."
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 echo "${GREEN}✔ Branch attivo: $BRANCH${RESET}"
 
@@ -95,6 +106,11 @@ log_info "Nuovo remoto: $NEW_REMOTE"
 log_info "Impostando il nuovo URL del remote..."
 git remote set-url origin "$NEW_REMOTE"
 >>>>>>> 30fce8a850f4384ad82e6d4c36deed5f1884866e
+=======
+echo "${GREEN}✔ Branch attivo: $BRANCH${RESET}"
+
+
+>>>>>>> origin/dev
 
 # Aggiunge e normalizza tutti i file per evitare problemi di permessi e formattazione
 log_info "Normalizzazione dei file..."
@@ -113,6 +129,7 @@ else
 fi
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "${YELLOW}==> Push su remoto...${RESET}"
 if ! git push origin HEAD:"$BRANCH" -u --progress 'origin'; then
     echo "${YELLOW}⚠ Tentativo di push alternativo...${RESET}"
@@ -122,6 +139,11 @@ log_info "Eseguendo push..."
 if ! git push origin "$BRANCH" -u --progress; then
     log_warning "Errore nel push. Riprovando con --set-upstream."
 >>>>>>> 30fce8a850f4384ad82e6d4c36deed5f1884866e
+=======
+echo "${YELLOW}==> Push su remoto...${RESET}"
+if ! git push origin HEAD:"$BRANCH" -u --progress 'origin'; then
+    echo "${YELLOW}⚠ Tentativo di push alternativo...${RESET}"
+>>>>>>> origin/dev
     git push --set-upstream origin "$BRANCH"
 fi
 
@@ -149,6 +171,7 @@ git merge "$BRANCH"
 log_info "Pull dei cambiamenti con autostash..."
 git pull origin "$BRANCH" --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 sed -i -e 's/\r$//' "$SCRIPT_PATH"
 echo "${GREEN}========= SYNC COMPLETATA CON SUCCESSO [$WHERE ($BRANCH)] =========${RESET}"
@@ -189,3 +212,7 @@ git push origin --delete cs0.2.10
 
 log_info "========= SYNC COMPLETATA CON SUCCESSO [$WHERE ($BRANCH)] ========="
 >>>>>>> 30fce8a850f4384ad82e6d4c36deed5f1884866e
+=======
+sed -i -e 's/\r$//' "$SCRIPT_PATH"
+echo "${GREEN}========= SYNC COMPLETATA CON SUCCESSO [$WHERE ($BRANCH)] =========${RESET}"
+>>>>>>> origin/dev
