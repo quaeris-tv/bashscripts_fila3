@@ -31,10 +31,6 @@ BRANCH=$2
 SCRIPT_PATH=$(readlink -f -- "$0")
 WHERE=$(pwd)
 
-<<<<<<< HEAD
-log_info "Inizializzazione... ($WHERE)"
-log_info "Organizzazione: $NEW_ORG, Branch: $BRANCH"
-=======
 # Controllo se siamo in una repo Git
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     echo "${RED}Errore: Questo script deve essere eseguito all'interno di una repository Git!${RESET}"
@@ -46,7 +42,6 @@ git submodule update --progress --init --recursive --merge --rebase --remote
 git submodule foreach "$SCRIPT_PATH" "$NEW_ORG" "$BRANCH"
 
 echo "${YELLOW}==> Controllo configurazioni Git...${RESET}"
->>>>>>> 8934346e6b6d3d9a76ccde00cdd553f14e806951
 
 # Configurazioni Git per evitare problemi
 log_info "Configurando Git..."
@@ -54,47 +49,16 @@ git config core.fileMode false
 git config advice.skippedCherryPicks false
 git config core.autocrlf input
 git config core.ignorecase false
-<<<<<<< HEAD
-
-# Aggiornamento del repository
-log_info "Recupero degli aggiornamenti dal repository remoto..."
-git fetch origin
-=======
 find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
->>>>>>> 8934346e6b6d3d9a76ccde00cdd553f14e806951
 
 # Assicuriamoci di essere sul branch corretto
 log_info "Verifica del branch locale..."
 git checkout "$BRANCH" -- || git checkout -b "$BRANCH"
 log_info "Branch '$BRANCH' selezionato."
 
-<<<<<<< HEAD
-# Aggiorna i submodules con forza per evitare disallineamenti
-log_info "Aggiornamento submodules..."
-git submodule update --progress --init --recursive --force --merge --rebase --remote
-
-
-
-# Sincronizza i submodules ricorsivamente
-log_info "Sincronizzazione dei submodules..."
-git submodule foreach "bash $SCRIPT_PATH $NEW_ORG $BRANCH"
-
-# Ottieni l'URL remoto attuale
-ORIGINAL_REMOTE=$(git config --get remote.origin.url)
-REPO_NAME=$(basename "$ORIGINAL_REMOTE" .git)
-
-# Costruisce il nuovo URL remoto con l'organizzazione specificata
-NEW_REMOTE="git@github.com:$NEW_ORG/$REPO_NAME.git"
-log_info "Nuovo remoto: $NEW_REMOTE"
-
-# Modifica temporaneamente il remote
-log_info "Impostando il nuovo URL del remote..."
-git remote set-url origin "$NEW_REMOTE"
-=======
 echo "${GREEN}✔ Branch attivo: $BRANCH${RESET}"
 
 
->>>>>>> 8934346e6b6d3d9a76ccde00cdd553f14e806951
 
 # Aggiunge e normalizza tutti i file per evitare problemi di permessi e formattazione
 log_info "Normalizzazione dei file..."
@@ -112,16 +76,9 @@ else
     log_warning "Nessuna modifica da committare."
 fi
 
-<<<<<<< HEAD
-# Push con fallback in caso di errore
-log_info "Eseguendo push..."
-if ! git push origin "$BRANCH" -u --progress; then
-    log_warning "Errore nel push. Riprovando con --set-upstream."
-=======
 echo "${YELLOW}==> Push su remoto...${RESET}"
 if ! git push origin HEAD:"$BRANCH" -u --progress 'origin'; then
     echo "${YELLOW}⚠ Tentativo di push alternativo...${RESET}"
->>>>>>> 8934346e6b6d3d9a76ccde00cdd553f14e806951
     git push --set-upstream origin "$BRANCH"
 fi
 
@@ -149,43 +106,5 @@ git merge "$BRANCH"
 log_info "Pull dei cambiamenti con autostash..."
 git pull origin "$BRANCH" --autostash --recurse-submodules --allow-unrelated-histories --prune --progress -v --rebase
 
-<<<<<<< HEAD
-# Aggiorna nuovamente i submodules per garantire la sincronizzazione completa
-log_info "Aggiornamento finale dei submodules..."
-git submodule update --progress --init --recursive --force --merge --rebase --remote
-
-# Ultima verifica del checkout per sicurezza
-log_info "Verifica finale del checkout del branch..."
-git checkout "$BRANCH" --
-
-# Ripristina il remote originale
-log_info "Ripristinando il remote originale..."
-git remote set-url origin "$ORIGINAL_REMOTE"
-echo "Ripristinato remote originale: $ORIGINAL_REMOTE"
-
-# Rimuove i ritorni a capo in eccesso (per evitare problemi su Windows)
-log_info "Pulizia dei ritorni a capo..."
-sed -i 's/\r$//' "$SCRIPT_PATH"
-
-# Recupero delle modifiche locali salvate
-log_info "Recupero modifiche locali..."
-git stash pop
-
-#git push origin --delete cs0.1.01
-#git push origin --delete cs0.2.00
-#git push origin --delete cs0.2.01
-#git push origin --delete cs0.2.02
-#git push origin --delete cs0.2.03
-#git push origin --delete cs0.2.04
-#git push origin --delete cs0.2.05
-#git push origin --delete cs0.2.06
-#git push origin --delete cs0.2.07
-#git push origin --delete cs0.2.08
-#git push origin --delete cs0.2.09
-#git push origin --delete cs0.2.10
-
-log_info "========= SYNC COMPLETATA CON SUCCESSO [$WHERE ($BRANCH)] ========="
-=======
 sed -i -e 's/\r$//' "$SCRIPT_PATH"
 echo "${GREEN}========= SYNC COMPLETATA CON SUCCESSO [$WHERE ($BRANCH)] =========${RESET}"
->>>>>>> 8934346e6b6d3d9a76ccde00cdd553f14e806951

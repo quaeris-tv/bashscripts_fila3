@@ -24,10 +24,7 @@ cache/
 .git-blame-ignore-revs
 .php-cs-fixer.cache
 *.exe
-<<<<<<< HEAD
 *:Zone.Identifier
 .php-cs-fixer.cache
-=======
 **/*.Zone.Identifier
-*:Zone.Identifier
->>>>>>> 8934346e6b6d3d9a76ccde00cdd553f14e806951
+

@@ -1,6 +1,5 @@
 Pensa ad alta voce e parla a te stesso. prima di rispondere, analizza la richiesta, scomponi i concetti chiave, 
 formula un ragionamento passo passo,
-<<<<<<< HEAD
  la tua memoria e' la cartella docs , 
 percio' aggiornala di continuo e studiala di continuo e prima di fare qualsiasi cosa consultala,
 quando correggi o fai qualcosa devi focalizzarti sullo scopo non solo alla correzione dell'errore
@@ -14,7 +13,6 @@ ma puoi aggiungere anche icon e color, ragiona e migliora e sistema
 
  la tua memoria e' la cartella docs , quando correggi errori devi concentrarti sullo scopo non solo alla correzione dell'errore
 percio' aggiornala di continuo e studiala di continuo e prima di fare qualsiasi cosa consultala
-=======
  la tua memoria e' la cartella docs  , 
 percio' aggiornala di continuo e studiala di continuo e prima di fare qualsiasi cosa consultala
 ogni modulo ha la sua cartella docs e devi studiarla di continuo e aggiornarla di continuo, 
@@ -23,4 +21,3 @@ e puoi aggiungere anche tooltip e placeholder anche actions stessa logina ma puo
 ragiona e migliora e sistema
 Quando correggi qualsiasi cosa devi focalizzarti sullo scopo non solo sulla correzione
 non voglio  ->label(   le label son gestite tramite langserviceprovider coi file di traduzioni
->>>>>>> 8934346e6b6d3d9a76ccde00cdd553f14e806951
