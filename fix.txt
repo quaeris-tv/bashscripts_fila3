@@ -32,7 +32,11 @@ git config --global --add --bool push.autoSetupRemote true
 ignore file mode chmod change
 git config core.fileMode false
 
+sudo update-alternatives --config php
+
+
 -------------
 find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
+find . -type f -name "*:Zone.Identifier" -exec rm -f {} +
 
 
