@@ -40,3 +40,6 @@ find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
 find . -type f -name "*:Zone.Identifier" -exec rm -f {} +
 
 
+
+sudo update-alternatives --config php
+

@@ -7,6 +7,7 @@ if [ $# -ne 1 ]; then
 fi
 
 NEW_ORG="$1"
+SCRIPT_PATH=$(readlink -f -- "$0")
 
 # Check if .gitmodules file exists
 if [ ! -f .gitmodules ]; then
@@ -79,5 +80,5 @@ while IFS= read -r line; do
         )
     fi
 done < .gitmodules
-
+sed -i 's/\r$//' "$SCRIPT_PATH"
 echo "All submodules and the main repository remote URL have been updated!"
