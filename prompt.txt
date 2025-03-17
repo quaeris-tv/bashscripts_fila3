@@ -43,3 +43,11 @@
 - Analizzare moduli esistenti
 - Focalizzarsi sullo scopo, non solo sulla correzione
 - Seguire convenzioni del framework
+
+
+prima di iniziare a lavorare dobbiamo sempre controllare phpstan e controllare tutta la cartella Modules a livello 9 e correggerre e migliorare il codice , per migliorare utilizziamo spatie laraveldata, non utilizziamo services ma spatie queableactions , stai attento che lavoriamo coi moduli percio' ogni modulo ha il suo composer.json che devi analizzare per non sbagliare path e namespace per esempio il modello User il suo path e' /var/www/html/exa/base_orisbroker_fila3/laravel/Modules/User/app/Models/User.php mentre il suo namespace e' Modules\User\Models , analizza e ragiona su quello che ti ho detto controlla che sia vero
+non estendiamo mai Migration ma estendiamo XotBaseMigration e anche la struttura interna della migrazione deve essere fatta in maniera diversa, studia come sono fatte le migrazioni negli altri moduli , aggiorna la cartella "docs" piu' vicina e studia quella cartella "docs" e poi procedi con implementazione correzzione
+procedi a sistemare tutti gli errori segnalati da phpstan a livello 9 su tutto Modules, quando correggi un errore trovi la cartella docs piu' vicina, la aggiorni la studi e poi procedi a implementare soluzione poi vai avanti cosi' per tutti gli altri errori, non ti fermare finche non hai finito di correggere tutti gli errori 
+phpstan e' installato dentro la cartella laravel e lo puoi lanciare con ./vendor/bin/phpstan
+chi estende XotBaseResource  non deve avere  protected static ?string $navigationIcon  scrivilo nella cartella docs piu' vicina, e scrivitelo anche nelle tue regole ! la documentazione non deve essere una replica del codice !
+mixed si usa solo come ultima spiaggia
