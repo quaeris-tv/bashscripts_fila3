@@ -43,3 +43,10 @@
 - Analizzare moduli esistenti
 - Focalizzarsi sullo scopo, non solo sulla correzione
 - Seguire convenzioni del framework
+
+
+analizza tutto Modules con phpstan a livello 9 e correggi tutti gli errori, prima di correggere vai ad aggiornare e studiare la cartella docs piu' vicina all'errore, poi ragiona sull'obiettivo , poi procedi con implementazione soluzione, non ti fermare finche non hai corretto tutti gli errori
+analizza tutto Modules a livello 9 e sistema gli errori, per sistemarli devi sempre aggiornare e studiare la cartella "docs" piu' vicina all'errore, devi correggere tutti gli errori in modalità turbo che il tempo e' poco
+ti ricordo che phpstan e' installato dentro la cartella laravel e lo puoi lanciare con ./vendor/bin/phpstan,
+ti ricordo che usiamo i moduli e ogni modulo ha il suo composer.json da leggere per non sbagliare namespace e path 
+quando modifichi un file devi validare tutta la cartella dove e' contenuto il file a livello 9 se ci sono piu' di 100 errori scendi di livello finche' non scendi dai 100 errori, poi quando sono meno di 100 sali di livello e cosi' via

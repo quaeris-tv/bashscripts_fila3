@@ -7,6 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 DISK_NAME=$1
+<<<<<<< HEAD
 TIMESTAMP=$(date +"%Y%m%d-%H%M")  # Formato YYYYMMDD-HHMM
 ARCHIVE_NAME="$(basename "$PWD")_$TIMESTAMP.tar.gz"
 
@@ -48,3 +49,13 @@ else
     echo "❌ Errore durante lo spostamento del file nel disco esterno"
     exit 1
 fi
+=======
+DEST_PATH="/mnt/$DISK_NAME$PWD"
+me=$( readlink -f -- "$0";)
+
+echo "Sincronizzazione in corso da '$PWD' a '$DEST_PATH'..."
+find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
+rsync -avz --relative --exclude='.git' --exclude='build' --exclude='cache'  --exclude='storage' --exclude='venv' --exclude='node_modules' --exclude='vendor' --exclude='stubs' ./ "$DEST_PATH"
+sed -i -e 's/\r$//' "$me"
+echo "Sincronizzazione completata!"
+>>>>>>> 26ad934e5 (first)

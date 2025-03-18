@@ -9,9 +9,6 @@ me=$( readlink -f -- "$0";)
 branch=$1
 where=$(pwd)
 
-
-
-
 git submodule update --progress --init --recursive --force --merge --rebase --remote
 git submodule foreach "$me" "$branch"
 find . -type f -name "*:Zone.Identifier" -exec rm -f {} \;
